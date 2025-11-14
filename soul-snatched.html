@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soul Snatched: Ginger Edition – Case Study | Moe Savari</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Moe Savari</a>
+            <div class="nav-links">
+                <a href="index.html#soul-snatched">Soul Snatched</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#about">About</a>
+            </div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="hero-inner">
+            <div>
+                <h1>Soul Snatched: Ginger Edition</h1>
+                <h2>2D top-down village defense ARPG</h2>
+                <p class="tagline">
+                    A morality-driven wave defense game built in Unity, showcasing systemic gameplay, UI, and architecture.
+                </p>
+                <div class="hero-actions">
+                    <a href="index.html" class="btn secondary">Back to Portfolio</a>
+                    <a href="https://github.com/moesavari/soul-snatcher-ginger-edition" target="_blank" class="btn primary">
+                        View Code on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- High-level overview -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Project Overview</h2>
+            </div>
+            <p>
+                Soul Snatched: Ginger Edition is a solo-developed 2D top-down ARPG where the player defends villages
+                from nightly zombie invasions. The core focus is on systemic design: a tight day/night loop, a
+                morality-driven soul siphoning system, and wave-based combat that responds to player choices.
+            </p>
+            <p>
+                This project is my primary commercial indie title and a showcase of my strengths as a gameplay and UI
+                programmer: building reusable systems, data-driven content, and responsive game feel.
+            </p>
+        </section>
+
+        <!-- Screens / media -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Gameplay Media</h2>
+                <p class="section-subtitle">Work-in-progress visuals - focus is on systems and feel rather than final art.</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-media">
+                    <div class="media-placeholder">
+                        <p>Main gameplay screenshot / GIF</p>
+                        <p class="hint">Replace this with an actual capture of combat or a wave.</p>
+                    </div>
+                    <div class="media-placeholder" style="margin-top: 1rem;">
+                        <p>Village / daytime preparation screenshot</p>
+                        <p class="hint">Show vendors, UI, or crafting here.</p>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <h3>What the Footage Demonstrates</h3>
+                    <ul>
+                        <li>Wave manager driving spawns, pacing, and difficulty scaling.</li>
+                        <li>Reputation changes based on soul siphoning, affecting villager behavior.</li>
+                        <li>Hair/soul meter increasing as powers are used, changing player presentation.</li>
+                        <li>UI panels reacting to equipment changes, currency updates, and wave states.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Systems breakdown -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Core Systems & Architecture</h2>
+                <p class="section-subtitle">How the game is structured under the hood.</p>
+            </div>
+
+            <h3>Day/Night and Wave Manager</h3>
+            <ul>
+                <li>Central <strong>WaveManager</strong> controls spawn timing, enemy composition, and lane routing.</li>
+                <li>Day/night state machine triggers village recovery, shop refreshes, and preparation windows.</li>
+                <li>Difficulty curves are data-driven, allowing tuning without changing core code.</li>
+            </ul>
+            <br />
+
+            <h3>Morality, Souls, and Reputation</h3>
+            <ul>
+                <li>Reputation value ranges from hostile to revered, clamped and color-coded in the UI.</li>
+                <li>Souls are a separate currency gained only from villagers, not enemies.</li>
+                <li>Vendors and NPCs query reputation to decide inventory, prices, and dialogue options.</li>
+                <li>Hair growth / visual state is mapped to soul thresholds for instant feedback.</li>
+            </ul>
+            <br />
+
+            <h3>Equipment, Stats, and Combat</h3>
+            <ul>
+                <li>Items defined via ScriptableObjects with base stats, rarity, and tags.</li>
+                <li>Equipment slots drive a stat aggregator that feeds into damage and defense calculations.</li>
+                <li>Melee and ranged attacks share a common combat pipeline (hit detection, damage event, feedback).</li>
+            </ul>
+            <br />
+
+            <h3>UI & UX Implementation</h3>
+            <ul>
+                <li>Inventory, vendor, and equipment panels built as separate components, wired through events.</li>
+                <li>Tooltip and context menus reuse a shared data model and are repositioned based on cursor offset.</li>
+                <li>Reputation meter, hair state, and currency text subscribe to central game events rather than polling.</li>
+            </ul>
+        </section>
+
+        <!-- Professional dev practices -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Professional Development Practices</h2>
+                <p class="section-subtitle">
+                    How I treat this project like a production game, not just a prototype.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div>
+                    <h3>Code Quality & Architecture</h3>
+                    <ul>
+                        <li>Consistent naming conventions and strict encapsulation of gameplay state.</li>
+                        <li>Separation of data (ScriptableObjects) from behavior (controllers and managers).</li>
+                        <li>Use of events and interfaces to decouple UI from gameplay systems.</li>
+                        <li>Refactoring passes to remove unused methods and keep responsibilities clear.</li>
+                    </ul>
+                    <br />
+
+                    <h3>Tools & Workflow</h3>
+                    <ul>
+                        <li>Git-based version control with feature branches and descriptive commits.</li>
+                        <li>In-editor debug views for wave states, reputation, and AI decisions.</li>
+                        <li>Use of Unity Profiler to track spikes from spawning, pathfinding, and UI updates.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Production Mindset</h3>
+                    <ul>
+                        <li>Designing systems with extension in mind (new enemies, new villages, new wave types).</li>
+                        <li>Planning toward an Early Access release with a clear vertical slice.</li>
+                        <li>Balancing scope carefully: strong core loop first, content expansion second.</li>
+                    </ul>
+                    <br />
+
+                    <h3>My Role</h3>
+                    <p>
+                        I am the sole developer on Soul Snatched. I handle programming, system design, and
+                        implementation, while leveraging free and placeholder art so I can prioritize gameplay,
+                        feel, and scalability.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap / status -->
+        <section class="section">
+            <div class="section-header">
+                <h2>Current Status & Roadmap</h2>
+            </div>
+            <ul>
+                <li>Core wave, morality, and reputation systems: functional.</li>
+                <li>Vendor and equipment systems: implemented and connected to reputation.</li>
+                <li>Next steps: content polish, more enemy types, and public demo build.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Moe Savari - Soul Snatched: Ginger Edition</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

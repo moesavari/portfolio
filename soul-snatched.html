@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soul Snatched: Ginger Edition – Case Study | Moe Savari</title>
     <link rel="stylesheet" href="style.css" />
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
-	<link rel="shortcut icon" href="assets/emberforge_favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
+    <link rel="shortcut icon" href="assets/emberforge_favicon.ico">
 </head>
 <body>
 <nav class="top-nav">
@@ -66,42 +66,54 @@
             </div>
             <div class="project-grid">
                 <div class="project-media">
-                    <div class="media-placeholder">
-                        <p>Main gameplay screenshot / GIF</p>
-                        <p class="hint">Replace this with an actual capture of combat or a wave.</p>
+                    <!-- Shop interaction GIF -->
+                    <div class="media-gif">
+                        <img src="assets/gifs/shop.gif"
+                             alt="Vendor and shop UI interaction in Soul Snatched"
+                             class="media-gif-image" />
+                        <p class="media-caption">
+                            Vendor & shop UI: opening the blacksmith, hovering items, and preparing gear before nightfall.
+                        </p>
                     </div>
-                    <div class="media-placeholder" style="margin-top: 1rem;">
-                        <p>Village / daytime preparation screenshot</p>
-                        <p class="hint">Show vendors, UI, or crafting here.</p>
+
+                    <!-- Equipment interaction GIF -->
+                    <div class="media-gif" style="margin-top: 1rem;">
+                        <img src="assets/gifs/equipment.gif"
+                             alt="Equipment and stat panel interaction in Soul Snatched"
+                             class="media-gif-image" />
+                        <p class="media-caption">
+                            Equipment & stats: swapping gear and seeing character stats update in real time.
+                        </p>
                     </div>
                 </div>
                 <div class="project-description">
                     <h3>What the Footage Demonstrates</h3>
                     <ul>
-                        <li>Wave manager driving spawns, pacing, and difficulty scaling.</li>
-                        <li>Reputation changes based on soul siphoning, affecting villager behavior.</li>
-                        <li>Hair/soul meter increasing as powers are used, changing player presentation.</li>
-                        <li>UI panels reacting to equipment changes, currency updates, and wave states.</li>
+                        <li>Vendor & shop UI driven by reputation and in-game currency.</li>
+                        <li>Equipment window updating stats dynamically as gear changes.</li>
+                        <li>Inventory and tooltips reacting to item selection and focus.</li>
+                        <li>UX focus on quick readability and clear feedback for player decisions.</li>
                     </ul>
                 </div>
             </div>
         </section>
-		<section class="showcase-section">
-			<h2 class="section-title">Combat Showcase</h2>
 
-			<div class="video-container">
-				<video controls preload="metadata" poster="" class="showcase-video">
-					<source src="assets/videos/combat.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-			</div>
+        <!-- Combat video showcase -->
+        <section class="showcase-section">
+            <h2 class="section-title">Combat Showcase</h2>
 
-			<p class="video-caption">
-				A short demonstration of Soul Snatched’s core combat loop.  
-				Includes: night spawn warning, enemy waves, hit feedback, and player death sequence.
-			</p>
-		</section>
+            <div class="video-container">
+                <video controls preload="metadata" poster="" class="showcase-video">
+                    <source src="assets/videos/combat.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 
+            <p class="video-caption">
+                A short demonstration of Soul Snatched's core combat loop.
+                Includes: night spawn warning, enemy waves, hit feedback, and player death sequence.
+            </p>
+        </section>
 
         <!-- Systems breakdown -->
         <section class="section">

@@ -435,3 +435,24 @@ a:hover {
     font-size: 1.1rem;
     color: #e0e0e0;
 }
+/* GIF media blocks */
+.media-gif {
+    border-radius: var(--ember-radius-lg);
+    border: 1px solid var(--ember-border);
+    background: #050407;
+    overflow: hidden;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.7);
+}
+
+.media-gif-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.media-caption {
+    padding: 0.6rem 0.9rem 0.8rem;
+    font-size: 0.9rem;
+    color: var(--ember-text-soft);
+    text-align: left;
+}

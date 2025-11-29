@@ -29,7 +29,8 @@
                 <h1>Soul Snatched: Ginger Edition</h1>
                 <h2>2D top-down village defense ARPG</h2>
                 <p class="tagline">
-                    A morality-driven wave defense game built in Unity, showcasing systemic gameplay, UI, and architecture.
+                    A morality-driven wave defense game built in Unity, backed by a custom Node.js/React
+                    tooling pipeline for items, vendors, and progression.
                 </p>
                 <div class="hero-actions">
                     <a href="index.html" class="btn secondary">Back to Portfolio</a>
@@ -53,8 +54,9 @@
                 morality-driven soul siphoning system, and wave-based combat that responds to player choices.
             </p>
             <p>
-                This project is my primary commercial indie title and a showcase of my strengths as a gameplay and UI
-                programmer: building reusable systems, data-driven content, and responsive game feel.
+                Over time the project has grown into a full ecosystem: the Unity client, a Node.js/Express backend,
+                and a React dashboard used to author, balance, and export the entire item and vendor economy as JSON.
+                This lets me iterate on design quickly while keeping the game data-driven and consistent.
             </p>
         </section>
 
@@ -72,7 +74,7 @@
                              alt="Vendor and shop UI interaction in Soul Snatched"
                              class="media-gif-image" />
                         <p class="media-caption">
-                            Vendor & shop UI: opening the blacksmith, hovering items, and preparing gear before nightfall.
+                            Vendor &amp; shop UI: opening the blacksmith, hovering items, and preparing gear before nightfall.
                         </p>
                     </div>
 
@@ -82,14 +84,15 @@
                              alt="Equipment and stat panel interaction in Soul Snatched"
                              class="media-gif-image" />
                         <p class="media-caption">
-                            Equipment & stats: swapping gear and seeing character stats update in real time.
+                            Equipment &amp; stats: swapping gear and seeing character stats update in real time,
+                            including paperdoll visuals that track hair stage and gender.
                         </p>
                     </div>
                 </div>
                 <div class="project-description">
                     <h3>What the Footage Demonstrates</h3>
                     <ul>
-                        <li>Vendor & shop UI driven by reputation and in-game currency.</li>
+                        <li>Vendor &amp; shop UI driven by reputation and in-game currency.</li>
                         <li>Equipment window updating stats dynamically as gear changes.</li>
                         <li>Inventory and tooltips reacting to item selection and focus.</li>
                         <li>UX focus on quick readability and clear feedback for player decisions.</li>
@@ -118,7 +121,7 @@
         <!-- Systems breakdown -->
         <section class="section">
             <div class="section-header">
-                <h2>Core Systems & Architecture</h2>
+                <h2>Core Systems &amp; Architecture</h2>
                 <p class="section-subtitle">How the game is structured under the hood.</p>
             </div>
 
@@ -147,11 +150,47 @@
             </ul>
             <br />
 
-            <h3>UI & UX Implementation</h3>
+            <h3>External Tools &amp; Data Pipeline</h3>
+            <ul>
+                <li>
+                    <strong>Node.js/Express backend</strong> exposes endpoints to manage items, stats, rarities,
+                    vendors, and vendor stock, persisting everything as JSON.
+                </li>
+                <li>
+                    <strong>React dashboard</strong> lets me author and balance items visually: choose icons,
+                    configure stats and enchants, assign vendors, and preview how gear will feel in-game.
+                </li>
+                <li>
+                    A one-click <strong>export flow</strong> generates normalized JSON files
+                    (<code>items.json</code>, <code>item_stats.json</code>, <code>rarities.json</code>,
+                    <code>vendors.json</code>, <code>vendor_stock.json</code>, etc.).
+                </li>
+                <li>
+                    On the Unity side, <strong>ItemDatabaseRuntime</strong> and a custom importer recreate
+                    <code>ItemDef</code> ScriptableObjects from JSON, attach the correct sprites from
+                    <code>Resources/ItemIcons</code>, and register them with runtime systems.
+                </li>
+                <li>
+                    <strong>VendorRuntime</strong> consumes the vendor stock JSON to build shop inventories at
+                    runtime, so buy/sell logic, prices, and quantities all come from the same source of truth
+                    as the web tools.
+                </li>
+                <li>
+                    Recent fixes ensured that buying and selling handle stacked items correctly and
+                    use the same runtime inventory abstraction on both sides.
+                </li>
+            </ul>
+            <br />
+
+            <h3>UI &amp; UX Implementation</h3>
             <ul>
                 <li>Inventory, vendor, and equipment panels built as separate components, wired through events.</li>
                 <li>Tooltip and context menus reuse a shared data model and are repositioned based on cursor offset.</li>
                 <li>Reputation meter, hair state, and currency text subscribe to central game events rather than polling.</li>
+                <li>
+                    Equipment panel now includes a <strong>paperdoll</strong> that reflects player gender and
+                    hair stage, driven by the same hair profile logic used in-game.
+                </li>
             </ul>
         </section>
 
@@ -166,50 +205,130 @@
 
             <div class="about-grid">
                 <div>
-                    <h3>Code Quality & Architecture</h3>
+                    <h3>Code Quality &amp; Architecture</h3>
                     <ul>
                         <li>Consistent naming conventions and strict encapsulation of gameplay state.</li>
-                        <li>Separation of data (ScriptableObjects) from behavior (controllers and managers).</li>
+                        <li>Separation of data (ScriptableObjects/JSON) from behavior (controllers and managers).</li>
                         <li>Use of events and interfaces to decouple UI from gameplay systems.</li>
                         <li>Refactoring passes to remove unused methods and keep responsibilities clear.</li>
                     </ul>
                     <br />
 
-                    <h3>Tools & Workflow</h3>
+                    <h3>Tools &amp; Workflow</h3>
                     <ul>
                         <li>Git-based version control with feature branches and descriptive commits.</li>
                         <li>In-editor debug views for wave states, reputation, and AI decisions.</li>
                         <li>Use of Unity Profiler to track spikes from spawning, pathfinding, and UI updates.</li>
+                        <li>
+                            External Node.js/React tooling feeding JSON into Unity, so designers (future me or collaborators)
+                            can work without touching engine internals.
+                        </li>
                     </ul>
                 </div>
                 <div>
-                    <h3>Production Mindset</h3>
-                    <ul>
-                        <li>Designing systems with extension in mind (new enemies, new villages, new wave types).</li>
-                        <li>Planning toward an Early Access release with a clear vertical slice.</li>
-                        <li>Balancing scope carefully: strong core loop first, content expansion second.</li>
+                    <h3>Tech Stack</h3>
+                    <ul class="pill-list">
+                        <li>Unity (C#)</li>
+                        <li>2D URP</li>
+                        <li>ScriptableObjects &amp; JSON-driven content</li>
+                        <li>Node.js &amp; Express</li>
+                        <li>React (item/vendor dashboard)</li>
+                        <li>REST APIs &amp; tooling</li>
+                        <li>Git / GitHub</li>
                     </ul>
-                    <br />
 
                     <h3>My Role</h3>
                     <p>
-                        I am the sole developer on Soul Snatched. I handle programming, system design, and
-                        implementation, while leveraging free and placeholder art so I can prioritize gameplay,
+                        I am the sole developer on Soul Snatched. I handle programming, system design, backend tools,
+                        and implementation, while leveraging free and placeholder art so I can prioritize gameplay,
                         feel, and scalability.
                     </p>
                 </div>
             </div>
         </section>
+		
+		<!-- Credits -->
+		<section class="section">
+			<div class="section-header">
+				<h2>Credits & Asset Attribution</h2>
+				<p class="section-subtitle">Acknowledging artists and creators whose assets helped bring the prototype to life.</p>
+			</div>
+
+			<div class="about-grid">
+				<div>
+					<h3>Character Art</h3>
+					<ul>
+						<li>
+							<strong>Male & Female Protagonists</strong> – Custom art created by
+							<strong>Sammy</strong> (friend / collaborator).
+						</li>
+					</ul>
+
+					<h3>Enemy, NPC, and Environment Art</h3>
+					<ul>
+						<li>
+							<strong>Monsters & Pirates Pixel Art Pack</strong>  
+							by <strong>Kenny / PixelFrog / LionRoot</strong>  
+							(Unity Asset Store, free package)
+						</li>
+						<li>
+							<strong>Bringer of Death – Free</strong>  
+							by <strong>Edwin del Rio</strong>  
+							(Unity Asset Store)
+						</li>
+						<li>
+							<strong>Cainos Pixel Art Icons & Assets</strong>  
+							by <strong>Cainos / Cainos Pixel Art</strong>
+						</li>
+						<li>
+							<strong>CaptainCatSparrow Pixel Assets</strong>  
+							by <strong>CaptainCatSparrow</strong>
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<h3>UI & Icons</h3>
+					<ul>
+						<li>
+							<strong>Addin’s Weapon Icons – RPG Icon Pack</strong>  
+							by <strong>Addin</strong> (Unity Asset Store)
+						</li>
+						<li>
+							Minor icons from <strong>Cainos Pixel Art Icon Pack</strong>
+						</li>
+					</ul>
+
+					<h3>Sound & SFX</h3>
+					<ul>
+						<li>CABAL - Command and Conquer Tiberian Sun.</li>
+					</ul>
+				</div>
+			</div>
+
+			<p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.7;">
+				Soul Snatched: Ginger Edition uses placeholder and third-party assets for prototype purposes only.  
+				All art and audio remain the property of their respective creators.
+			</p>
+		</section>
 
         <!-- Roadmap / status -->
         <section class="section">
             <div class="section-header">
-                <h2>Current Status & Roadmap</h2>
+                <h2>Current Status &amp; Roadmap</h2>
             </div>
             <ul>
                 <li>Core wave, morality, and reputation systems: functional.</li>
                 <li>Vendor and equipment systems: implemented and connected to reputation.</li>
-                <li>Next steps: content polish, more enemy types, and public demo build.</li>
+                <li>
+                    Node.js/React item &amp; vendor dashboard: implemented, exporting JSON that the Unity
+                    importers consume to rebuild the in-game economy.
+                </li>
+                <li>
+                    Recent work: new enemy prefabs (Monsters &amp; Bringer of Death), updated zombie animations,
+                    and paperdoll visuals tied to hair stages.
+                </li>
+                <li>Next steps: content polish, more enemy types, dashboard quality-of-life, and public demo build.</li>
             </ul>
         </section>
     </main>

@@ -79,22 +79,38 @@
                         <li>Vendor and shop UI with reputation-based inventory and item quality.</li>
                         <li>Equipment and stats system driving player power and survivability.</li>
                         <li>Event-driven audio and UI feedback for combat, waves, and upgrades.</li>
+                        <li>
+                            Data-driven item &amp; vendor pipeline: external Node.js/React dashboard exports
+                            JSON (items, stats, rarities, vendors, vendor stock) that Unity imports at runtime.
+                        </li>
                     </ul>
+
+                    <h3>Tools &amp; Pipeline</h3>
+                    <p>
+                        Beyond the game client, Soul Snatched includes a full tooling stack: a Node.js/Express
+                        backend and React dashboard used to author items, enchantments, and vendor inventories.
+                        The tools export clean JSON which is consumed by Unity importers to rebuild
+                        <code>ItemDef</code> ScriptableObjects and vendor stock automatically, keeping design
+                        and implementation in sync without manual data entry.
+                    </p>
 
                     <h3>My Role</h3>
                     <p>
                         Solo developer - responsible for all gameplay programming, systems design,
-                        UI implementation, and project architecture.
+                        UI implementation, backend tools, and project architecture.
                     </p>
 
                     <h3>Tech Stack</h3>
-					<ul class="pill-list">
-						<li>Unity (C#)</li>
-						<li>2D URP</li>
-						<li>ScriptableObjects</li>
-						<li>Event-driven architecture</li>
-						<li>Custom AI and wave controllers</li>
-					</ul>
+                    <ul class="pill-list">
+                        <li>Unity (C#)</li>
+                        <li>2D URP</li>
+                        <li>ScriptableObjects</li>
+                        <li>Event-driven architecture</li>
+                        <li>Custom AI and wave controllers</li>
+                        <li>Node.js &amp; Express (REST/JSON)</li>
+                        <li>React dashboard</li>
+                        <li>Git-based workflow</li>
+                    </ul>
 
                     <div class="project-links">
                         <a href="https://github.com/moesavari/soul-snatcher-ginger-edition" target="_blank" class="btn secondary">

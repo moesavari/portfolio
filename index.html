@@ -18,7 +18,8 @@
             </a>
             <div class="nav-links">
                 <a href="index.html#soul-snatched">Soul Snatched</a>
-                <a href="index.html#projects">Projects</a>
+                
+                <a href="index.html#echoes-of-genesis">Echoes of Genesis</a><a href="index.html#projects">Projects</a>
                 <a href="index.html#about">About</a>
             </div>
         </div>
@@ -33,9 +34,10 @@
                     Systems-focused Unity & Unreal dev, specializing in combat, AI, UI, and game feel.
                 </p>
                 <div class="hero-actions">
-                    <a href="#soul-snatched" class="btn primary">View Soul Snatched</a>
-                    <a href="#projects" class="btn secondary">All Projects</a>
-                </div>
+					<a class="btn primary" href="soul-snatched.html">View Soul Snatched</a>
+					<a class="btn primary" href="echoes-of-genesis.html">View Echoes of Genesis</a>
+					<a class="btn secondary" href="#projects">Other Projects</a>
+				</div>
             </div>
             <div class="hero-meta">
                 <p>Based in Leland, NC</p>
@@ -47,8 +49,8 @@
                     <a href="https://linkedin.com/in/mohammedsavari" target="_blank">LinkedIn</a>
                 </p>
             </div>
-        </div>
-    </header>
+		</div>
+</header>
 
     <main>
         <!-- Soul Snatched - MAIN PROJECT -->
@@ -142,55 +144,155 @@
             </div>
         </section>
 
+        
+        <!-- Echoes of Genesis - DESIGN CASE STUDY -->
+        <section id="echoes-of-genesis" class="section">
+            <div class="section-header">
+                <h2>Echoes of Genesis</h2>
+                <p class="section-subtitle">
+                    Systems &amp; narrative design case study, large-scale class design, encounter structure, and world architecture.
+                </p>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-description">
+                    <h3>Overview</h3>
+                    <p>
+                        Echoes of Genesis is a long-form game design project exploring MMO-scale systems: specialization-driven classes,
+                        scalable combat frameworks, and narrative delivered as a gameplay system. This page showcases design artifacts and
+                        production-ready concepts (not a gameplay build).
+                    </p>
+
+                    <h3>Design Pillars</h3>
+                    <ul>
+                        <li>Systems-first architecture built for expansion.</li>
+                        <li>Strong class identity through specialization and resource mechanics.</li>
+                        <li>Encounters designed for coordination, readability, and role clarity.</li>
+                        <li>Narrative delivered through diegetic UI and in-world artifacts (CABAL / archives), not exposition dumps.</li>
+                    </ul>
+					
+					<h3>Design case study highlights</h3>
+					<ul>
+						<li>Specialization-driven class framework with role clarity.</li>
+						<li>Encounter design built for telegraphs, coordination, and readability.</li>
+						<li>Diegetic UI concept (security-desk login) used for lore delivery.</li>
+					</ul>
+
+                    <h3>Highlighted Systems</h3>
+                    <ul>
+                        <li><strong>Class &amp; specialization framework:</strong> role clarity, tradeoffs, and modular growth.</li>
+                        <li><strong>Resource/alignment mechanics:</strong> Void/Light/Twilight/Cosmos themes influencing ability behavior.</li>
+                        <li><strong>Encounter design:</strong> multi-phase fights built around teamwork and movement.</li>
+                        <li><strong>Diegetic UI concepts:</strong> security-desk login experience and foreshadowing systems.</li>
+                    </ul>
+
+                    <h3>Tools &amp; Artifacts</h3>
+                    <ul class="pill-list">
+                        <li>GDD (systems &amp; pillars)</li>
+                        <li>Class guide / specialization docs</li>
+                        <li>Encounter concepts</li>
+                        <li>TDD excerpts (scalability awareness)</li>
+                        <li>UI mockups &amp; concept art</li>
+                    </ul>
+					
+                    <a href="echoes-of-genesis.html" class="btn primary" style="align-self:flex-start;">Open Full Case Study</a>
+					
+                </div>
+
+                <div class="project-media">
+                    
+                    <div class="media-gif">
+                        <img src="assets/eog/EOG_Logo.png" alt="Echoes of Genesis logo" class="media-gif-image">
+                        <div class="media-caption">Echoes of Genesis, project identity</div>
+                    </div>
+
+                    <div class="media-gif">
+                        <img src="assets/eog/Vantropolis.png" alt="Vantropolis concept art" class="media-gif-image">
+                        <div class="media-caption">Vantropolis, cyberpunk megacity concept</div>
+                    </div>
+                    <div class="media-gif">
+                        <img src="assets/eog/ScorchedExpanse.png" alt="Scorched Expanse concept art" class="media-gif-image">
+                        <div class="media-caption">Scorched Expanse, environmental zone concept</div>
+                    </div>
+
+					<div class="media-notes">
+                        <h3>What to Look For</h3>
+                        <ul>
+                            <li>Clear system goals → mechanics → player outcomes.</li>
+                            <li>Scalable class identities (not just “more damage”).</li>
+                            <li>Design decisions informed by MMO constraints.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Other Projects Section -->
         <section id="projects" class="section">
             <div class="section-header">
-                <h2>Other Projects</h2>
+                <h2>Shipped Projects</h2>
                 <p class="section-subtitle">
-                    Additional work demonstrating combat systems, UI, and engine versatility.
+                    Commercial releases across PC, mobile, and console platforms.
                 </p>
             </div>
 
             <div class="cards">
-                <!-- EOG Prototype placeholder -->
                 <article class="card">
-                    <h3>Echoes of Genesis - Combat Prototype (WIP)</h3>
+                    <h3>Sentience</h3>
                     <p>
-                        Compact Unreal Engine 5 prototype focused on combat feel, class-based abilities,
-                        and network-ready architecture. Rebuilt from scratch as a focused combat slice to
-                        better demonstrate UE5/C++ gameplay engineering.
+                        Sentience is an online multiplayer game where 2 teams of up to 4 players wrestle for control of society long after the humans they were built to replace have disappeared.
                     </p>
-                    <ul>
-                        <li>Ability framework (projectile, AoE, targeted).</li>
-                        <li>Combat loop with hit reactions and cooldowns.</li>
-                        <li>Clean separation of data (abilities) and behavior (casters).</li>
-                    </ul>
+					<br>
                     <p class="card-links">
-                        <span class="pill">Unreal Engine 5</span>
-                        <span class="pill">C++ and Blueprints</span>
-                        <span class="pill">Combat Systems</span>
+                        <a href="https://store.steampowered.com/app/1352540/Sentience/" target="_blank" class="btn primary">Steam</a>
+                        <span class="pill">Shipped</span>
+                        <span class="pill">Unity</span>
                     </p>
                 </article>
 
-                <!-- Add more cards later if you want -->
                 <article class="card">
-                    <h3>Sentience / Bring to Light (Shipped titles)</h3>
+                    <h3>Bring to Light</h3>
                     <p>
-                        Contributed gameplay and systems programming at Red Meat Games on Sentience and
-                        Bring to Light using Unity/C#. Focus areas included AI behavior, UI, and reusable
-                        gameplay systems.
+                        First-person survival horror centered around light-based mechanics, exploration, and player guidance through feedback and UI.
                     </p>
-                    <ul>
-                        <li>Shipped commercial Steam titles.</li>
-                        <li>Worked in an agile, multi-disciplinary team.</li>
-                    </ul>
+					<br>
                     <p class="card-links">
+                        <a href="https://store.steampowered.com/app/636720/Bring_to_Light/" target="_blank" class="btn primary">Steam</a>
+                        <span class="pill">Shipped</span>
                         <span class="pill">Unity</span>
-                        <span class="pill">Gameplay Programming</span>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Project Dark</h3>
+                    <p>
+                        Narrative-driven, immersive audio game with interactive branching storylines.
+                    </p>
+					<br>
+                    <p class="card-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.RedMeatGames.ProjectDark&hl=en_US" target="_blank" class="btn primary">Google Play</a>
+                        <span class="pill">Shipped</span>
+						<span class="pill">Unity</span>
+                        <span class="pill">Mobile</span>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Finding Heidi</h3>
+                    <p>
+                        Narrative adventure released across mobile and console platforms, with emphasis on accessibility and cross-platform delivery.
+                    </p>
+					<br>
+                    <p class="card-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.RedMeatGames.FindingHeidiPrem" target="_blank" class="btn primary">Google Play</a>
+                        <a href="https://apps.apple.com/il/app/finding-heidi/id1607544480" target="_blank" class="btn primary">iOS</a>
+                        <a href="https://www.nintendo.com/us/store/products/finding-heidi-switch/" target="_blank" class="btn primary">Switch</a>
+                        <span class="pill">Shipped</span>
+						<span class="pill">Unity</span>
                     </p>
                 </article>
             </div>
-        </section>
+
 
         <!-- About / Contact -->
         <section id="about" class="section">

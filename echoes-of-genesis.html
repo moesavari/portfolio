@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Echoes of Genesis, Design Case Study</title>
+    <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body>
+<nav class="top-nav">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/emberforge-logo.png" alt="EmberForge logo" class="brand-logo" />
+            <span class="brand-text">EmberForge Studios</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+        </div>
+    </div>
+</nav>
+    <header class="hero">
+        <div class="hero-inner">
+            <div>
+                <h1>Echoes of Genesis</h1>
+                <h2>Systems &amp; Narrative Design Case Study</h2>
+                <p class="tagline">MMO-scale class design, encounter structure, and world architecture, curated for portfolio signal (not a build).</p>
+                <div class="hero-actions">
+            <a href="index.html#echoes-of-genesis" class="btn secondary">Back to Portfolio</a>
+            <a href="#visuals" class="btn primary">Visuals</a>
+            <a href="#systems" class="btn primary">Systems</a>
+        </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-header">
+                <h2>Overview</h2>
+                <p class="section-subtitle">What this project demonstrates (and why it belongs in a portfolio).</p>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-description">
+                    <p>
+                        <strong>Echoes of Genesis</strong> is a long-form game design project focused on building scalable MMO-style systems:
+                        specialization-driven classes, modular combat frameworks, and narrative delivered through in-world artifacts and diegetic UI.
+                    </p>
+                    <p>
+                        This page intentionally highlights <strong>design frameworks and production-ready concepts</strong>, not a gameplay build —
+                        to demonstrate large-scale systems thinking, readability, and expansion planning.
+                    </p>
+
+                    <h3>Design Pillars</h3>
+                    <ul>
+                        <li><strong>Systems-first scalability:</strong> mechanics that expand cleanly across content drops.</li>
+                        <li><strong>Class identity:</strong> each kit has constraints and a reason to exist beyond raw numbers.</li>
+                        <li><strong>Readable combat:</strong> telegraphs, role clarity, and meaningful decision space.</li>
+                        <li><strong>Narrative as gameplay:</strong> discovery via CABAL/archives/diegetic UI instead of exposition dumps.</li>
+                    </ul>
+
+                    <h3>Core Deliverables</h3>
+                    <ul class="pill-list">
+                        <li>GDD (pillars &amp; systems)</li>
+                        <li>Class/specialization guide</li>
+                        <li>Encounter concepts</li>
+                        <li>TDD excerpts (technical awareness)</li>
+                        <li>UI concepts (security-desk login)</li>
+                        <li>Concept art &amp; tone references</li>
+                    </ul>
+                </div>
+
+                <div class="project-media">
+					<figure class="media-card">
+						<img src="assets/eog/EOG_TAR_SplashScreen.png" alt="The Abandoned Realm splash screen" loading="lazy" />
+						<figcaption>The Abandoned Realm, splash / tone reference</figcaption>
+					</figure>
+						
+					<figure class="media-card">
+						<img src="assets/eog/EOG_Logo.png" alt="Echoes of Genesis logo" loading="lazy" />
+						<figcaption>Project identity</figcaption>
+					</figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="visuals" class="section">
+            <div class="section-header">
+                <h2>World &amp; Visual Direction</h2>
+                <p class="section-subtitle">Zones are designed to be readable, distinct, and mechanically purposeful.</p>
+            </div>
+
+            <div class="media-grid">
+                
+                <figure class="media-card">
+                    <img src="assets/eog/Erythria_Prime.png" alt="Erythria Prime world concept" loading="lazy" />
+                    <figcaption>Erythria Prime, world identity</figcaption>
+                </figure>
+                
+                <figure class="media-card">
+                    <img src="assets/eog/Vantropolis.png" alt="Vantropolis concept art" loading="lazy" />
+                    <figcaption>Vantropolis, cyberpunk megacity concept</figcaption>
+                </figure>
+                
+                <figure class="media-card">
+                    <img src="assets/eog/ScorchedExpanse.png" alt="Scorched Expanse concept art" loading="lazy" />
+                    <figcaption>Scorched Expanse, harsh environmental zone</figcaption>
+                </figure>
+                
+                <figure class="media-card">
+                    <img src="assets/eog/Void_Zone.png" alt="Void zone concept art" loading="lazy" />
+                    <figcaption>Void-corrupted zone, corruption &amp; threat framing</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="systems" class="section">
+            <div class="section-header">
+                <h2>Systems Deep Dives</h2>
+                <p class="section-subtitle">The frameworks that keep the universe scalable and coherent.</p>
+            </div>
+
+            <div class="project-grid">
+                <div class="project-description">
+                    <h3>1) Class &amp; Specialization Framework</h3>
+                    <ul>
+                        <li>Classes are structured around fantasy + role clarity (DPS, tank, support, hybrids).</li>
+                        <li>Specializations create distinct play patterns and tradeoffs rather than linear power.</li>
+                        <li>Goal: long-term balance through identity + constraints, not “one class does everything.”</li>
+                    </ul>
+
+                    <h3>2) Cosmic Alignment &amp; Attributes</h3>
+                    <ul>
+                        <li><strong>Twilight (Shadow + Light):</strong> balance and versatility.</li>
+                        <li><strong>Abyssal (Shadow + Void):</strong> obscuration and destruction.</li>
+                        <li><strong>Cosmos (Void + Light):</strong> creation and transcendence.</li>
+                        <li>Alignments influence ability behavior, visuals, and encounter theming for cohesion.</li>
+                    </ul>
+
+                    <h3>3) Encounter Structure</h3>
+                    <ul>
+                        <li>Multi-phase encounters emphasize movement, teamwork, and readability.</li>
+                        <li>Role responsibilities create replayable learning loops and reduce “DPS check” design.</li>
+                        <li>Internal example reference: multi-boss → fusion phase encounter concepts.</li>
+                    </ul>
+
+                    <h3>4) Diegetic UI: Security Desk Login Concept</h3>
+                    <ul>
+                        <li>Login framed as an in-world interaction with a reactive security guard NPC.</li>
+                        <li>Diegetic feedback: holographic fields, contextual dialogue, queue-time interaction.</li>
+                        <li>Mysterious cosmic cat cameo foreshadows future lore (Astralborn).</li>
+                        <li>Design goal: UX that feels like worldbuilding, not a separate menu screen.</li>
+                    </ul>
+                </div>
+
+                <div class="project-media">
+                    
+                <figure class="media-card">
+                    <img src="assets/eog/Lightning_Tempest.png" alt="Lightning Tempest concept art" loading="lazy" />
+                    <figcaption>Elemental Adept, Lightning Tempest (fast chain-damage identity)</figcaption>
+                </figure>
+                    
+                <figure class="media-card">
+                    <img src="assets/eog/Necroweaver.png" alt="Necroweaver concept art" loading="lazy" />
+                    <figcaption>Umbrawarden, Necroweaver (summoning/dark magic identity)</figcaption>
+                </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Races &amp; Faction Readability</h2>
+                <p class="section-subtitle">Silhouette and aesthetic choices that reinforce gameplay expectations.</p>
+            </div>
+
+            <div class="media-grid">
+                
+                <figure class="media-card">
+                    <img src="assets/eog/Mortalis.png" alt="Mortalis concept art" loading="lazy" />
+                    <figcaption>Mortalis, baseline human identity &amp; silhouette</figcaption>
+                </figure>
+				
+				<figure class="media-card">
+                    <img src="assets/eog/Omnilith.jpg" alt="Omnilith concept art" loading="lazy" />
+                    <figcaption>Omnilith, cosmic mythos anchor</figcaption>
+                </figure>
+				
+				<figure class="media-card">
+                    <img src="assets/eog/Valkyrie_1.png" alt="Valkyrie concept art" loading="lazy" />
+                    <figcaption>Val’kyr, celestial warrior silhouette</figcaption>
+                </figure>
+                
+                <figure class="media-card">
+                    <img src="assets/eog/Machina.jpg" alt="Machina concept art" loading="lazy" />
+                    <figcaption>Machina, cybernetic faction visual direction</figcaption>
+                </figure>
+                
+            </div>
+        </section>
+
+       <section class="section">
+            <div class="section-header">
+                <h2>Key Characters</h2>
+                <p class="section-subtitle">Narrative anchors used to deliver systems and worldbuilding through gameplay.</p>
+            </div>
+
+            <div class="key-characters-grid">
+                <article class="card character-card">
+                    <h3>Rylan Kane</h3>
+                    <p>Legion commander and ex-Spectre who leads through tactical calm, dry humor, and a stubborn moral line. Built to bridge player progression with the Omnilith mythos and long-term endgame stakes.</p>
+                    <div class="character-media">
+					<img src="assets/eog/Rylan.png" alt="Rylan concept art" class="char-img char-rylan"">
+					</div>
+					<div class="project-links">
+                        <span class="pill">Legion Commander</span>
+                        <span class="pill">Tactical Lead</span>
+                        <span class="pill">Omnilith Foreshadowing</span>
+                    </div>
+                </article>
+
+                <article class="card character-card">
+                    <h3>Serina Altharys</h3>
+                    <p>Cybernetic marksman defined by silence, precision, and an almost comical devotion to food. She converts “cool sniper fantasy” into clear gameplay reads: patience, positioning, and lethal decision-making.</p>
+					<div class="character-media">
+					<img src="assets/eog/Serina.png" alt="Serina concept art" class="char-img char-serina">
+					</div>
+					<div class="project-links">
+                        <span class="pill">Silent Precision</span>
+                        <span class="pill">Ranged Specialist</span>
+                        <span class="pill">Crit Chain</span>
+                    </div>
+                </article>
+
+                <article class="card character-card">
+                    <h3>Clyreus</h3>
+                    <p>Gentle-giant Machina protector with a builder’s heart. He represents the “create/repair/protect” axis of the world—bringing engineering fantasy and frontline support into the party’s emotional core.</p>
+					<div class="character-media">
+					<img src="assets/eog/Clyreus.png" alt="Clyreus concept art" class="char-img char-clyreus">
+					</div>
+					<div class="project-links">
+                        <span class="pill">Protector</span>
+                        <span class="pill">Machina Engineer</span>
+                        <span class="pill">Builder Fantasy</span>
+                    </div>
+                </article>
+
+                <article class="card character-card">
+                    <h3>Arlena Solraven</h3>
+                    <p>Inquisitor and Angel’s Disciple—warm, graceful, and absolutely willing to judge you into next week. She embodies Light as both mercy and authority, giving you a strong moral-pressure character with healer/support identity.</p>
+					<div class="character-media">
+					<img src="assets/eog/Arlena.png" alt="Arlena concept art" class="char-img char-arlena">
+					</div>
+					<div class="project-links">
+                        <span class="pill">Arbiter of Light</span>
+                        <span class="pill">Moral Authority</span>
+                        <span class="pill">Radiant Presence</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+		
+		<section class="section">
+            <div class="section-header">
+                <h2>Credits &amp; Notes</h2>
+                <p class="section-subtitle">Attribution, placeholders, and the broader narrative framework.</p>
+            </div>
+
+            <div class="project-description">
+                <p>
+                    Some imagery shown in this case study includes <strong>AI-generated placeholder visuals</strong> used to communicate tone, silhouette,
+                    and thematic direction during early design. These placeholders will be replaced with final, original artwork as the project’s art
+                    production ramps up.
+                </p>
+                <p>
+                    Several concept pieces and visual references were produced by <strong>Orrathai Nalkon</strong> as part of early exploration and
+                    direction setting.
+                </p>
+                <p>
+                    Echoes of Genesis is organized as a multi-title universe: <strong>four main titles</strong> supported by a <strong>mobile companion experience</strong>
+                    and a <strong>single-player perspective entry</strong>, with shared lore, documentation, and narrative continuity designed to be discoverable
+                    across releases.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>My Role</h2>
+            </div>
+            <div class="project-description">
+                <p>
+                    I lead the systems design and narrative architecture: defining class frameworks, encounter structure, world cohesion rules,
+                    and player-facing delivery methods (including diegetic UI concepts). The goal is consistency, scalability, and clarity —
+                    so the universe can expand without breaking itself.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Moe Savari, Echoes of Genesis</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

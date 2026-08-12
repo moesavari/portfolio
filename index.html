@@ -1,343 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moe Savari - Gameplay & UI Programmer</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Moe Savari, gameplay systems engineer and independent game developer behind Haunted Heists.">
+    <title>Moe Savari | Gameplay Systems Engineer</title>
+    <link rel="stylesheet" href="style.css?v=9">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
     <link rel="shortcut icon" href="assets/emberforge_favicon.ico">
 </head>
 <body>
-    <nav class="top-nav">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="top-nav" aria-label="Primary navigation">
         <div class="nav-inner">
-            <a href="index.html" class="nav-brand">
-                <img src="assets/emberforge-logo.png" alt="EmberForge logo" class="brand-logo" />
+            <a href="index.html" class="nav-brand" aria-label="EmberForge Studios home">
+                <img src="assets/emberforge-logo.png" alt="" class="brand-logo">
                 <span class="brand-text">EmberForge Studios</span>
             </a>
             <div class="nav-links">
-                <a href="index.html#soul-snatched">Soul Snatched</a>
-                
-                <a href="index.html#echoes-of-genesis">Echoes of Genesis</a><a href="index.html#projects">Projects</a>
-                <a href="index.html#about">About</a>
+                <a href="#haunted-heists">Haunted Heists</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="mailto:moe.savari@gmail.com">Contact</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero portfolio-hero">
         <div class="hero-inner">
-            <div>
+            <div class="hero-copy">
+                <p class="eyebrow">Gameplay systems • AI • multiplayer</p>
                 <h1>Moe Savari</h1>
-                <h2>Gameplay & UI Programmer</h2>
+                <h2>Gameplay Systems Engineer &amp; Independent Game Developer</h2>
                 <p class="tagline">
-                    Systems-focused Unity & Unreal dev, specializing in combat, AI, UI, and game feel.
+                    I build readable, reactive game systems in Unreal and Unity—from server-authoritative
+                    multiplayer and AI directors to inventory, UI, and the little moments that make a game feel alive.
                 </p>
                 <div class="hero-actions">
-					<a class="btn primary" href="soul-snatched.html">View Soul Snatched</a>
-					<a class="btn primary" href="echoes-of-genesis.html">View Echoes of Genesis</a>
-					<a class="btn secondary" href="#projects">Other Projects</a>
-				</div>
+                    <a class="btn primary" href="haunted-heists.html">Explore Haunted Heists</a>
+                    <a class="btn secondary" href="#projects">View Other Work</a>
+                </div>
             </div>
-            <div class="hero-meta">
-                <p>Based in Leland, NC</p>
-                <p>
-                    <a href="mailto:moe.savari@gmail.com">moe.savari@gmail.com</a>
-                </p>
-                <p>
-                    <a href="https://github.com/moesavari" target="_blank">GitHub</a> -
-                    <a href="https://linkedin.com/in/mohammedsavari" target="_blank">LinkedIn</a>
-                </p>
-            </div>
-		</div>
-</header>
+            <aside class="hero-proof" aria-label="Professional highlights">
+                <span class="proof-kicker">Currently building</span>
+                <strong>Haunted Heists</strong>
+                <p>1–6 player co-op horror extraction game in Unreal Engine 5.</p>
+                <div class="proof-stats">
+                    <span><b>7+</b> years</span>
+                    <span><b>4</b> shipped titles</span>
+                    <span><b>NC</b> based</span>
+                </div>
+            </aside>
+        </div>
+    </header>
 
-    <main>
-        <!-- Soul Snatched - MAIN PROJECT -->
-        <section id="soul-snatched" class="section highlight">
-            <div class="section-header">
-                <h2>Soul Snatched: Ginger Edition</h2>
-                <p class="section-subtitle">
-                    2D top-down village defense ARPG - soul-siphoning, morality, and wave-based survival.
-                </p>
-            </div>
-
-            <div class="project-grid">
-                <div class="project-description">
-                    <h3>Overview</h3>
-                    <p>
-                        Soul Snatched: Ginger Edition is a 2D top-down action RPG where a lone ginger
-                        defends villages from nightly zombie invasions. By day, you prepare defenses,
-                        upgrade gear, and manage relationships. By night, you survive waves, siphon souls,
-                        and walk the line between protector and monster.
+    <main id="main-content">
+        <section id="haunted-heists" class="section flagship-section">
+            <div class="section-header split-header">
+                <div>
+                    <p class="eyebrow spectral">Flagship project • MVP complete</p>
+                    <h2>Haunted Heists</h2>
+                    <p class="section-subtitle">
+                        Steal valuables from haunted properties. Survive what notices. Get out before the house decides you belong there.
                     </p>
+                </div>
+                <div class="status-chip"><span></span> Pre-alpha polishing</div>
+            </div>
 
-                    <h3>Core Systems Implemented</h3>
-                    <ul>
-                        <li>Day/Night loop controlling village recovery, crafting, and zombie invasions.</li>
-                        <li>Wave-based enemy spawning with difficulty scaling and multi-lane routing.</li>
-                        <li>Morality and reputation system tied to soul-siphoning villagers.</li>
-                        <li>Hair-as-magic visual indicator that tracks your soul power and sanity.</li>
-                        <li>Vendor and shop UI with reputation-based inventory and item quality.</li>
-                        <li>Equipment and stats system driving player power and survivability.</li>
-                        <li>Event-driven audio and UI feedback for combat, waves, and upgrades.</li>
-                        <li>
-                            Data-driven item &amp; vendor pipeline: external Node.js/React dashboard exports
-                            JSON (items, stats, rarities, vendors, vendor stock) that Unity imports at runtime.
-                        </li>
+            <article class="flagship-card">
+                <a class="flagship-visual" href="haunted-heists.html" aria-label="Open the Haunted Heists case study">
+                    <img src="assets/haunted-heists/haunted-heists-keyart.webp" alt="Haunted Heists title screen showing a panicked thief hiding from a ghost">
+                    <span class="visual-scrim"></span>
+                    <span class="visual-label">STEAL. SURVIVE. GET OUT.</span>
+                </a>
+                <div class="flagship-content">
+                    <p>
+                        A server-authoritative cooperative horror game where greed drives the threat.
+                        Players break in, steal loot, manage panic, and escape while an adaptive Director turns the house against them.
+                    </p>
+                    <div class="feature-rail" role="group" aria-label="Haunted Heists highlights">
+                        <div><strong>1–6</strong><span>Player co-op</span></div>
+                        <div><strong>UE5</strong><span>C++ &amp; Blueprints</span></div>
+                        <div><strong>AI</strong><span>Adaptive Director</span></div>
+                    </div>
+                    <ul class="compact-list">
+                        <li>Complete vehicle-to-break-in-to-extraction gameplay loop</li>
+                        <li>Ghost state machines, perception, investigation, and chase behavior</li>
+                        <li>Panic, House Activity, dynamic scares, loot, inventory, and mission results</li>
                     </ul>
-
-                    <h3>Tools &amp; Pipeline</h3>
-                    <p>
-                        Beyond the game client, Soul Snatched includes a full tooling stack: a Node.js/Express
-                        backend and React dashboard used to author items, enchantments, and vendor inventories.
-                        The tools export clean JSON which is consumed by Unity importers to rebuild
-                        <code>ItemDef</code> ScriptableObjects and vendor stock automatically, keeping design
-                        and implementation in sync without manual data entry.
-                    </p>
-
-                    <h3>My Role</h3>
-                    <p>
-                        Solo developer - responsible for all gameplay programming, systems design,
-                        UI implementation, backend tools, and project architecture.
-                    </p>
-
-                    <h3>Tech Stack</h3>
-                    <ul class="pill-list">
-                        <li>Unity (C#)</li>
-                        <li>2D URP</li>
-                        <li>ScriptableObjects</li>
-                        <li>Event-driven architecture</li>
-                        <li>Custom AI and wave controllers</li>
-                        <li>Node.js &amp; Express (REST/JSON)</li>
-                        <li>React dashboard</li>
-                        <li>Git-based workflow</li>
-                    </ul>
-
                     <div class="project-links">
-                        <a href="https://github.com/moesavari/soul-snatcher-ginger-edition" target="_blank" class="btn secondary">
-                            View Code on GitHub
-                        </a>
-                        <a href="soul-snatched.html" class="btn primary">
-                            Full Case Study
-                        </a>
+                        <a href="haunted-heists.html" class="btn primary">Full Case Study</a>
+                        <span class="pill">Solo Developer</span>
+                        <span class="pill">Proprietary</span>
                     </div>
                 </div>
-
-                <div class="project-media">
-                    <div class="media-gif">
-                        <img src="assets/gifs/Reputation.gif"
-                             alt="Soul siphoning and reputation change in Soul Snatched"
-                             class="media-gif-image" />
-                    </div>
-                    <div class="media-notes">
-                        <h3>What to Look For</h3>
-                        <ul>
-                            <li>Reputation shifting as the player siphons souls from villagers.</li>
-                            <li>Hair growth / soul meter changing as powers are used.</li>
-                            <li>Wave manager spawning and pacing zombie attacks.</li>
-                            <li>UI updating dynamically with equipment, souls, and currency changes.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </article>
         </section>
 
-        
-        <!-- Echoes of Genesis - DESIGN CASE STUDY -->
-        <section id="echoes-of-genesis" class="section">
-            <div class="section-header">
-                <h2>Echoes of Genesis</h2>
-                <p class="section-subtitle">
-                    Systems &amp; narrative design case study, large-scale class design, encounter structure, and world architecture.
-                </p>
-            </div>
-
-            <div class="project-grid">
-                <div class="project-description">
-                    <h3>Overview</h3>
-                    <p>
-                        Echoes of Genesis is a long-form game design project exploring MMO-scale systems: specialization-driven classes,
-                        scalable combat frameworks, and narrative delivered as a gameplay system. This page showcases design artifacts and
-                        production-ready concepts (not a gameplay build).
-                    </p>
-
-                    <h3>Design Pillars</h3>
-                    <ul>
-                        <li>Systems-first architecture built for expansion.</li>
-                        <li>Strong class identity through specialization and resource mechanics.</li>
-                        <li>Encounters designed for coordination, readability, and role clarity.</li>
-                        <li>Narrative delivered through diegetic UI and in-world artifacts (CABAL / archives), not exposition dumps.</li>
-                    </ul>
-					
-					<h3>Design case study highlights</h3>
-					<ul>
-						<li>Specialization-driven class framework with role clarity.</li>
-						<li>Encounter design built for telegraphs, coordination, and readability.</li>
-						<li>Diegetic UI concept (security-desk login) used for lore delivery.</li>
-					</ul>
-
-                    <h3>Highlighted Systems</h3>
-                    <ul>
-                        <li><strong>Class &amp; specialization framework:</strong> role clarity, tradeoffs, and modular growth.</li>
-                        <li><strong>Resource/alignment mechanics:</strong> Void/Light/Twilight/Cosmos themes influencing ability behavior.</li>
-                        <li><strong>Encounter design:</strong> multi-phase fights built around teamwork and movement.</li>
-                        <li><strong>Diegetic UI concepts:</strong> security-desk login experience and foreshadowing systems.</li>
-                    </ul>
-
-                    <h3>Tools &amp; Artifacts</h3>
-                    <ul class="pill-list">
-                        <li>GDD (systems &amp; pillars)</li>
-                        <li>Class guide / specialization docs</li>
-                        <li>Encounter concepts</li>
-                        <li>TDD excerpts (scalability awareness)</li>
-                        <li>UI mockups &amp; concept art</li>
-                    </ul>
-					
-                    <a href="echoes-of-genesis.html" class="btn primary" style="align-self:flex-start;">Open Full Case Study</a>
-					
-                </div>
-
-                <div class="project-media">
-                    
-                    <div class="media-gif">
-                        <img src="assets/eog/EOG_Logo.png" alt="Echoes of Genesis logo" class="media-gif-image">
-                        <div class="media-caption">Echoes of Genesis, project identity</div>
-                    </div>
-
-                    <div class="media-gif">
-                        <img src="assets/eog/Vantropolis.png" alt="Vantropolis concept art" class="media-gif-image">
-                        <div class="media-caption">Vantropolis, cyberpunk megacity concept</div>
-                    </div>
-                    <div class="media-gif">
-                        <img src="assets/eog/ScorchedExpanse.png" alt="Scorched Expanse concept art" class="media-gif-image">
-                        <div class="media-caption">Scorched Expanse, environmental zone concept</div>
-                    </div>
-
-					<div class="media-notes">
-                        <h3>What to Look For</h3>
-                        <ul>
-                            <li>Clear system goals → mechanics → player outcomes.</li>
-                            <li>Scalable class identities (not just “more damage”).</li>
-                            <li>Design decisions informed by MMO constraints.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other Projects Section -->
         <section id="projects" class="section">
             <div class="section-header">
-                <h2>Shipped Projects</h2>
-                <p class="section-subtitle">
-                    Commercial projects shipped as part of the Red Meat Games team, contributing as a gameplay and systems programmer.
-                </p>
+                <p class="eyebrow">Selected work</p>
+                <h2>Projects &amp; Case Studies</h2>
+                <p class="section-subtitle">Production systems, experimental tools, and long-form design work.</p>
             </div>
 
-            <div class="cards">
-                <article class="card">
-                    <h3>Sentience</h3>
+            <div class="project-showcase-grid">
+                <article class="project-tile soul-tile">
+                    <div class="tile-topline"><span>Unity / C#</span><span>Systems &amp; tooling</span></div>
+                    <h3>Soul Snatched: Ginger Edition</h3>
                     <p>
-                        Sentience is an online multiplayer game where 2 teams of up to 4 players wrestle for control of society long after the humans they were built to replace have disappeared.
+                        A 2D village-defense ARPG with morality, soul siphoning, wave survival, equipment,
+                        and a custom React/Node content pipeline feeding game data into Unity.
                     </p>
-					<br>
-                    <p class="card-links">
-                        <a href="https://store.steampowered.com/app/1352540/Sentience/" target="_blank" class="btn primary">Steam</a>
-                        <span class="pill">Shipped</span>
-                        <span class="pill">Unity</span>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Bring to Light</h3>
-                    <p>
-                        First-person survival horror centered around light-based mechanics, exploration, and player guidance through feedback and UI.
-                    </p>
-					<br>
-                    <p class="card-links">
-                        <a href="https://store.steampowered.com/app/636720/Bring_to_Light/" target="_blank" class="btn primary">Steam</a>
-                        <span class="pill">Shipped</span>
-                        <span class="pill">Unity</span>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Project Dark</h3>
-                    <p>
-                        Narrative-driven, immersive audio game with interactive branching storylines.
-                    </p>
-					<br>
-                    <p class="card-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.RedMeatGames.ProjectDark&hl=en_US" target="_blank" class="btn primary">Google Play</a>
-                        <span class="pill">Shipped</span>
-						<span class="pill">Unity</span>
-                        <span class="pill">Mobile</span>
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>Finding Heidi</h3>
-                    <p>
-                        Narrative adventure released across mobile and console platforms, with emphasis on accessibility and cross-platform delivery.
-                    </p>
-					<br>
-                    <p class="card-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.RedMeatGames.FindingHeidiPrem" target="_blank" class="btn primary">Google Play</a>
-                        <a href="https://apps.apple.com/il/app/finding-heidi/id1607544480" target="_blank" class="btn primary">iOS</a>
-                        <a href="https://www.nintendo.com/us/store/products/finding-heidi-switch/" target="_blank" class="btn primary">Switch</a>
-                        <span class="pill">Shipped</span>
-						<span class="pill">Unity</span>
-                    </p>
-                </article>
-            </div>
-
-
-        <!-- About / Contact -->
-        <section id="about" class="section">
-            <div class="section-header">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-grid">
-                <div>
-                    <p>
-                        I am a gameplay and UI programmer with 7+ years of experience in Unity and Unreal,
-                        including shipped commercial titles and deep prototyping work. I specialize in
-                        combat systems, AI, UI flows, and making mechanics feel responsive and readable.
-                    </p>
-                    <p>
-                        I enjoy building systemic gameplay - things like wave managers, ability
-                        frameworks, reputation systems, and dynamic UI that clearly reflects the
-                        underlying game state.
-                    </p>
-                </div>
-                <div>
-                    <h3>Skills and Focus</h3>
-                    <ul class="pill-list">
-                        <li>Unity (C#)</li>
-                        <li>Unreal Engine 5 (C++/Blueprints)</li>
-                        <li>Gameplay Programming</li>
-                        <li>AI and Waves</li>
-                        <li>UI / UX Implementation</li>
-                        <li>Profiling and Optimization</li>
+                    <ul class="compact-list">
+                        <li>Day/night and wave orchestration</li>
+                        <li>Reputation, vendors, equipment, and dynamic UI</li>
+                        <li>External content-authoring dashboard</li>
                     </ul>
+                    <a href="soul-snatched.html" class="text-link">View case study <span aria-hidden="true">→</span></a>
+                </article>
 
-                    <h3>Contact</h3>
+                <article class="project-tile eog-tile">
+                    <div class="tile-topline"><span>Game design</span><span>World architecture</span></div>
+                    <h3>Echoes of Genesis</h3>
                     <p>
-                        Email:
-                        <a href="mailto:moe.savari@gmail.com">moe.savari@gmail.com</a><br />
-                        GitHub:
-                        <a href="https://github.com/moesavari" target="_blank">github.com/moesavari</a><br />
-                        LinkedIn:
-                        <a href="https://linkedin.com/in/mohammedsavari" target="_blank">linkedin.com/in/mohammedsavari</a>
+                        A systems and narrative design case study exploring specialization-driven classes,
+                        readable encounters, diegetic interfaces, and a scalable multi-title universe.
                     </p>
+                    <ul class="compact-list">
+                        <li>Class and specialization frameworks</li>
+                        <li>Encounter and faction readability</li>
+                        <li>Worldbuilding delivered through systems</li>
+                    </ul>
+                    <a href="echoes-of-genesis.html" class="text-link">View case study <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section shipped-section">
+            <div class="section-header">
+                <p class="eyebrow">Commercial experience</p>
+                <h2>Shipped Titles</h2>
+                <p class="section-subtitle">Gameplay and systems programming contributions as part of the Red Meat Games team.</p>
+            </div>
+
+            <div class="ship-grid">
+                <article class="ship-card">
+                    <span class="ship-number">01</span>
+                    <div><h3>Sentience</h3><p>Online multiplayer team strategy game.</p></div>
+                    <a href="https://store.steampowered.com/app/1352540/Sentience/" target="_blank" rel="noreferrer">Steam ↗</a>
+                </article>
+                <article class="ship-card">
+                    <span class="ship-number">02</span>
+                    <div><h3>Bring to Light</h3><p>First-person survival horror.</p></div>
+                    <a href="https://store.steampowered.com/app/636720/Bring_to_Light/" target="_blank" rel="noreferrer">Steam ↗</a>
+                </article>
+                <article class="ship-card">
+                    <span class="ship-number">03</span>
+                    <div><h3>Project Dark</h3><p>Immersive branching audio narrative.</p></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.RedMeatGames.ProjectDark&amp;hl=en_US" target="_blank" rel="noreferrer">Google Play ↗</a>
+                </article>
+                <article class="ship-card">
+                    <span class="ship-number">04</span>
+                    <div><h3>Finding Heidi</h3><p>Cross-platform narrative adventure.</p></div>
+                    <a href="https://www.nintendo.com/us/store/products/finding-heidi-switch/" target="_blank" rel="noreferrer">Nintendo ↗</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="about-copy">
+                <p class="eyebrow">About</p>
+                <h2>Systems first. Player experience always.</h2>
+                <p>
+                    I’m a gameplay systems engineer and independent developer with more than seven years of Unity and Unreal experience.
+                    I specialize in AI, multiplayer gameplay, UI flows, progression, and turning ambitious designs into maintainable systems.
+                </p>
+                <p>I’m currently leading Haunted Heists from concept through production under EmberForge Studios.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="mailto:moe.savari@gmail.com">Start a Conversation</a>
+                    <a class="btn secondary" href="https://github.com/moesavari" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="btn secondary" href="https://linkedin.com/in/mohammedsavari" target="_blank" rel="noreferrer">LinkedIn</a>
                 </div>
+            </div>
+            <div class="skills-panel">
+                <h3>Core Focus</h3>
+                <ul class="skill-cloud">
+                    <li>Unreal Engine 5</li><li>C++</li><li>Blueprints</li><li>Unity</li><li>C#</li>
+                    <li>Multiplayer</li><li>Gameplay AI</li><li>UI / UX</li><li>Systems Design</li><li>Optimization</li>
+                </ul>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Moe Savari - Gameplay & UI Programmer</p>
+        <p>&copy; <span id="year"></span> Moe Savari • EmberForge Studios</p>
     </footer>
 
     <script>

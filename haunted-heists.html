@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haunted Heists is Moe Savari's 1–6 player cooperative horror extraction game built in Unreal Engine 5.">
+    <title>Haunted Heists | Gameplay &amp; Technical Case Study</title>
+    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
+    <link rel="shortcut icon" href="assets/emberforge_favicon.ico">
+</head>
+<body class="haunted-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <nav class="top-nav haunted-nav" aria-label="Primary navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand" aria-label="Return to Moe Savari's portfolio">
+                <img src="assets/emberforge-logo.png" alt="" class="brand-logo">
+                <span class="brand-text">Moe Savari</span>
+            </a>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#systems">Systems</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#status">Status</a>
+                <a href="index.html">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hh-hero">
+        <div class="hh-hero-art" aria-hidden="true"></div>
+        <div class="hh-hero-shade" aria-hidden="true"></div>
+        <div class="hh-hero-inner">
+            <div class="hh-hero-copy">
+                <p class="eyebrow spectral">A co-op horror extraction game</p>
+                <h1>Haunted <span>Heists</span></h1>
+                <p class="hh-hook">
+                    Break in. Take everything worth stealing. Get out before your greed wakes the house.
+                </p>
+                <div class="hh-meta-row" role="group" aria-label="Project facts">
+                    <span>1–6 Players</span><span>Unreal Engine 5</span><span>C++ &amp; Blueprints</span><span>PC</span>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn spectral-btn" href="#overview">Enter the House</a>
+                    <a class="btn secondary" href="index.html">Back to Portfolio</a>
+                </div>
+            </div>
+            <aside class="hh-status-card">
+                <span class="proof-kicker">Development status</span>
+                <strong>MVP Complete</strong>
+                <p>The full mission loop is playable. Current work is focused on polish, presentation, content, and funding materials.</p>
+                <div class="status-line"><span></span> Pre-alpha</div>
+            </aside>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="overview" class="section hh-overview">
+            <div class="section-header split-header">
+                <div>
+                    <p class="eyebrow spectral">The pitch</p>
+                    <h2>Greed is the difficulty setting.</h2>
+                </div>
+                <p class="section-lede">
+                    Haunted Heists is a cooperative horror game about thieves, not investigators.
+                    Every stolen item raises the stakes, and the safest exit is always one valuable away from being a terrible idea.
+                </p>
+            </div>
+
+            <div class="loop-grid" role="group" aria-label="Core gameplay loop">
+                <article><span>01</span><h3>Case the Property</h3><p>Arrive at the vehicle, choose equipment, and identify a way inside.</p></article>
+                <article><span>02</span><h3>Break In</h3><p>Hack or lockpick entry points while noise and time begin working against the crew.</p></article>
+                <article><span>03</span><h3>Steal Everything</h3><p>Search rooms, manage limited inventory space, and deposit secured loot in the van.</p></article>
+                <article><span>04</span><h3>Survive the House</h3><p>Respond to escalating events, hunts, panic, and a ghost that learns where players have been.</p></article>
+                <article><span>05</span><h3>Extract</h3><p>Escape with the crew—or leave with fewer people and one extremely expensive vase.</p></article>
+            </div>
+        </section>
+
+        <section class="section hh-role-section">
+            <div class="role-card">
+                <div>
+                    <p class="eyebrow">My role</p>
+                    <h2>Solo developer from concept to playable MVP.</h2>
+                </div>
+                <p>
+                    I own the game design, C++ architecture, Blueprint integration, multiplayer gameplay,
+                    AI behavior, UI implementation, technical design, production planning, and day-to-day direction.
+                    Marketplace and commissioned assets support the project while the core game logic remains custom-built.
+                </p>
+            </div>
+            <div class="metric-grid">
+                <div><strong>1–6</strong><span>networked players</span></div>
+                <div><strong>9</strong><span>ghost AI states</span></div>
+                <div><strong>3</strong><span>inventory slots</span></div>
+                <div><strong>1</strong><span>very angry house</span></div>
+            </div>
+        </section>
+
+        <section id="systems" class="section">
+            <div class="section-header">
+                <p class="eyebrow spectral">Gameplay systems</p>
+                <h2>The house reacts to what players do.</h2>
+                <p class="section-subtitle">The horror is systemic: player behavior feeds pressure, pressure shapes events, and events change how the crew moves through the property.</p>
+            </div>
+
+            <div class="system-grid">
+                <article class="system-card featured-system">
+                    <span class="system-icon">D</span>
+                    <h3>Adaptive Director</h3>
+                    <p>
+                        A server-authoritative Director scores eligible players using panic, threat pressure,
+                        recent targeting, and house state. It paces scares and hunts while protecting against repetitive targeting and overlapping haunts.
+                    </p>
+                    <ul class="compact-list">
+                        <li>Weighted target selection</li>
+                        <li>Adaptive cooldowns and recovery windows</li>
+                        <li>Global and victim-specific event routing</li>
+                    </ul>
+                </article>
+                <article class="system-card">
+                    <span class="system-icon">AI</span>
+                    <h3>Ghost State Machine</h3>
+                    <p>Ghosts roam, investigate noise, chase on confirmed sight, search last-known locations, interact with doors, and return to whole-house roaming when the trail goes cold.</p>
+                </article>
+                <article class="system-card">
+                    <span class="system-icon">P</span>
+                    <h3>Panic &amp; House Activity</h3>
+                    <p>Player panic drives vulnerability while House Activity preserves the consequences of theft. The crew can recover; the house does not forget.</p>
+                </article>
+                <article class="system-card">
+                    <span class="system-icon">L</span>
+                    <h3>Loot &amp; Inventory</h3>
+                    <p>Items have size, weight, hidden value, world interaction, replicated pickup/drop behavior, van storage, and a final extraction reveal.</p>
+                </article>
+                <article class="system-card">
+                    <span class="system-icon">E</span>
+                    <h3>Environmental Horror</h3>
+                    <p>Door slams, mirror apparitions, screams, light chases, breaker failures, and house audio are routed through shared scare rules instead of isolated jump-scare scripts.</p>
+                </article>
+                <article class="system-card">
+                    <span class="system-icon">UI</span>
+                    <h3>Minimal Information</h3>
+                    <p>Loot value and panic stay hidden during the robbery. Players read the world, their teammates, and sound—not a dashboard full of certainty.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="architecture" class="section architecture-section">
+            <div class="section-header">
+                <p class="eyebrow spectral">Technical architecture</p>
+                <h2>Server authority without flattening the scares.</h2>
+                <p class="section-subtitle">The server decides what is true; presentation is routed only to the players who should experience it.</p>
+            </div>
+
+            <div class="architecture-flow" role="group" aria-label="Haunted Heists gameplay architecture">
+                <div class="arch-node arch-source"><span>Player Actions</span><small>Noise • theft • panic • position</small></div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-node arch-core"><span>Game State &amp; Director</span><small>Authoritative scoring and lifecycle</small></div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-outputs">
+                    <div class="arch-node"><span>Ghost AI</span><small>World-visible threat</small></div>
+                    <div class="arch-node"><span>Scare Routing</span><small>Global or target-only</small></div>
+                    <div class="arch-node"><span>Player State</span><small>Panic and eligibility</small></div>
+                </div>
+            </div>
+
+            <div class="challenge-grid">
+                <article>
+                    <p class="eyebrow">Challenge</p>
+                    <h3>Make fear fair in multiplayer</h3>
+                    <p>Some scares must be shared while others only work if the intended victim sees them.</p>
+                    <div class="solution"><b>Solution</b><span>Server-selected targets with explicit global, area, and victim-local presentation paths.</span></div>
+                </article>
+                <article>
+                    <p class="eyebrow">Challenge</p>
+                    <h3>Keep tension from becoming exhaustion</h3>
+                    <p>Constant hunts turn horror into a predictable hide-and-seek loop.</p>
+                    <div class="solution"><b>Solution</b><span>Pressure-aware cooldowns, recovery states, recent-target penalties, and one active haunt at a time.</span></div>
+                </article>
+                <article>
+                    <p class="eyebrow">Challenge</p>
+                    <h3>Let ghosts feel intelligent</h3>
+                    <p>Instant omniscience is frustrating; instant amnesia is goofy.</p>
+                    <div class="solution"><b>Solution</b><span>LOS-gated pursuit, last-known-position search, noise investigation, and whole-house roaming after a failed search.</span></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section principles-section">
+            <div class="section-header">
+                <p class="eyebrow spectral">Design pillars</p>
+                <h2>What Haunted Heists protects.</h2>
+            </div>
+            <div class="principles-grid">
+                <article><strong>Horror before chores</strong><p>Pressure comes from decisions and uncertainty, not busywork disguised as difficulty.</p></article>
+                <article><strong>Greed creates stories</strong><p>The funniest disasters begin when the crew agrees to take just one more item.</p></article>
+                <article><strong>Readable, not predictable</strong><p>Players can learn the rules without knowing exactly when the house will use them.</p></article>
+                <article><strong>Co-op chaos with consequences</strong><p>Teammates can save the mission, endanger everyone, or become the reason a lamp was apparently worth dying for.</p></article>
+            </div>
+        </section>
+
+        <section id="status" class="section status-section">
+            <div class="status-copy">
+                <p class="eyebrow spectral">Current status</p>
+                <h2>The MVP loop is complete. Now it has to look, sound, and feel undeniable.</h2>
+                <p>
+                    Players can move from the main menu into a multiplayer mission, enter the property,
+                    steal and secure loot, survive escalating threats, extract, review mission results, and return to the menu.
+                </p>
+            </div>
+            <div class="roadmap-card">
+                <h3>Next production milestone</h3>
+                <ul class="roadmap-list">
+                    <li class="done"><span></span><div><b>Playable MVP</b><small>Complete start-to-finish loop</small></div></li>
+                    <li class="active"><span></span><div><b>Vertical-slice polish</b><small>Art, animation, audio, VFX, UX, balance</small></div></li>
+                    <li><span></span><div><b>Funding &amp; publishing</b><small>MegaGrants, partners, and pitch materials</small></div></li>
+                    <li><span></span><div><b>Early Access candidate</b><small>Content, QA, optimization, and launch readiness</small></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section credits-section">
+            <h2>Credits &amp; production note</h2>
+            <p>
+                Haunted Heists is independently developed by Moe Savari under EmberForge Studios.
+                The current pre-alpha uses licensed marketplace assets and placeholders alongside original gameplay code and systems.
+                Credits will be expanded as commissioned production art, animation, audio, and other final assets enter the project.
+            </p>
+            <div class="hero-actions">
+                <a class="btn primary" href="mailto:moe.savari@gmail.com?subject=Haunted%20Heists">Discuss Haunted Heists</a>
+                <a class="btn secondary" href="index.html">Explore the Portfolio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Moe Savari • Haunted Heists • EmberForge Studios</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

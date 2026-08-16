@@ -374,6 +374,44 @@ a:hover {
     background: #050407;
 }
 
+.footer-links {
+    margin-top: 0.35rem;
+}
+
+.legal-hero {
+    padding-bottom: 2.5rem;
+}
+
+.legal-content {
+    max-width: 860px;
+}
+
+.legal-summary {
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(255, 138, 31, 0.28);
+    border-radius: var(--ember-radius-md);
+    background: rgba(17, 16, 24, 0.86);
+}
+
+.legal-content h2 {
+    margin: 2rem 0 0.55rem;
+    color: var(--ember-gold);
+}
+
+.legal-content h3 {
+    margin: 1.25rem 0 0.4rem;
+}
+
+.legal-content p,
+.legal-content ul {
+    margin-bottom: 0.9rem;
+}
+
+.legal-content ul {
+    padding-left: 1.4rem;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {

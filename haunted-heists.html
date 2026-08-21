@@ -6,6 +6,7 @@
     <meta name="description" content="Haunted Heists is Moe Savari's 1–6 player cooperative horror extraction game built in Unreal Engine 5.">
     <title>Haunted Heists | Gameplay &amp; Technical Case Study</title>
     <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="hh-builds.css?v=1">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
     <link rel="shortcut icon" href="assets/emberforge_favicon.ico">
@@ -24,6 +25,7 @@
                 <a href="#systems">Systems</a>
                 <a href="#architecture">Architecture</a>
                 <a href="#status">Status</a>
+                <a href="#build">Build</a>
                 <a href="index.html">Portfolio</a>
             </div>
         </div>
@@ -221,6 +223,267 @@
             </div>
         </section>
 
+        <!--
+            PUBLIC BUILD CONFIG
+            Version convention:
+              Feature/content milestone: 0.X.0
+              Bug fix/balance patch:     0.X.Y
+              Full commercial release:   1.0.0
+
+            When the build is ready:
+              1. Replace href="#" on the download button with the direct ZIP URL.
+              2. Remove build-download-disabled and aria-disabled.
+              3. Update file size and release date.
+              4. Move "Preparing release" to "Available".
+        -->
+        <section id="build" class="section build-section">
+            <div class="section-header split-header build-heading">
+                <div>
+                    <p class="eyebrow spectral">Latest playable build</p>
+                    <h2>Download Haunted Heists</h2>
+                    <p class="section-lede">
+                        This is the newest development build available for external testing.
+                        Older grant, publisher, and archive builds remain separate.
+                    </p>
+                </div>
+
+                <div class="build-version-lockup" aria-label="Latest build version">
+                    <span>Current Patch</span>
+                    <strong>v0.2.0</strong>
+                    <small>Pre-Alpha</small>
+                </div>
+            </div>
+
+            <div class="build-card current-build">
+                <div class="build-card-main">
+                    <div class="build-mark" aria-hidden="true">HH</div>
+                    <div class="build-copy">
+                        <div class="build-status available"><span></span> Available for testing</div>
+                        <h3>Multiplayer Lobby + Villa WIP</h3>
+                        <p>
+                            The current build expands Haunted Heists from basic WAN multiplayer into a proper
+                            room-based multiplayer flow while beginning migration toward the larger Modern Villa map.
+                        </p>
+
+                        <div class="build-meta" aria-label="Build details">
+                            <span><b>Platform</b> Windows PC</span>
+                            <span><b>Players</b> 1–6</span>
+                            <span><b>Version</b> v0.2.0</span>
+                            <span><b>Released</b> Aug 21, 2026</span>
+                            <span><b>Archive</b> 1.50 GB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build-card-actions">
+                    <a class="btn spectral-btn"
+                       href="https://drive.google.com/file/d/1Y_2YFOVC-ST00DrEwFYx9lymx1BM-F0c/view?usp=drivesdk"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Download v0.2.0
+                    </a>
+                    <small>Google Drive • ZIP archive</small>
+                </div>
+            </div>
+
+            <div class="build-warning">
+                <strong>Development build.</strong>
+                <p>
+                    Haunted Heists is still in pre-alpha. Expect incomplete presentation, balance changes,
+                    placeholder assets, networking bugs, and parts of the Villa that are visibly still under construction.
+                    Feedback is very welcome; summoning contractors for the ghost is not.
+                </p>
+            </div>
+        </section>
+
+        <section id="patch-notes" class="section patch-notes-section">
+            <div class="section-header split-header">
+                <div>
+                    <p class="eyebrow spectral">Current update</p>
+                    <h2>Patch Notes</h2>
+                </div>
+                <p class="section-lede">
+                    The current patch stays fully expanded. Previous releases are preserved underneath
+                    so playtest reports can always be tied to the build that produced them.
+                </p>
+            </div>
+
+            <article class="patch-entry patch-current">
+                <header class="patch-entry-header">
+                    <div>
+                        <div class="patch-title-line">
+                            <span class="patch-version">v0.2.0</span>
+                            <span class="patch-tag">Pre-Alpha</span>
+                            <span class="patch-tag current">Current</span>
+                        </div>
+                        <h3>Multiplayer Lobby + Villa WIP</h3>
+                    </div>
+                    <time datetime="2026-08-21">August 21, 2026</time>
+                </header>
+
+                <p class="patch-summary">
+                    This update focuses on making online multiplayer feel like an actual game flow instead of
+                    “first six thieves pile into whatever session exists.” It also introduces the work-in-progress
+                    Modern Villa as the next primary playable property.
+                </p>
+
+                <div class="patch-grid">
+                    <section>
+                        <h4>Multiplayer Lobby</h4>
+                        <ul>
+                            <li>Reworked multiplayer around player-created rooms instead of automatic session joining.</li>
+                            <li>Added a session-browser flow with a dedicated row widget for each discovered room.</li>
+                            <li>Added per-room Join controls so players choose which hosted session to enter.</li>
+                            <li>Continued EOS WAN multiplayer support for host/client play across separate networks.</li>
+                            <li>Improved multiplayer menu flow and session presentation for external playtesting.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Modern Villa — WIP</h4>
+                        <ul>
+                            <li>Added the larger Modern Villa property as the next major playable map.</li>
+                            <li>Started gameplay setup for player spawning, ghost systems, directors, exits, and mission actors.</li>
+                            <li>Added the beach-side van staging area and began defining playable boundaries.</li>
+                            <li>Villa layout, lighting, collision, loot placement, and final scare coverage remain work in progress.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Menus &amp; Settings</h4>
+                        <ul>
+                            <li>Reworked the main menu into Play, Settings, How to Play, Credits, and Quit flows.</li>
+                            <li>Moved multiplayer choices into a cleaner Solo / Host / Join structure.</li>
+                            <li>Improved Settings and pause-menu navigation.</li>
+                            <li>Added functional mouse-sensitivity control.</li>
+                            <li>Continued visual cleanup of the Host / Join interface and session rows.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4>Gameplay &amp; Polish</h4>
+                        <ul>
+                            <li>Improved item interaction reliability and interaction reach.</li>
+                            <li>Preserved the corrected held-item and dropped-item behavior after reverting a transform regression.</li>
+                            <li>Improved loading transitions between the menu and mission.</li>
+                            <li>Continued multiplayer mission-flow, UI, and usability fixes discovered during two-player testing.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="patch-footnote">
+                    <strong>Known WIP:</strong>
+                    The Villa is not considered content-complete in v0.2.0. This build primarily exists to validate
+                    the new room/lobby flow and continue multiplayer testing while the new property is assembled.
+                </div>
+            </article>
+
+            <div class="patch-history-heading">
+                <div>
+                    <p class="eyebrow spectral">Previous releases</p>
+                    <h3>Patch History</h3>
+                </div>
+                <span>Click a version to expand</span>
+            </div>
+
+            <div class="patch-history-scroll" aria-label="Previous Haunted Heists patches">
+                <details class="patch-history-item">
+                    <summary>
+                        <span class="history-version">v0.1.0</span>
+                        <span class="history-title">EOS WAN Multiplayer</span>
+                        <time datetime="2026-08-16">Aug 16, 2026</time>
+                    </summary>
+
+                    <div class="history-body">
+                        <p>
+                            The first multiplayer-distributed build. This release took the completed single-player
+                            MVP and connected the mission flow to Epic Online Services for real WAN host/client testing.
+                        </p>
+
+                        <div class="history-columns">
+                            <section>
+                                <h4>Multiplayer</h4>
+                                <ul>
+                                    <li>Implemented working EOS WAN session hosting and discovery.</li>
+                                    <li>Wired the main menu to multiplayer Host and Join actions.</li>
+                                    <li>Added the Haunted Heists WAN session bucket/query configuration.</li>
+                                    <li>Validated real host/client play across separate networks.</li>
+                                    <li>Improved server-authoritative movement and multiplayer mission flow.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Polish added after the MVP build</h4>
+                                <ul>
+                                    <li>Improved menus, settings, and item interaction.</li>
+                                    <li>Added gameplay polish and multiplayer mission-flow fixes.</li>
+                                    <li>Continued loading-screen, return-to-menu, pause-menu, and usability work.</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="patch-history-item">
+                    <summary>
+                        <span class="history-version">v0.0.1</span>
+                        <span class="history-title">Singleplayer MVP</span>
+                        <time datetime="2026-08-14">Aug 14, 2026</time>
+                    </summary>
+
+                    <div class="history-body">
+                        <p>
+                            The original packaged Haunted Heists milestone: a complete start-to-finish
+                            single-player MVP used as the stable foundation for later multiplayer builds.
+                        </p>
+
+                        <div class="history-columns">
+                            <section>
+                                <h4>Complete Mission Loop</h4>
+                                <ul>
+                                    <li>Start from the main menu, enter the property, steal valuables, and secure loot at the van.</li>
+                                    <li>Complete extraction requirements and receive mission results with secured money and survivor information.</li>
+                                    <li>Return cleanly to the main menu after mission completion.</li>
+                                    <li>Added van inventory presentation, item information, and extraction guidance.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Playtest Polish</h4>
+                                <ul>
+                                    <li>Added Master, Music, and SFX volume controls.</li>
+                                    <li>Added pause-menu Resume, Main Menu, and Quit actions.</li>
+                                    <li>Added Settings, How to Play, and Credits to the main menu.</li>
+                                    <li>Added contextual onboarding for inventory, deposits, the main objective, medicine, and extraction blockers.</li>
+                                    <li>Improved haunt reset reliability, ghost spawn validation, collision boundaries, audio routing, and scare behavior.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Core Gameplay Systems</h4>
+                                <ul>
+                                    <li>Three-slot inventory with pickup, cycling, dropping, and van deposit behavior.</li>
+                                    <li>Lockpicking, medicine, breaker interaction, flashlight controls, and randomized door states.</li>
+                                    <li>Panic, House Activity, noise, theft reactions, and adaptive Director pacing.</li>
+                                    <li>Ghost roaming, investigation, chasing, last-known-position searching, and haunt lifecycle behavior.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h4>Horror Systems</h4>
+                                <ul>
+                                    <li>Environmental events including door slams, mirror apparitions, screams, audio stings, and Light Chase.</li>
+                                    <li>Haunt exit-door locking and restoration.</li>
+                                    <li>Shared and victim-specific scare routing for multiplayer-ready presentation logic.</li>
+                                    <li>First-entry scare and audio tuning for less predictable playthroughs.</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
         <section class="section credits-section">
             <h2>Credits &amp; production note</h2>
             <p>
@@ -242,6 +505,12 @@
 
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
+
+        document.querySelectorAll('.build-download-disabled').forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+            });
+        });
     </script>
 </body>
 </html>

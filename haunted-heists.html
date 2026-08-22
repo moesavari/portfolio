@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Haunted Heists is Moe Savari's 1–6 player cooperative horror extraction game built in Unreal Engine 5.">
-    <title>Haunted Heists | Gameplay &amp; Technical Case Study</title>
-    <link rel="stylesheet" href="style.css?v=9">
+    <meta name="description" content="Paranormal Estates: Haunted Robberies is Moe Savari's 1–6 player cooperative horror extraction game built in Unreal Engine 5.">
+    <title>Paranormal Estates: Haunted Robberies | Gameplay &amp; Technical Case Study</title>
+    <link rel="stylesheet" href="style.css?v=10">
     <link rel="stylesheet" href="hh-builds.css?v=1">
+    <link rel="stylesheet" href="pe-franchise.css?v=1">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
     <link rel="shortcut icon" href="assets/emberforge_favicon.ico">
 </head>
-<body class="haunted-page">
+<body class="haunted-page paranormal-estates-page">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <nav class="top-nav haunted-nav" aria-label="Primary navigation">
@@ -21,6 +22,7 @@
                 <span class="brand-text">Moe Savari</span>
             </a>
             <div class="nav-links">
+                <a href="#franchise">Franchise</a>
                 <a href="#overview">Overview</a>
                 <a href="#systems">Systems</a>
                 <a href="#architecture">Architecture</a>
@@ -37,8 +39,11 @@
         <div class="hh-hero-shade" aria-hidden="true"></div>
         <div class="hh-hero-inner">
             <div class="hh-hero-copy">
-                <p class="eyebrow spectral">A co-op horror extraction game</p>
-                <h1>Haunted <span>Heists</span></h1>
+                <p class="eyebrow spectral">A Paranormal Estates story</p>
+                <h1 class="pe-hero-title">
+                    <span class="pe-franchise-name">Paranormal Estates</span>
+                    <span class="pe-installment-name">Haunted Robberies</span>
+                </h1>
                 <p class="hh-hook">
                     Break in. Take everything worth stealing. Get out before your greed wakes the house.
                 </p>
@@ -60,6 +65,40 @@
     </header>
 
     <main id="main-content">
+        <section id="franchise" class="section pe-franchise-section" aria-labelledby="pe-franchise-heading">
+            <div class="section-header split-header">
+                <div>
+                    <p class="eyebrow spectral">The franchise</p>
+                    <h2 id="pe-franchise-heading">Every property has a story. Every story has a price.</h2>
+                </div>
+                <p class="section-lede">
+                    Paranormal Estates is an anthology of haunted properties, desperate crews, and spectacularly bad real-estate decisions.
+                </p>
+            </div>
+
+            <div class="pe-property-files">
+                <article class="pe-property-file active-entry">
+                    <span class="pe-file-status">Now in development</span>
+                    <p class="pe-file-number">Property file 01</p>
+                    <h3><span>Paranormal Estates</span>Haunted Robberies</h3>
+                    <p>Break into haunted estates, steal everything worth carrying, and escape before the residents notice.</p>
+                    <a href="#overview" class="pe-file-link">Open the case file <span aria-hidden="true">→</span></a>
+                </article>
+
+                <button class="pe-property-file sealed-entry" type="button" aria-expanded="false" aria-controls="grave-improvements-reveal">
+                    <span class="pe-file-status">Sealed property file</span>
+                    <span class="pe-file-number">Property file 02</span>
+                    <span class="pe-seal" aria-hidden="true">PE</span>
+                    <span class="pe-redacted-title">Title withheld</span>
+                    <span id="grave-improvements-reveal" class="pe-hidden-title">
+                        <span>Paranormal Estates</span>
+                        Grave Improvements
+                    </span>
+                    <span class="pe-reveal-prompt">Break the seal to reveal</span>
+                </button>
+            </div>
+        </section>
+
         <section id="overview" class="section hh-overview">
             <div class="section-header split-header">
                 <div>
@@ -67,7 +106,7 @@
                     <h2>Greed is the difficulty setting.</h2>
                 </div>
                 <p class="section-lede">
-                    Haunted Heists is a cooperative horror game about thieves, not investigators.
+                    Paranormal Estates: Haunted Robberies is a cooperative horror game about thieves, not investigators.
                     Every stolen item raises the stakes, and the safest exit is always one valuable away from being a terrible idea.
                 </p>
             </div>
@@ -157,7 +196,7 @@
                 <p class="section-subtitle">The server decides what is true; presentation is routed only to the players who should experience it.</p>
             </div>
 
-            <div class="architecture-flow" role="group" aria-label="Haunted Heists gameplay architecture">
+            <div class="architecture-flow" role="group" aria-label="Paranormal Estates: Haunted Robberies gameplay architecture">
                 <div class="arch-node arch-source"><span>Player Actions</span><small>Noise • theft • panic • position</small></div>
                 <span class="arch-arrow" aria-hidden="true">→</span>
                 <div class="arch-node arch-core"><span>Game State &amp; Director</span><small>Authoritative scoring and lifecycle</small></div>
@@ -194,7 +233,7 @@
         <section class="section principles-section">
             <div class="section-header">
                 <p class="eyebrow spectral">Design pillars</p>
-                <h2>What Haunted Heists protects.</h2>
+                <h2>What Haunted Robberies protects.</h2>
             </div>
             <div class="principles-grid">
                 <article><strong>Horror before chores</strong><p>Pressure comes from decisions and uncertainty, not busywork disguised as difficulty.</p></article>
@@ -245,13 +284,13 @@
                     <h2>What we're building next.</h2>
                 </div>
                 <p class="section-lede">
-                    Follow Haunted Heists from its first playable build through new maps, equipment,
+                    Follow Haunted Robberies from its first playable build through new maps, equipment,
                     objectives, ghost behaviors, and increasingly questionable people to rob alongside.
                 </p>
             </div>
 
             <div class="roadmap-shell">
-                <div class="roadmap-scroll" aria-label="Haunted Heists development roadmap">
+                <div class="roadmap-scroll" aria-label="Haunted Robberies development roadmap">
                     <div class="roadmap-track" role="tablist" aria-label="Roadmap milestones">
                         <div class="roadmap-line" aria-hidden="true"></div>
 
@@ -261,7 +300,7 @@
                                 data-version="v0.0.1"
                                 data-title="First Playable"
                                 data-status="Released"
-                                data-description="The first playable version of Haunted Heists established the core idea: enter a haunted property, steal valuables, survive the supernatural response, and escape with the score. This milestone proved the central horror-heist loop could work as a game."
+                                data-description="The first playable version of Haunted Robberies established the core idea: enter a haunted property, steal valuables, survive the supernatural response, and escape with the score. This milestone proved the central horror-heist loop could work as a game."
                                 data-highlights="Core movement and interaction|Early ghost and scare systems|Initial theft and extraction concept">
                             <span class="roadmap-label"><b>v0.0.1</b><small>First Playable</small></span><span class="roadmap-dot"></span>
                         </button>
@@ -272,7 +311,7 @@
                                 data-version="v0.1.0"
                                 data-title="First Multiplayer Build"
                                 data-status="Released"
-                                data-description="Haunted Heists moved from a single-player experience into online co-op. Epic Online Services WAN sessions allowed players on separate networks to host, discover, and join real multiplayer games for the first time."
+                                data-description="Haunted Robberies moved from a single-player experience into online co-op. Epic Online Services WAN sessions allowed players on separate networks to host, discover, and join real multiplayer games for the first time."
                                 data-highlights="EOS WAN multiplayer|Host and Join flow|First external co-op testing">
                             <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.1.0</b><small>First Multiplayer Build</small></span>
                         </button>
@@ -305,7 +344,7 @@
                                 data-version="v0.3.0"
                                 data-title="Modern Villa"
                                 data-status="Planned"
-                                data-description="The Modern Villa becomes a fully integrated, playable Haunted Heists property. The map will receive complete mission setup, loot placement, ghost systems, boundaries, exits, lighting, and the final gameplay pass needed for normal matches."
+                                data-description="The Modern Villa becomes a fully integrated, playable Haunted Robberies property. The map will receive complete mission setup, loot placement, ghost systems, boundaries, exits, lighting, and the final gameplay pass needed for normal matches."
                                 data-highlights="Fully playable Villa|Loot and mission setup|Ghost, exit, lighting, and boundary integration">
                             <span class="roadmap-label"><b>v0.3.0</b><small>Modern Villa</small></span><span class="roadmap-dot"></span>
                         </button>
@@ -393,7 +432,7 @@
                                 data-version="v0.9.0"
                                 data-title="Early Access Candidate"
                                 data-status="Planned"
-                                data-description="Haunted Heists enters its final pre-release stabilization phase. The focus shifts from adding major systems to polishing, balancing, optimizing, and validating the full experience across multiplayer, progression, content, onboarding, controls, accessibility, and reliability."
+                                data-description="Haunted Robberies enters its final pre-release stabilization phase. The focus shifts from adding major systems to polishing, balancing, optimizing, and validating the full experience across multiplayer, progression, content, onboarding, controls, accessibility, and reliability."
                                 data-highlights="Optimization and QA|Balance and onboarding polish|Multiplayer and progression hardening">
                             <span class="roadmap-label"><b>v0.9.0</b><small>Early Access</small></span>
                             <span class="roadmap-dot"></span>
@@ -405,7 +444,7 @@
                                 data-version="v1.0.0"
                                 data-title="Full Release"
                                 data-status="Planned"
-                                data-description="Haunted Heists reaches its first complete commercial release. The core maps, ghost behaviors, equipment, objective systems, multiplayer flow, progression, presentation, and launch-ready content come together as the fully released version of the game."
+                                data-description="Haunted Robberies reaches its first complete commercial release. The core maps, ghost behaviors, equipment, objective systems, multiplayer flow, progression, presentation, and launch-ready content come together as the fully released version of the game."
                                 data-highlights="Complete core feature set|Launch-ready multiplayer and progression|Final release polish">
                             <span class="roadmap-dot"></span>
                             <span class="roadmap-label"><b>v1.0.0</b><small>Full Release</small></span>
@@ -438,7 +477,7 @@
             <div class="section-header split-header build-heading">
                 <div>
                     <p class="eyebrow spectral">Latest playable build</p>
-                    <h2>Download Haunted Heists</h2>
+                    <h2>Download Haunted Robberies</h2>
                     <p class="section-lede">
                         This is the newest development build available for external testing.
                         Older grant, publisher, and archive builds remain separate.
@@ -454,12 +493,12 @@
 
             <div class="build-card current-build">
                 <div class="build-card-main">
-                    <div class="build-mark" aria-hidden="true">HH</div>
+                    <div class="build-mark" aria-hidden="true">PE</div>
                     <div class="build-copy">
                         <div class="build-status available"><span></span> Available for testing</div>
                         <h3>Multiplayer Lobby + Villa WIP</h3>
                         <p>
-                            The current build expands Haunted Heists from basic WAN multiplayer into a proper
+                            The current build expands Haunted Robberies from basic WAN multiplayer into a proper
                             room-based multiplayer flow while beginning migration toward the larger Modern Villa map.
                         </p>
 
@@ -487,7 +526,7 @@
             <div class="build-warning">
                 <strong>Development build.</strong>
                 <p>
-                    Haunted Heists is still in pre-alpha. Expect incomplete presentation, balance changes,
+                    Paranormal Estates: Haunted Robberies is still in pre-alpha. Expect incomplete presentation, balance changes,
                     placeholder assets, networking bugs, and parts of the Villa that are visibly still under construction.
                     Feedback is very welcome; summoning contractors for the ghost is not.
                 </p>
@@ -584,7 +623,7 @@
                 <span>Click a version to expand</span>
             </div>
 
-            <div class="patch-history-scroll" aria-label="Previous Haunted Heists patches">
+            <div class="patch-history-scroll" aria-label="Previous Haunted Robberies patches">
                 <details class="patch-history-item">
                     <summary>
                         <span class="history-version">v0.1.0</span>
@@ -604,7 +643,7 @@
                                 <ul>
                                     <li>Implemented working EOS WAN session hosting and discovery.</li>
                                     <li>Wired the main menu to multiplayer Host and Join actions.</li>
-                                    <li>Added the Haunted Heists WAN session bucket/query configuration.</li>
+                                    <li>Added the EOS WAN session bucket/query configuration.</li>
                                     <li>Validated real host/client play across separate networks.</li>
                                     <li>Improved server-authoritative movement and multiplayer mission flow.</li>
                                 </ul>
@@ -631,7 +670,7 @@
 
                     <div class="history-body">
                         <p>
-                            The original packaged Haunted Heists milestone: a complete start-to-finish
+                            The original packaged Haunted Robberies milestone: a complete start-to-finish
                             single-player MVP used as the stable foundation for later multiplayer builds.
                         </p>
 
@@ -685,19 +724,19 @@
         <section class="section credits-section">
             <h2>Credits &amp; production note</h2>
             <p>
-                Haunted Heists is independently developed by Moe Savari under EmberForge Studios.
+                Paranormal Estates: Haunted Robberies is independently developed by Moe Savari under EmberForge Studios.
                 The current pre-alpha uses licensed marketplace assets and placeholders alongside original gameplay code and systems.
                 Credits will be expanded as commissioned production art, animation, audio, and other final assets enter the project.
             </p>
             <div class="hero-actions">
-                <a class="btn primary" href="mailto:moe.savari@gmail.com?subject=Haunted%20Heists">Discuss Haunted Heists</a>
+                <a class="btn primary" href="mailto:moe.savari@gmail.com?subject=Paranormal%20Estates%3A%20Haunted%20Robberies">Discuss Haunted Robberies</a>
                 <a class="btn secondary" href="index.html">Explore the Portfolio</a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Moe Savari • Haunted Heists • EmberForge Studios</p>
+        <p>&copy; <span id="year"></span> Moe Savari • Paranormal Estates: Haunted Robberies • EmberForge Studios</p>
         <p class="footer-links"><a href="privacy.html">Privacy Policy</a></p>
     </footer>
 
@@ -737,6 +776,13 @@
             });
         });
 
+        const sealedEntry = document.querySelector('.sealed-entry');
+        if (sealedEntry) {
+            sealedEntry.addEventListener('click', function () {
+                const isOpen = sealedEntry.classList.toggle('revealed');
+                sealedEntry.setAttribute('aria-expanded', String(isOpen));
+            });
+        }
 
         document.querySelectorAll('.build-download-disabled').forEach(function (link) {
             link.addEventListener('click', function (event) {

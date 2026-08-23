@@ -1,269 +1,219 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Paranormal Estates: Haunted Robberies is Moe Savari's 1–6 player cooperative horror extraction game built in Unreal Engine 5.">
-    <title>Paranormal Estates: Haunted Robberies | Gameplay &amp; Technical Case Study</title>
-    <link rel="stylesheet" href="style.css?v=10">
-    <link rel="stylesheet" href="hh-builds.css?v=1">
-    <link rel="stylesheet" href="pe-franchise.css?v=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/emberforge_favicon_32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/emberforge_favicon_16x16.png">
-    <link rel="shortcut icon" href="assets/emberforge_favicon.ico">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Haunted Heists is Moe Savari's 1–6 player cooperative horror extraction game built in Unreal Engine 5." name="description"/>
+<title>Haunted Heists | Gameplay &amp; Technical Case Study</title>
+<link href="style.css?v=9" rel="stylesheet"/>
+<link href="hh-builds.css?v=1" rel="stylesheet"/>
+<link href="assets/emberforge_favicon_32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/emberforge_favicon_16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/emberforge_favicon.ico" rel="shortcut icon"/>
 </head>
-<body class="haunted-page paranormal-estates-page">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
-    <nav class="top-nav haunted-nav" aria-label="Primary navigation">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-brand" aria-label="Return to Moe Savari's portfolio">
-                <img src="assets/emberforge-logo.png" alt="" class="brand-logo">
-                <span class="brand-text">Moe Savari</span>
-            </a>
-            <div class="nav-links">
-                <a href="#franchise">Franchise</a>
-                <a href="#overview">Overview</a>
-                <a href="#systems">Systems</a>
-                <a href="#architecture">Architecture</a>
-                <a href="#status">Status</a>
-                <a href="#roadmap">Roadmap</a>
-                <a href="#build">Build</a>
-                <a href="index.html">Portfolio</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hh-hero">
-        <div class="hh-hero-art" aria-hidden="true"></div>
-        <div class="hh-hero-shade" aria-hidden="true"></div>
-        <div class="hh-hero-inner">
-            <div class="hh-hero-copy">
-                <p class="eyebrow spectral">A Paranormal Estates story</p>
-                <h1 class="pe-hero-title">
-                    <span class="pe-franchise-name">Paranormal Estates</span>
-                    <span class="pe-installment-name">Haunted Robberies</span>
-                </h1>
-                <p class="hh-hook">
+<body class="haunted-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav aria-label="Primary navigation" class="top-nav haunted-nav">
+<div class="nav-inner">
+<a aria-label="Return to Moe Savari's portfolio" class="nav-brand" href="index.html">
+<img alt="" class="brand-logo" src="assets/emberforge-logo.png"/>
+<span class="brand-text">Moe Savari</span>
+</a>
+<div class="nav-links">
+<a href="#overview">Overview</a>
+<a href="#systems">Systems</a>
+<a href="#architecture">Architecture</a>
+<a href="#status">Status</a>
+<a href="#showcase">Showcase</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#build">Build</a>
+<a href="index.html">Portfolio</a>
+</div>
+</div>
+</nav>
+<header class="hh-hero">
+<div aria-hidden="true" class="hh-hero-art"></div>
+<div aria-hidden="true" class="hh-hero-shade"></div>
+<div class="hh-hero-inner">
+<div class="hh-hero-copy">
+<p class="eyebrow spectral">A co-op horror extraction game</p>
+<h1>Haunted <span>Heists</span></h1>
+<p class="hh-hook">
                     Break in. Take everything worth stealing. Get out before your greed wakes the house.
                 </p>
-                <div class="hh-meta-row" role="group" aria-label="Project facts">
-                    <span>1–6 Players</span><span>Unreal Engine 5</span><span>C++ &amp; Blueprints</span><span>PC</span>
-                </div>
-                <div class="hero-actions">
-                    <a class="btn spectral-btn" href="#overview">Enter the House</a>
-                    <a class="btn secondary" href="index.html">Back to Portfolio</a>
-                </div>
-            </div>
-            <aside class="hh-status-card">
-                <span class="proof-kicker">Development status</span>
-                <strong>MVP Complete</strong>
-                <p>The full mission loop is playable. Current work is focused on polish, presentation, content, and funding materials.</p>
-                <div class="status-line"><span></span> Pre-alpha</div>
-            </aside>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <section id="franchise" class="section pe-franchise-section" aria-labelledby="pe-franchise-heading">
-            <div class="section-header split-header">
-                <div>
-                    <p class="eyebrow spectral">The franchise</p>
-                    <h2 id="pe-franchise-heading">Every property has a story. Every story has a price.</h2>
-                </div>
-                <p class="section-lede">
-                    Paranormal Estates is an anthology of haunted properties, desperate crews, and spectacularly bad real-estate decisions.
-                </p>
-            </div>
-
-            <div class="pe-property-files">
-                <article class="pe-property-file active-entry">
-                    <span class="pe-file-status">Now in development</span>
-                    <p class="pe-file-number">Property file 01</p>
-                    <h3><span>Paranormal Estates</span>Haunted Robberies</h3>
-                    <p>Break into haunted estates, steal everything worth carrying, and escape before the residents notice.</p>
-                    <a href="#overview" class="pe-file-link">Open the case file <span aria-hidden="true">→</span></a>
-                </article>
-
-                <button class="pe-property-file sealed-entry" type="button" aria-expanded="false" aria-controls="grave-improvements-reveal">
-                    <span class="pe-file-status">Sealed property file</span>
-                    <span class="pe-file-number">Property file 02</span>
-                    <span class="pe-seal" aria-hidden="true">PE</span>
-                    <span class="pe-redacted-title">Title withheld</span>
-                    <span id="grave-improvements-reveal" class="pe-hidden-title">
-                        <span>Paranormal Estates</span>
-                        Grave Improvements
-                    </span>
-                    <span class="pe-reveal-prompt">Break the seal to reveal</span>
-                </button>
-            </div>
-        </section>
-
-        <section id="overview" class="section hh-overview">
-            <div class="section-header split-header">
-                <div>
-                    <p class="eyebrow spectral">The pitch</p>
-                    <h2>Greed is the difficulty setting.</h2>
-                </div>
-                <p class="section-lede">
-                    Paranormal Estates: Haunted Robberies is a cooperative horror game about thieves, not investigators.
+<div aria-label="Project facts" class="hh-meta-row" role="group">
+<span>1–6 Players</span><span>Unreal Engine 5</span><span>C++ &amp; Blueprints</span><span>PC</span>
+</div>
+<div class="hero-actions">
+<a class="btn spectral-btn" href="#overview">Enter the House</a>
+<a class="btn secondary" href="index.html">Back to Portfolio</a>
+</div>
+</div>
+<aside class="hh-status-card">
+<span class="proof-kicker">Development status</span>
+<strong>MVP Complete</strong>
+<p>The full mission loop is playable. Current work is focused on polish, presentation, content, and funding materials.</p>
+<div class="status-line"><span></span> Pre-alpha</div>
+</aside>
+</div>
+</header>
+<main id="main-content">
+<section class="section hh-overview" id="overview">
+<div class="section-header split-header">
+<div>
+<p class="eyebrow spectral">The pitch</p>
+<h2>Greed is the difficulty setting.</h2>
+</div>
+<p class="section-lede">
+                    Haunted Heists is a cooperative horror game about thieves, not investigators.
                     Every stolen item raises the stakes, and the safest exit is always one valuable away from being a terrible idea.
                 </p>
-            </div>
-
-            <div class="loop-grid" role="group" aria-label="Core gameplay loop">
-                <article><span>01</span><h3>Case the Property</h3><p>Arrive at the vehicle, choose equipment, and identify a way inside.</p></article>
-                <article><span>02</span><h3>Break In</h3><p>Hack or lockpick entry points while noise and time begin working against the crew.</p></article>
-                <article><span>03</span><h3>Steal Everything</h3><p>Search rooms, manage limited inventory space, and deposit secured loot in the van.</p></article>
-                <article><span>04</span><h3>Survive the House</h3><p>Respond to escalating events, hunts, panic, and a ghost that learns where players have been.</p></article>
-                <article><span>05</span><h3>Extract</h3><p>Escape with the crew—or leave with fewer people and one extremely expensive vase.</p></article>
-            </div>
-        </section>
-
-        <section class="section hh-role-section">
-            <div class="role-card">
-                <div>
-                    <p class="eyebrow">My role</p>
-                    <h2>Solo developer from concept to playable MVP.</h2>
-                </div>
-                <p>
+</div>
+<div aria-label="Core gameplay loop" class="loop-grid" role="group">
+<article><span>01</span><h3>Case the Property</h3><p>Arrive at the vehicle, choose equipment, and identify a way inside.</p></article>
+<article><span>02</span><h3>Break In</h3><p>Hack or lockpick entry points while noise and time begin working against the crew.</p></article>
+<article><span>03</span><h3>Steal Everything</h3><p>Search rooms, manage limited inventory space, and deposit secured loot in the van.</p></article>
+<article><span>04</span><h3>Survive the House</h3><p>Respond to escalating events, hunts, panic, and a ghost that learns where players have been.</p></article>
+<article><span>05</span><h3>Extract</h3><p>Escape with the crew—or leave with fewer people and one extremely expensive vase.</p></article>
+</div>
+</section>
+<section class="section hh-role-section">
+<div class="role-card">
+<div>
+<p class="eyebrow">My role</p>
+<h2>Solo developer from concept to playable MVP.</h2>
+</div>
+<p>
                     I own the game design, C++ architecture, Blueprint integration, multiplayer gameplay,
                     AI behavior, UI implementation, technical design, production planning, and day-to-day direction.
                     Marketplace and commissioned assets support the project while the core game logic remains custom-built.
                 </p>
-            </div>
-            <div class="metric-grid">
-                <div><strong>1–6</strong><span>networked players</span></div>
-                <div><strong>9</strong><span>ghost AI states</span></div>
-                <div><strong>3</strong><span>inventory slots</span></div>
-                <div><strong>1</strong><span>very angry house</span></div>
-            </div>
-        </section>
-
-        <section id="systems" class="section">
-            <div class="section-header">
-                <p class="eyebrow spectral">Gameplay systems</p>
-                <h2>The house reacts to what players do.</h2>
-                <p class="section-subtitle">The horror is systemic: player behavior feeds pressure, pressure shapes events, and events change how the crew moves through the property.</p>
-            </div>
-
-            <div class="system-grid">
-                <article class="system-card featured-system">
-                    <span class="system-icon">D</span>
-                    <h3>Adaptive Director</h3>
-                    <p>
+</div>
+<div class="metric-grid">
+<div><strong>1–6</strong><span>networked players</span></div>
+<div><strong>9</strong><span>ghost AI states</span></div>
+<div><strong>3</strong><span>inventory slots</span></div>
+<div><strong>1</strong><span>very angry house</span></div>
+</div>
+</section>
+<section class="section" id="systems">
+<div class="section-header">
+<p class="eyebrow spectral">Gameplay systems</p>
+<h2>The house reacts to what players do.</h2>
+<p class="section-subtitle">The horror is systemic: player behavior feeds pressure, pressure shapes events, and events change how the crew moves through the property.</p>
+</div>
+<div class="system-grid">
+<article class="system-card featured-system">
+<span class="system-icon">D</span>
+<h3>Adaptive Director</h3>
+<p>
                         A server-authoritative Director scores eligible players using panic, threat pressure,
                         recent targeting, and house state. It paces scares and hunts while protecting against repetitive targeting and overlapping haunts.
                     </p>
-                    <ul class="compact-list">
-                        <li>Weighted target selection</li>
-                        <li>Adaptive cooldowns and recovery windows</li>
-                        <li>Global and victim-specific event routing</li>
-                    </ul>
-                </article>
-                <article class="system-card">
-                    <span class="system-icon">AI</span>
-                    <h3>Ghost State Machine</h3>
-                    <p>Ghosts roam, investigate noise, chase on confirmed sight, search last-known locations, interact with doors, and return to whole-house roaming when the trail goes cold.</p>
-                </article>
-                <article class="system-card">
-                    <span class="system-icon">P</span>
-                    <h3>Panic &amp; House Activity</h3>
-                    <p>Player panic drives vulnerability while House Activity preserves the consequences of theft. The crew can recover; the house does not forget.</p>
-                </article>
-                <article class="system-card">
-                    <span class="system-icon">L</span>
-                    <h3>Loot &amp; Inventory</h3>
-                    <p>Items have size, weight, hidden value, world interaction, replicated pickup/drop behavior, van storage, and a final extraction reveal.</p>
-                </article>
-                <article class="system-card">
-                    <span class="system-icon">E</span>
-                    <h3>Environmental Horror</h3>
-                    <p>Door slams, mirror apparitions, screams, light chases, breaker failures, and house audio are routed through shared scare rules instead of isolated jump-scare scripts.</p>
-                </article>
-                <article class="system-card">
-                    <span class="system-icon">UI</span>
-                    <h3>Minimal Information</h3>
-                    <p>Loot value and panic stay hidden during the robbery. Players read the world, their teammates, and sound—not a dashboard full of certainty.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="architecture" class="section architecture-section">
-            <div class="section-header">
-                <p class="eyebrow spectral">Technical architecture</p>
-                <h2>Server authority without flattening the scares.</h2>
-                <p class="section-subtitle">The server decides what is true; presentation is routed only to the players who should experience it.</p>
-            </div>
-
-            <div class="architecture-flow" role="group" aria-label="Paranormal Estates: Haunted Robberies gameplay architecture">
-                <div class="arch-node arch-source"><span>Player Actions</span><small>Noise • theft • panic • position</small></div>
-                <span class="arch-arrow" aria-hidden="true">→</span>
-                <div class="arch-node arch-core"><span>Game State &amp; Director</span><small>Authoritative scoring and lifecycle</small></div>
-                <span class="arch-arrow" aria-hidden="true">→</span>
-                <div class="arch-outputs">
-                    <div class="arch-node"><span>Ghost AI</span><small>World-visible threat</small></div>
-                    <div class="arch-node"><span>Scare Routing</span><small>Global or target-only</small></div>
-                    <div class="arch-node"><span>Player State</span><small>Panic and eligibility</small></div>
-                </div>
-            </div>
-
-            <div class="challenge-grid">
-                <article>
-                    <p class="eyebrow">Challenge</p>
-                    <h3>Make fear fair in multiplayer</h3>
-                    <p>Some scares must be shared while others only work if the intended victim sees them.</p>
-                    <div class="solution"><b>Solution</b><span>Server-selected targets with explicit global, area, and victim-local presentation paths.</span></div>
-                </article>
-                <article>
-                    <p class="eyebrow">Challenge</p>
-                    <h3>Keep tension from becoming exhaustion</h3>
-                    <p>Constant hunts turn horror into a predictable hide-and-seek loop.</p>
-                    <div class="solution"><b>Solution</b><span>Pressure-aware cooldowns, recovery states, recent-target penalties, and one active haunt at a time.</span></div>
-                </article>
-                <article>
-                    <p class="eyebrow">Challenge</p>
-                    <h3>Let ghosts feel intelligent</h3>
-                    <p>Instant omniscience is frustrating; instant amnesia is goofy.</p>
-                    <div class="solution"><b>Solution</b><span>LOS-gated pursuit, last-known-position search, noise investigation, and whole-house roaming after a failed search.</span></div>
-                </article>
-            </div>
-        </section>
-
-        <section class="section principles-section">
-            <div class="section-header">
-                <p class="eyebrow spectral">Design pillars</p>
-                <h2>What Haunted Robberies protects.</h2>
-            </div>
-            <div class="principles-grid">
-                <article><strong>Horror before chores</strong><p>Pressure comes from decisions and uncertainty, not busywork disguised as difficulty.</p></article>
-                <article><strong>Greed creates stories</strong><p>The funniest disasters begin when the crew agrees to take just one more item.</p></article>
-                <article><strong>Readable, not predictable</strong><p>Players can learn the rules without knowing exactly when the house will use them.</p></article>
-                <article><strong>Co-op chaos with consequences</strong><p>Teammates can save the mission, endanger everyone, or become the reason a lamp was apparently worth dying for.</p></article>
-            </div>
-        </section>
-
-        <section id="status" class="section status-section">
-            <div class="status-copy">
-                <p class="eyebrow spectral">Current status</p>
-                <h2>The MVP loop is complete. Now it has to look, sound, and feel undeniable.</h2>
-                <p>
+<ul class="compact-list">
+<li>Weighted target selection</li>
+<li>Adaptive cooldowns and recovery windows</li>
+<li>Global and victim-specific event routing</li>
+</ul>
+</article>
+<article class="system-card">
+<span class="system-icon">AI</span>
+<h3>Ghost State Machine</h3>
+<p>Ghosts roam, investigate noise, chase on confirmed sight, search last-known locations, interact with doors, and return to whole-house roaming when the trail goes cold.</p>
+</article>
+<article class="system-card">
+<span class="system-icon">P</span>
+<h3>Panic &amp; House Activity</h3>
+<p>Player panic drives vulnerability while House Activity preserves the consequences of theft. The crew can recover; the house does not forget.</p>
+</article>
+<article class="system-card">
+<span class="system-icon">L</span>
+<h3>Loot &amp; Inventory</h3>
+<p>Items have size, weight, hidden value, world interaction, replicated pickup/drop behavior, van storage, and a final extraction reveal.</p>
+</article>
+<article class="system-card">
+<span class="system-icon">E</span>
+<h3>Environmental Horror</h3>
+<p>Door slams, mirror apparitions, screams, light chases, breaker failures, and house audio are routed through shared scare rules instead of isolated jump-scare scripts.</p>
+</article>
+<article class="system-card">
+<span class="system-icon">UI</span>
+<h3>Minimal Information</h3>
+<p>Loot value and panic stay hidden during the robbery. Players read the world, their teammates, and sound—not a dashboard full of certainty.</p>
+</article>
+</div>
+</section>
+<section class="section architecture-section" id="architecture">
+<div class="section-header">
+<p class="eyebrow spectral">Technical architecture</p>
+<h2>Server authority without flattening the scares.</h2>
+<p class="section-subtitle">The server decides what is true; presentation is routed only to the players who should experience it.</p>
+</div>
+<div aria-label="Haunted Heists gameplay architecture" class="architecture-flow" role="group">
+<div class="arch-node arch-source"><span>Player Actions</span><small>Noise • theft • panic • position</small></div>
+<span aria-hidden="true" class="arch-arrow">→</span>
+<div class="arch-node arch-core"><span>Game State &amp; Director</span><small>Authoritative scoring and lifecycle</small></div>
+<span aria-hidden="true" class="arch-arrow">→</span>
+<div class="arch-outputs">
+<div class="arch-node"><span>Ghost AI</span><small>World-visible threat</small></div>
+<div class="arch-node"><span>Scare Routing</span><small>Global or target-only</small></div>
+<div class="arch-node"><span>Player State</span><small>Panic and eligibility</small></div>
+</div>
+</div>
+<div class="challenge-grid">
+<article>
+<p class="eyebrow">Challenge</p>
+<h3>Make fear fair in multiplayer</h3>
+<p>Some scares must be shared while others only work if the intended victim sees them.</p>
+<div class="solution"><b>Solution</b><span>Server-selected targets with explicit global, area, and victim-local presentation paths.</span></div>
+</article>
+<article>
+<p class="eyebrow">Challenge</p>
+<h3>Keep tension from becoming exhaustion</h3>
+<p>Constant hunts turn horror into a predictable hide-and-seek loop.</p>
+<div class="solution"><b>Solution</b><span>Pressure-aware cooldowns, recovery states, recent-target penalties, and one active haunt at a time.</span></div>
+</article>
+<article>
+<p class="eyebrow">Challenge</p>
+<h3>Let ghosts feel intelligent</h3>
+<p>Instant omniscience is frustrating; instant amnesia is goofy.</p>
+<div class="solution"><b>Solution</b><span>LOS-gated pursuit, last-known-position search, noise investigation, and whole-house roaming after a failed search.</span></div>
+</article>
+</div>
+</section>
+<section class="section principles-section">
+<div class="section-header">
+<p class="eyebrow spectral">Design pillars</p>
+<h2>What Haunted Heists protects.</h2>
+</div>
+<div class="principles-grid">
+<article><strong>Horror before chores</strong><p>Pressure comes from decisions and uncertainty, not busywork disguised as difficulty.</p></article>
+<article><strong>Greed creates stories</strong><p>The funniest disasters begin when the crew agrees to take just one more item.</p></article>
+<article><strong>Readable, not predictable</strong><p>Players can learn the rules without knowing exactly when the house will use them.</p></article>
+<article><strong>Co-op chaos with consequences</strong><p>Teammates can save the mission, endanger everyone, or become the reason a lamp was apparently worth dying for.</p></article>
+</div>
+</section>
+<section class="section status-section" id="status">
+<div class="status-copy">
+<p class="eyebrow spectral">Current status</p>
+<h2>The MVP loop is complete. Now it has to look, sound, and feel undeniable.</h2>
+<p>
                     Players can move from the main menu into a multiplayer mission, enter the property,
                     steal and secure loot, survive escalating threats, extract, review mission results, and return to the menu.
                 </p>
-            </div>
-            <div class="roadmap-card">
-                <h3>Next production milestone</h3>
-                <ul class="roadmap-list">
-                    <li class="done"><span></span><div><b>Playable MVP</b><small>Complete start-to-finish loop</small></div></li>
-                    <li class="active"><span></span><div><b>Vertical-slice polish</b><small>Art, animation, audio, VFX, UX, balance</small></div></li>
-                    <li><span></span><div><b>Funding &amp; publishing</b><small>MegaGrants, partners, and pitch materials</small></div></li>
-                    <li><span></span><div><b>Early Access candidate</b><small>Content, QA, optimization, and launch readiness</small></div></li>
-                </ul>
-            </div>
-        </section>
-
-        <!--
+</div>
+<div class="roadmap-card">
+<h3>Next production milestone</h3>
+<ul class="roadmap-list">
+<li class="done"><span></span><div><b>Playable MVP</b><small>Complete start-to-finish loop</small></div></li>
+<li class="active"><span></span><div><b>Vertical-slice polish</b><small>Art, animation, audio, VFX, UX, balance</small></div></li>
+<li><span></span><div><b>Funding &amp; publishing</b><small>MegaGrants, partners, and pitch materials</small></div></li>
+<li><span></span><div><b>Early Access candidate</b><small>Content, QA, optimization, and launch readiness</small></div></li>
+</ul>
+</div>
+</section>
+<!--
             PUBLIC BUILD CONFIG
             Version convention:
               Feature/content milestone: 0.X.0
@@ -276,471 +226,323 @@
               3. Update file size and release date.
               4. Move "Preparing release" to "Available".
         -->
-
-        <section id="roadmap" class="section roadmap-section">
-            <div class="section-header split-header roadmap-header">
-                <div>
-                    <p class="eyebrow spectral">Development roadmap</p>
-                    <h2>What we're building next.</h2>
-                </div>
-                <p class="section-lede">
-                    Follow Haunted Robberies from its first playable build through new maps, equipment,
-                    objectives, ghost behaviors, and increasingly questionable people to rob alongside.
+<section class="section hh-video-section" id="showcase">
+<div class="section-header split-header">
+<div>
+<p class="eyebrow spectral">Gameplay showcase</p>
+<h2>See the robbery go wrong.</h2>
+</div>
+<p class="section-lede">
+                    A look at Haunted Heists in motion: breaking into a haunted property, securing valuables,
+                    surviving supernatural pressure, and discovering why “one more item” is usually a terrible plan.
+					(Gameplay footage taken with v0.1.0)
                 </p>
-            </div>
-
-            <div class="roadmap-shell">
-                <div class="roadmap-scroll" aria-label="Haunted Robberies development roadmap">
-                    <div class="roadmap-track" role="tablist" aria-label="Roadmap milestones">
-                        <div class="roadmap-line" aria-hidden="true"></div>
-
-                        <button class="roadmap-node complete position-top"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.0.1"
-                                data-title="First Playable"
-                                data-status="Released"
-                                data-description="The first playable version of Haunted Robberies established the core idea: enter a haunted property, steal valuables, survive the supernatural response, and escape with the score. This milestone proved the central horror-heist loop could work as a game."
-                                data-highlights="Core movement and interaction|Early ghost and scare systems|Initial theft and extraction concept">
-                            <span class="roadmap-label"><b>v0.0.1</b><small>First Playable</small></span><span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node complete position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.1.0"
-                                data-title="First Multiplayer Build"
-                                data-status="Released"
-                                data-description="Haunted Robberies moved from a single-player experience into online co-op. Epic Online Services WAN sessions allowed players on separate networks to host, discover, and join real multiplayer games for the first time."
-                                data-highlights="EOS WAN multiplayer|Host and Join flow|First external co-op testing">
-                            <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.1.0</b><small>First Multiplayer Build</small></span>
-                        </button>
-
-                        <button class="roadmap-node current position-top"
-                                type="button" role="tab"
-                                aria-selected="true"
-                                data-version="v0.2.0"
-                                data-title="Improved Multiplayer"
-                                data-status="Current"
-                                data-description="The multiplayer foundation is being expanded into a proper room-based experience. Players can browse hosted sessions and choose which crew to join, while the larger Modern Villa begins integration as the next major property."
-                                data-highlights="Room-based session browser|Per-session Join controls|Modern Villa work in progress">
-                            <span class="roadmap-label"><b>v0.2.0</b><small>Improved Multiplayer</small></span><span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.2.5"
-                                data-title="UI Polish"
-                                data-status="Planned"
-                                data-description="This polish milestone focuses on making the multiplayer front end feel intentional and easy to use. Host, Join, session rows, menus, lobby presentation, and general navigation will receive a visual and usability pass."
-                                data-highlights="Host and Join redesign|Lobby and session-row cleanup|Menu and UX polish">
-                            <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.2.5</b><small>UI Polish</small></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-top"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.3.0"
-                                data-title="Modern Villa"
-                                data-status="Planned"
-                                data-description="The Modern Villa becomes a fully integrated, playable Haunted Robberies property. The map will receive complete mission setup, loot placement, ghost systems, boundaries, exits, lighting, and the final gameplay pass needed for normal matches."
-                                data-highlights="Fully playable Villa|Loot and mission setup|Ghost, exit, lighting, and boundary integration">
-                            <span class="roadmap-label"><b>v0.3.0</b><small>Modern Villa</small></span><span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.4.0"
-                                data-title="Item Overhaul"
-                                data-status="Planned"
-                                data-description="Loot and equipment move into a more flexible item framework. This update lays the groundwork for procedural valuables, richer loot variety, and a shared structure that can support both things players steal and tools they intentionally bring."
-                                data-highlights="Procedural loot framework|Expanded valuable-item system|Inventory and equipment item foundation">
-                            <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.4.0</b><small>Item Overhaul</small></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-top"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.4.5"
-                                data-title="Equipment Planning"
-                                data-status="Planned"
-                                data-description="Before the robbery starts, solo players and multiplayer crews will be able to prepare an equipment pool for the upcoming heist. This milestone introduces the pre-heist interface and the rules for deciding what the crew brings into the property."
-                                data-highlights="Pre-heist equipment pool|Solo and multiplayer preparation|Equipment selection UI">
-                            <span class="roadmap-label"><b>v0.4.5</b><small>Equipment Planning</small></span><span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.5.0"
-                                data-title="Heist Tools"
-                                data-status="Planned"
-                                data-description="The first dedicated thief tools arrive. Equipment tiers, consumables, and practical gameplay effects will give crews new ways to approach entry, survival, recovery, and the robbery itself."
-                                data-highlights="First player tools|Equipment tiers|Consumables and gameplay effects">
-                            <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.5.0</b><small>Heist Tools</small></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-top"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.5.5"
-                                data-title="Equipment Economy"
-                                data-status="Planned"
-                                data-description="The new equipment system becomes part of the larger game loop. Tools and consumables become available through the menus, and the surrounding acquisition and preparation economy is completed."
-                                data-highlights="Equipment availability|Menu integration|Preparation economy">
-                            <span class="roadmap-label"><b>v0.5.5</b><small>Equipment Economy</small></span><span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.6.0"
-                                data-title="Objective Requirements"
-                                data-status="Planned"
-                                data-description="The biggest score will no longer simply be sitting there waiting to be picked up. Primary objectives will be protected by puzzles or randomized requirements that force thieves to investigate the property and earn access to the main prize."
-                                data-highlights="Puzzle-gated objectives|Randomized requirements|More varied heist routes">
-                            <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.6.0</b><small>Objective Requirements</small></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-top"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.7.0"
-                                data-title="Behavioral Ghost Types"
-                                data-status="Planned"
-                                data-description="Ghosts begin behaving like distinct threats rather than variations of the same opponent. Different supernatural types will react to the world and the crew in their own ways, forcing players to adapt their habits from one property to the next."
-                                data-highlights="Distinct ghost behaviors|Different player counterplay|Greater match-to-match uncertainty">
-                            <span class="roadmap-label"><b>v0.7.0</b><small>Behavioral Ghost Types</small></span><span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.8.0"
-                                data-title="Outsiders"
-                                data-status="Planned"
-                                data-description="Not every problem in a haunted house has to be dead. Outsider events introduce living complications such as rival thieves and other unexpected visitors, creating situations where players have to deal with both human interference and the supernatural."
-                                data-highlights="Rival thief events|Living NPC complications|More unpredictable heists">
-                            <span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.8.0</b><small>Outsiders</small></span>
-                        </button>
-
-                        <button class="roadmap-node planned position-top"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v0.9.0"
-                                data-title="Early Access Candidate"
-                                data-status="Planned"
-                                data-description="Haunted Robberies enters its final pre-release stabilization phase. The focus shifts from adding major systems to polishing, balancing, optimizing, and validating the full experience across multiplayer, progression, content, onboarding, controls, accessibility, and reliability."
-                                data-highlights="Optimization and QA|Balance and onboarding polish|Multiplayer and progression hardening">
-                            <span class="roadmap-label"><b>v0.9.0</b><small>Early Access</small></span>
-                            <span class="roadmap-dot"></span>
-                        </button>
-
-                        <button class="roadmap-node planned roadmap-finale position-bottom"
-                                type="button" role="tab"
-                                aria-selected="false"
-                                data-version="v1.0.0"
-                                data-title="Full Release"
-                                data-status="Planned"
-                                data-description="Haunted Robberies reaches its first complete commercial release. The core maps, ghost behaviors, equipment, objective systems, multiplayer flow, progression, presentation, and launch-ready content come together as the fully released version of the game."
-                                data-highlights="Complete core feature set|Launch-ready multiplayer and progression|Final release polish">
-                            <span class="roadmap-dot"></span>
-                            <span class="roadmap-label"><b>v1.0.0</b><small>Full Release</small></span>
-                        </button>
-
-                    </div>
-                </div>
-
-                <div id="roadmap-detail" class="roadmap-detail" role="tabpanel" aria-live="polite">
-                    <div class="roadmap-detail-topline">
-                        <span id="roadmap-detail-version">v0.2.0</span>
-                        <span id="roadmap-detail-status" class="roadmap-detail-status current">Current</span>
-                    </div>
-                    <h3 id="roadmap-detail-title">Improved Multiplayer</h3>
-                    <p id="roadmap-detail-description">
-                        The multiplayer foundation is being expanded into a proper room-based experience.
-                        Players can browse hosted sessions and choose which crew to join, while the larger
-                        Modern Villa begins integration as the next major property.
-                    </p>
-                    <ul id="roadmap-detail-highlights" class="roadmap-detail-highlights">
-                        <li>Room-based session browser</li>
-                        <li>Per-session Join controls</li>
-                        <li>Modern Villa work in progress</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="build" class="section build-section">
-            <div class="section-header split-header build-heading">
-                <div>
-                    <p class="eyebrow spectral">Latest playable build</p>
-                    <h2>Download Haunted Robberies</h2>
-                    <p class="section-lede">
+</div>
+<div class="hh-video-frame">
+<div aria-hidden="true" class="hh-video-glow"></div>
+<iframe allow="autoplay; fullscreen" allowfullscreen="" loading="lazy" src="https://drive.google.com/file/d/1tqfzLPJU3grIyLL1cQgAD7vBfeAZNmdf/preview" title="Haunted Heists gameplay showcase">
+</iframe>
+</div>
+<div class="hh-video-meta">
+<span>Pre-Alpha Gameplay</span>
+<span>Work in Progress</span>
+<span>Unreal Engine 5</span>
+</div>
+</section>
+<section class="section roadmap-section" id="roadmap">
+<div class="section-header split-header roadmap-header">
+<div>
+<p class="eyebrow spectral">Development roadmap</p>
+<h2>What we're building next.</h2>
+</div>
+<p class="section-lede">Follow Haunted Heists from its first playable prototype through multiplayer, the current UI polish milestone, Villa integration, new systems and content, the tutorial conversion, visual upgrades, and the Early Access launch.</p>
+</div>
+<div class="roadmap-shell">
+<div aria-label="Haunted Heists development roadmap" class="roadmap-scroll">
+<div aria-label="Roadmap milestones" class="roadmap-track" role="tablist"><div aria-hidden="true" class="roadmap-line"></div><button aria-selected="false" class="roadmap-node complete position-top" data-description="The first playable Haunted Heists build established the core robbery loop: enter a haunted property, steal valuables, survive supernatural pressure, and escape with the score." data-highlights="Core movement and interaction|Early theft and extraction loop|Initial ghost and scare systems" data-status="Released" data-title="First Playable" data-version="v0.0.1" role="tab" type="button"><span class="roadmap-label"><b>v0.0.1</b><small>First Playable</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node complete position-bottom" data-description="Haunted Heists became an online co-op game. This milestone introduced the first multiplayer build and proved that separate players could enter the same robbery together." data-highlights="First multiplayer build|Early Host and Join flow|Initial co-op testing" data-status="Released" data-title="First Multiplayer Build" data-version="v0.1.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.1.0</b><small>Multiplayer</small></span></button><button aria-selected="false" class="roadmap-node complete position-top" data-description="The multiplayer foundation expanded toward a proper room-based lobby experience, with session browsing and continued work toward reliable WAN play. Development of the larger Modern Villa also began during this milestone." data-highlights="Room-based session direction|Session browsing and Join controls|Modern Villa work in progress" data-status="Released" data-title="Improved Multiplayer" data-version="v0.2.0" role="tab" type="button"><span class="roadmap-label"><b>v0.2.0</b><small>Improved MP</small></span><span class="roadmap-dot"></span></button><button aria-selected="true" class="roadmap-node current position-top" data-description="This update focuses on making the multiplayer front end and moment-to-moment interaction feel cleaner and more reliable. Host and Join presentation, visual consistency, replicated map selection, hover language, and extraction/back-door interaction issues are brought into one dedicated polish pass." data-highlights="Host/Join redesign|Visual consistency and hover language|Map-selection sync|Extraction and back-door interaction fixes" data-status="Current" data-title="UI &amp; Interaction Polish" data-version="v0.2.5" role="tab" type="button"><span class="roadmap-label"><b>v0.2.5</b><small>UI Polish</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned position-bottom" data-description="The Modern Villa becomes a fully integrated playable property. Alongside completing its mission setup, this milestone begins map-level gameplay polish so the larger space supports stealth, navigation, hiding, ghost pressure, and the full robbery loop rather than simply existing as a second environment." data-highlights="Fully integrate the Villa|Map-level gameplay polish|Begin hiding-spot and traversal improvements" data-status="Planned" data-title="Villa Update" data-version="v0.3.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.3.0</b><small>Villa Update</small></span></button><button aria-selected="false" class="roadmap-node planned position-top" data-description="Player feedback gets a dedicated pass so panic and death are easier to understand without turning the horror experience into a dashboard. This milestone adds spectator support after death, optional death presentation, and clearer audio/visual feedback as panic crosses important thresholds." data-highlights="Death spectator mode|Optional death animation|Panic threshold audio feedback|Panic threshold visual feedback" data-status="Planned" data-title="Player State Polish" data-version="v0.3.5" role="tab" type="button"><span class="roadmap-label"><b>v0.3.5</b><small>Player State</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned position-bottom" data-description="Loot and carried equipment move onto a stronger shared item architecture. Procedural valuables, item categories, inventory rules, and equipment data are reorganized so future loot, tools, consumables, and objectives can grow without needing separate one-off systems." data-highlights="Procedural loot|Item categories|Inventory architecture|Equipment architecture" data-status="Planned" data-title="Item Revamp" data-version="v0.4.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.4.0</b><small>Item Revamp</small></span></button><button aria-selected="false" class="roadmap-node planned position-top" data-description="Pre-heist preparation becomes a real multiplayer system. Each job begins with an empty shared equipment pool, and players choose which owned items they want to contribute before the crew enters the property. Internal ownership tracking remains part of the supporting backlog." data-highlights="Empty shared equipment pool|Players contribute owned items|Pre-heist equipment UI|Internal ownership backlog" data-status="Planned" data-title="Equipment Preparation UI" data-version="v0.4.5" role="tab" type="button"><span class="roadmap-label"><b>v0.4.5</b><small>Equipment UI</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned position-bottom" data-description="The first real thief equipment lineup arrives. Tiered player items, consumables, traps, and other usable tools begin giving crews meaningful choices about how they enter, survive, recover, and deal with supernatural threats." data-highlights="Tiered player items|Consumables|Ghost traps|Usable heist equipment" data-status="Planned" data-title="Heist Tools" data-version="v0.5.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.5.0</b><small>Heist Tools</small></span></button><button aria-selected="false" class="roadmap-node planned position-top" data-description="Equipment becomes part of the long-term progression loop rather than a menu-only feature. Purchasing, ownership, tier unlocks, item use, item loss, and death reconciliation are connected so what players bring—and lose—has persistent consequences." data-highlights="Purchasing and ownership|Tier unlocks|Use and loss reconciliation|Death equipment reconciliation" data-status="Planned" data-title="Equipment Economy" data-version="v0.5.5" role="tab" type="button"><span class="roadmap-label"><b>v0.5.5</b><small>Equipment Economy</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned position-bottom" data-description="The main score stops being something players can simply walk up and grab. Primary objectives become secured behind puzzles, requirements, tools, or other property-specific conditions, giving each robbery a stronger objective layer before the final prize can be taken." data-highlights="Puzzle-gated main objectives|Tool or requirement gates|Property-specific objective conditions" data-status="Planned" data-title="Secured Objectives" data-version="v0.6.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.6.0</b><small>Secured Objectives</small></span></button><button aria-selected="false" class="roadmap-node planned position-top" data-description="Ghosts begin behaving as distinct archetypes instead of interchangeable threats. Different supernatural types gain their own tendencies, strengths, weaknesses, and reactions, forcing crews to change how they play from one haunting to another." data-highlights="Distinct ghost archetypes|Different behavioral rules|New strengths and weaknesses|More varied counterplay" data-status="Planned" data-title="Ghost Types" data-version="v0.7.0" role="tab" type="button"><span class="roadmap-label"><b>v0.7.0</b><small>Ghost Types</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned position-bottom" data-description="Living complications enter the robbery. Rival thieves, police, and other external events can interrupt jobs and create situations where the crew must deal with both human problems and whatever is already haunting the property." data-highlights="Rival thieves|Police events|Other external encounters|Human and supernatural pressure" data-status="Planned" data-title="Outsiders" data-version="v0.8.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.8.0</b><small>Outsiders</small></span></button><button aria-selected="false" class="roadmap-node planned position-top" data-description="The content layer broadens beyond the initial properties. Additional maps, more procedural variation, and wider job progression are introduced to make repeat robberies feel less predictable and give players more reasons to keep building their criminal career." data-highlights="Additional maps|Procedural variety|Broader job progression|Greater replayability" data-status="Planned" data-title="Replayability &amp; Maps" data-version="v0.9.0" role="tab" type="button"><span class="roadmap-label"><b>v0.9.0</b><small>Replayability</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned position-bottom" data-description="The original MVP house is repurposed into a dedicated tutorial experience. Instead of remaining just another normal property, it becomes the player's introduction to stealing, equipment, objectives, panic, haunting escalation, and extraction." data-highlights="Convert the original MVP house|Dedicated playable tutorial|Teach the core robbery loop|Introduce haunting and extraction" data-status="Planned" data-title="Tutorial Conversion" data-version="v0.9.x" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.9.x</b><small>Tutorial</small></span></button><button aria-selected="false" class="roadmap-node planned position-top" data-description="Characters and ghosts receive a major visual-quality pass as production resources allow. New models, stronger animation work, and broader art upgrades replace or improve temporary presentation so the game approaches its Early Access visual target." data-highlights="New character models|New ghost models|Animation polish|Broader art upgrades" data-status="Planned" data-title="Character / Ghost Visual Overhaul" data-version="v0.9.5" role="tab" type="button"><span class="roadmap-label"><b>v0.9.5</b><small>Visual Overhaul</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="roadmap-node planned roadmap-finale position-bottom" data-description="Haunted Heists reaches its Early Access launch milestone. The focus is stabilization, balance, optimization, multiplayer reliability, and making sure the complete initial gameplay loop is coherent and ready for a wider public audience." data-highlights="Stabilization and QA|Balance pass|Optimization|Complete initial gameplay loop" data-status="Planned" data-title="Early Access" data-version="v1.0.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v1.0.0</b><small>Early Access</small></span></button></div>
+</div>
+<div aria-live="polite" class="roadmap-detail" id="roadmap-detail" role="tabpanel">
+<div class="roadmap-detail-topline">
+<span id="roadmap-detail-version">v0.2.5</span>
+<span class="roadmap-detail-status current" id="roadmap-detail-status">Current</span>
+</div>
+<h3 id="roadmap-detail-title">UI &amp; Interaction Polish</h3>
+<p id="roadmap-detail-description">This update focuses on making the multiplayer front end and moment-to-moment interaction feel cleaner and more reliable. Host and Join presentation, visual consistency, replicated map selection, hover language, and extraction/back-door interaction issues are brought into one dedicated polish pass.</p>
+<ul class="roadmap-detail-highlights" id="roadmap-detail-highlights"><li>Host/Join redesign</li><li>Visual consistency and hover language</li><li>Map-selection sync</li><li>Extraction and back-door interaction fixes</li></ul>
+</div>
+</div>
+</section>
+<section class="section build-section" id="build">
+<div class="section-header split-header build-heading">
+<div>
+<p class="eyebrow spectral">Latest playable build</p>
+<h2>Download Haunted Heists</h2>
+<p class="section-lede">
                         This is the newest development build available for external testing.
                         Older grant, publisher, and archive builds remain separate.
                     </p>
-                </div>
-
-                <div class="build-version-lockup" aria-label="Latest build version">
-                    <span>Current Patch</span>
-                    <strong>v0.2.0</strong>
-                    <small>Pre-Alpha</small>
-                </div>
-            </div>
-
-            <div class="build-card current-build">
-                <div class="build-card-main">
-                    <div class="build-mark" aria-hidden="true">PE</div>
-                    <div class="build-copy">
-                        <div class="build-status available"><span></span> Available for testing</div>
-                        <h3>Multiplayer Lobby + Villa WIP</h3>
-                        <p>
-                            The current build expands Haunted Robberies from basic WAN multiplayer into a proper
-                            room-based multiplayer flow while beginning migration toward the larger Modern Villa map.
+</div>
+<div aria-label="Latest build version" class="build-version-lockup">
+<span>Current Patch</span>
+<strong>v0.2.5</strong>
+<small>Pre-Alpha</small>
+</div>
+</div>
+<div class="build-card current-build">
+<div class="build-card-main">
+<div aria-hidden="true" class="build-mark">HH</div>
+<div class="build-copy">
+<div class="build-status available"><span></span> Available for testing</div>
+<h3>UI Polish + Multiplayer Verification</h3>
+<p>
+                            The current build completes the 0.2.5 UI polish milestone and verifies the multiplayer
+                            lobby, replicated map selection, ready states, listen-server travel, and two-player movement
+                            across both the Starter House and Modern Villa.
                         </p>
-
-                        <div class="build-meta" aria-label="Build details">
-                            <span><b>Platform</b> Windows PC</span>
-                            <span><b>Players</b> 1–6</span>
-                            <span><b>Version</b> v0.2.0</span>
-                            <span><b>Released</b> Aug 21, 2026</span>
-                            <span><b>Archive</b> 1.50 GB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="build-card-actions">
-                    <a class="btn spectral-btn"
-                       href="https://drive.google.com/file/d/1Y_2YFOVC-ST00DrEwFYx9lymx1BM-F0c/view?usp=drivesdk"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Download v0.2.0
+<div aria-label="Build details" class="build-meta">
+<span><b>Platform</b> Windows PC</span>
+<span><b>Players</b> 1–6</span>
+<span><b>Version</b> v0.2.5</span>
+<span><b>Released</b> Aug 23, 2026</span>
+<span><b>Archive</b> Upload pending</span>
+</div>
+</div>
+</div>
+<div class="build-card-actions">
+<a class="btn spectral-btn" href="https://drive.google.com/file/d/1LHIjpeC_1GQibTy3kNCHol6f4qqz3cwk/view?usp=drivesdk">
+                        Download v0.2.5
                     </a>
-                    <small>Google Drive • ZIP archive</small>
-                </div>
-            </div>
-
-            <div class="build-warning">
-                <strong>Development build.</strong>
-                <p>
-                    Paranormal Estates: Haunted Robberies is still in pre-alpha. Expect incomplete presentation, balance changes,
+<small>Google Drive • ZIP archive</small>
+</div>
+</div>
+<div class="build-warning">
+<strong>Development build.</strong>
+<p>
+                    Haunted Heists is still in pre-alpha. Expect incomplete presentation, balance changes,
                     placeholder assets, networking bugs, and parts of the Villa that are visibly still under construction.
                     Feedback is very welcome; summoning contractors for the ghost is not.
                 </p>
-            </div>
-        </section>
-
-        <section id="patch-notes" class="section patch-notes-section">
-            <div class="section-header split-header">
-                <div>
-                    <p class="eyebrow spectral">Current update</p>
-                    <h2>Patch Notes</h2>
-                </div>
-                <p class="section-lede">
+</div>
+</section>
+<section class="section patch-notes-section" id="patch-notes">
+<div class="section-header split-header">
+<div>
+<p class="eyebrow spectral">Current update</p>
+<h2>Patch Notes</h2>
+</div>
+<p class="section-lede">
                     The current patch stays fully expanded. Previous releases are preserved underneath
                     so playtest reports can always be tied to the build that produced them.
                 </p>
-            </div>
-
-            <article class="patch-entry patch-current">
-                <header class="patch-entry-header">
-                    <div>
-                        <div class="patch-title-line">
-                            <span class="patch-version">v0.2.0</span>
-                            <span class="patch-tag">Pre-Alpha</span>
-                            <span class="patch-tag current">Current</span>
-                        </div>
-                        <h3>Multiplayer Lobby + Villa WIP</h3>
-                    </div>
-                    <time datetime="2026-08-21">August 21, 2026</time>
-                </header>
-
-                <p class="patch-summary">
-                    This update focuses on making online multiplayer feel like an actual game flow instead of
-                    “first six thieves pile into whatever session exists.” It also introduces the work-in-progress
-                    Modern Villa as the next primary playable property.
+</div>
+<article class="patch-entry patch-current">
+<header class="patch-entry-header">
+<div>
+<div class="patch-title-line">
+<span class="patch-version">v0.2.5</span>
+<span class="patch-tag">Pre-Alpha</span>
+<span class="patch-tag current">Current</span>
+</div>
+<h3>UI Polish + Multiplayer Verification</h3>
+</div>
+<time datetime="2026-08-23">August 23, 2026</time>
+</header>
+<p class="patch-summary">
+                    Version 0.2.5 focuses on presentation, lobby usability, and making the multiplayer flow reliable
+                    enough for wider playtesting. The main menu and lobby received a substantial visual overhaul,
+                    while map selection, ready states, hosting travel, and packaged multiplayer were corrected and verified.
                 </p>
-
-                <div class="patch-grid">
-                    <section>
-                        <h4>Multiplayer Lobby</h4>
-                        <ul>
-                            <li>Reworked multiplayer around player-created rooms instead of automatic session joining.</li>
-                            <li>Added a session-browser flow with a dedicated row widget for each discovered room.</li>
-                            <li>Added per-room Join controls so players choose which hosted session to enter.</li>
-                            <li>Continued EOS WAN multiplayer support for host/client play across separate networks.</li>
-                            <li>Improved multiplayer menu flow and session presentation for external playtesting.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h4>Modern Villa — WIP</h4>
-                        <ul>
-                            <li>Added the larger Modern Villa property as the next major playable map.</li>
-                            <li>Started gameplay setup for player spawning, ghost systems, directors, exits, and mission actors.</li>
-                            <li>Added the beach-side van staging area and began defining playable boundaries.</li>
-                            <li>Villa layout, lighting, collision, loot placement, and final scare coverage remain work in progress.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h4>Menus &amp; Settings</h4>
-                        <ul>
-                            <li>Reworked the main menu into Play, Settings, How to Play, Credits, and Quit flows.</li>
-                            <li>Moved multiplayer choices into a cleaner Solo / Host / Join structure.</li>
-                            <li>Improved Settings and pause-menu navigation.</li>
-                            <li>Added functional mouse-sensitivity control.</li>
-                            <li>Continued visual cleanup of the Host / Join interface and session rows.</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h4>Gameplay &amp; Polish</h4>
-                        <ul>
-                            <li>Improved item interaction reliability and interaction reach.</li>
-                            <li>Preserved the corrected held-item and dropped-item behavior after reverting a transform regression.</li>
-                            <li>Improved loading transitions between the menu and mission.</li>
-                            <li>Continued multiplayer mission-flow, UI, and usability fixes discovered during two-player testing.</li>
-                        </ul>
-                    </section>
+<div class="patch-grid">
+<section>
+<h4>Menus &amp; Presentation</h4>
+<ul>
+<li>Rebuilt and polished the main menu, Host, Join, lobby, Settings, pause, Credits, and How To Play screens.</li>
+<li>Added themed button artwork and lobby background styling.</li>
+<li>Added map-preview images for the Starter House and Modern Villa.</li>
+<li>Improved UI scaling, layout consistency, button visibility, and navigation flow.</li>
+<li>Updated loading-screen presentation.</li>
+</ul>
+</section>
+<section>
+<h4>Lobby &amp; Map Selection</h4>
+<ul>
+<li>Added fixed lobby player-row space so the layout no longer collapses with fewer players.</li>
+<li>Added selectable map cards for the Starter House and Modern Villa.</li>
+<li>Fixed map-selection replication so clients see the host's currently selected map.</li>
+<li>Fixed ready/unready state updates so player status displays correctly.</li>
+<li>Fixed host controls and Standalone behavior for selecting maps and starting a heist.</li>
+</ul>
+</section>
+<section>
+<h4>Multiplayer Reliability</h4>
+<ul>
+<li>Reworked EOS hosting travel so a valid listen server is created only after authentication.</li>
+<li>Verified that players can host and join packaged multiplayer sessions.</li>
+<li>Verified synchronized selected-map updates between host and client.</li>
+<li>Verified that either playable map can be launched successfully from the lobby.</li>
+<li>Verified successful travel and player movement for both players after loading into the mission.</li>
+</ul>
+</section>
+<section>
+<h4>Settings &amp; Usability</h4>
+<ul>
+<li>Added functional mouse-sensitivity controls.</li>
+<li>Improved navigation between the main menu and in-game pause Settings.</li>
+<li>Continued interaction and general usability polish for packaged builds.</li>
+<li>Prepared the UI foundation for future lobby and equipment features.</li>
+</ul>
+</section>
+</div>
+<div class="patch-footnote">
+<strong>Playtest status:</strong>
+                    Two packaged development builds were verified together. Both players could join the same session,
+                    see the host's selected map, start a heist on either map, travel successfully, and move after loading.
                 </div>
-
-                <div class="patch-footnote">
-                    <strong>Known WIP:</strong>
-                    The Villa is not considered content-complete in v0.2.0. This build primarily exists to validate
-                    the new room/lobby flow and continue multiplayer testing while the new property is assembled.
-                </div>
-            </article>
-
-            <div class="patch-history-heading">
-                <div>
-                    <p class="eyebrow spectral">Previous releases</p>
-                    <h3>Patch History</h3>
-                </div>
-                <span>Click a version to expand</span>
-            </div>
-
-            <div class="patch-history-scroll" aria-label="Previous Haunted Robberies patches">
-                <details class="patch-history-item">
-                    <summary>
-                        <span class="history-version">v0.1.0</span>
-                        <span class="history-title">EOS WAN Multiplayer</span>
-                        <time datetime="2026-08-16">Aug 16, 2026</time>
-                    </summary>
-
-                    <div class="history-body">
-                        <p>
+</article>
+<div class="patch-history-heading">
+<div>
+<p class="eyebrow spectral">Previous releases</p>
+<h3>Patch History</h3>
+</div>
+<span>Click a version to expand</span>
+</div>
+<div aria-label="Previous Haunted Heists patches" class="patch-history-scroll">
+<details class="patch-history-item">
+<summary>
+<span class="history-version">v0.2.0</span>
+<span class="history-title">Improved Multiplayer + Villa WIP</span>
+<time datetime="2026-08-21">Aug 21, 2026</time>
+</summary>
+<div class="history-body">
+<p>
+                            The multiplayer foundation moved toward a room-based lobby flow and began integrating
+                            the larger Modern Villa as the game's next major property.
+                        </p>
+<div class="history-columns">
+<section>
+<h4>Multiplayer</h4>
+<ul>
+<li>Reworked multiplayer around player-created rooms and session browsing.</li>
+<li>Added dedicated session-row widgets with per-room Join controls.</li>
+<li>Continued EOS WAN multiplayer support and mission-flow improvements.</li>
+</ul>
+</section>
+<section>
+<h4>Modern Villa</h4>
+<ul>
+<li>Added the work-in-progress Modern Villa property.</li>
+<li>Started gameplay setup for spawning, directors, exits, and mission actors.</li>
+<li>Added the beach-side van staging area and began defining playable boundaries.</li>
+</ul>
+</section>
+</div>
+</div>
+</details>
+<details class="patch-history-item">
+<summary>
+<span class="history-version">v0.1.0</span>
+<span class="history-title">EOS WAN Multiplayer</span>
+<time datetime="2026-08-16">Aug 16, 2026</time>
+</summary>
+<div class="history-body">
+<p>
                             The first multiplayer-distributed build. This release took the completed single-player
                             MVP and connected the mission flow to Epic Online Services for real WAN host/client testing.
                         </p>
-
-                        <div class="history-columns">
-                            <section>
-                                <h4>Multiplayer</h4>
-                                <ul>
-                                    <li>Implemented working EOS WAN session hosting and discovery.</li>
-                                    <li>Wired the main menu to multiplayer Host and Join actions.</li>
-                                    <li>Added the EOS WAN session bucket/query configuration.</li>
-                                    <li>Validated real host/client play across separate networks.</li>
-                                    <li>Improved server-authoritative movement and multiplayer mission flow.</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <h4>Polish added after the MVP build</h4>
-                                <ul>
-                                    <li>Improved menus, settings, and item interaction.</li>
-                                    <li>Added gameplay polish and multiplayer mission-flow fixes.</li>
-                                    <li>Continued loading-screen, return-to-menu, pause-menu, and usability work.</li>
-                                </ul>
-                            </section>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="patch-history-item">
-                    <summary>
-                        <span class="history-version">v0.0.1</span>
-                        <span class="history-title">Singleplayer MVP</span>
-                        <time datetime="2026-08-14">Aug 14, 2026</time>
-                    </summary>
-
-                    <div class="history-body">
-                        <p>
-                            The original packaged Haunted Robberies milestone: a complete start-to-finish
+<div class="history-columns">
+<section>
+<h4>Multiplayer</h4>
+<ul>
+<li>Implemented working EOS WAN session hosting and discovery.</li>
+<li>Wired the main menu to multiplayer Host and Join actions.</li>
+<li>Added the Haunted Heists WAN session bucket/query configuration.</li>
+<li>Validated real host/client play across separate networks.</li>
+<li>Improved server-authoritative movement and multiplayer mission flow.</li>
+</ul>
+</section>
+<section>
+<h4>Polish added after the MVP build</h4>
+<ul>
+<li>Improved menus, settings, and item interaction.</li>
+<li>Added gameplay polish and multiplayer mission-flow fixes.</li>
+<li>Continued loading-screen, return-to-menu, pause-menu, and usability work.</li>
+</ul>
+</section>
+</div>
+</div>
+</details>
+<details class="patch-history-item">
+<summary>
+<span class="history-version">v0.0.1</span>
+<span class="history-title">Singleplayer MVP</span>
+<time datetime="2026-08-14">Aug 14, 2026</time>
+</summary>
+<div class="history-body">
+<p>
+                            The original packaged Haunted Heists milestone: a complete start-to-finish
                             single-player MVP used as the stable foundation for later multiplayer builds.
                         </p>
-
-                        <div class="history-columns">
-                            <section>
-                                <h4>Complete Mission Loop</h4>
-                                <ul>
-                                    <li>Start from the main menu, enter the property, steal valuables, and secure loot at the van.</li>
-                                    <li>Complete extraction requirements and receive mission results with secured money and survivor information.</li>
-                                    <li>Return cleanly to the main menu after mission completion.</li>
-                                    <li>Added van inventory presentation, item information, and extraction guidance.</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <h4>Playtest Polish</h4>
-                                <ul>
-                                    <li>Added Master, Music, and SFX volume controls.</li>
-                                    <li>Added pause-menu Resume, Main Menu, and Quit actions.</li>
-                                    <li>Added Settings, How to Play, and Credits to the main menu.</li>
-                                    <li>Added contextual onboarding for inventory, deposits, the main objective, medicine, and extraction blockers.</li>
-                                    <li>Improved haunt reset reliability, ghost spawn validation, collision boundaries, audio routing, and scare behavior.</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <h4>Core Gameplay Systems</h4>
-                                <ul>
-                                    <li>Three-slot inventory with pickup, cycling, dropping, and van deposit behavior.</li>
-                                    <li>Lockpicking, medicine, breaker interaction, flashlight controls, and randomized door states.</li>
-                                    <li>Panic, House Activity, noise, theft reactions, and adaptive Director pacing.</li>
-                                    <li>Ghost roaming, investigation, chasing, last-known-position searching, and haunt lifecycle behavior.</li>
-                                </ul>
-                            </section>
-
-                            <section>
-                                <h4>Horror Systems</h4>
-                                <ul>
-                                    <li>Environmental events including door slams, mirror apparitions, screams, audio stings, and Light Chase.</li>
-                                    <li>Haunt exit-door locking and restoration.</li>
-                                    <li>Shared and victim-specific scare routing for multiplayer-ready presentation logic.</li>
-                                    <li>First-entry scare and audio tuning for less predictable playthroughs.</li>
-                                </ul>
-                            </section>
-                        </div>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section class="section credits-section">
-            <h2>Credits &amp; production note</h2>
-            <p>
-                Paranormal Estates: Haunted Robberies is independently developed by Moe Savari under EmberForge Studios.
+<div class="history-columns">
+<section>
+<h4>Complete Mission Loop</h4>
+<ul>
+<li>Start from the main menu, enter the property, steal valuables, and secure loot at the van.</li>
+<li>Complete extraction requirements and receive mission results with secured money and survivor information.</li>
+<li>Return cleanly to the main menu after mission completion.</li>
+<li>Added van inventory presentation, item information, and extraction guidance.</li>
+</ul>
+</section>
+<section>
+<h4>Playtest Polish</h4>
+<ul>
+<li>Added Master, Music, and SFX volume controls.</li>
+<li>Added pause-menu Resume, Main Menu, and Quit actions.</li>
+<li>Added Settings, How to Play, and Credits to the main menu.</li>
+<li>Added contextual onboarding for inventory, deposits, the main objective, medicine, and extraction blockers.</li>
+<li>Improved haunt reset reliability, ghost spawn validation, collision boundaries, audio routing, and scare behavior.</li>
+</ul>
+</section>
+<section>
+<h4>Core Gameplay Systems</h4>
+<ul>
+<li>Three-slot inventory with pickup, cycling, dropping, and van deposit behavior.</li>
+<li>Lockpicking, medicine, breaker interaction, flashlight controls, and randomized door states.</li>
+<li>Panic, House Activity, noise, theft reactions, and adaptive Director pacing.</li>
+<li>Ghost roaming, investigation, chasing, last-known-position searching, and haunt lifecycle behavior.</li>
+</ul>
+</section>
+<section>
+<h4>Horror Systems</h4>
+<ul>
+<li>Environmental events including door slams, mirror apparitions, screams, audio stings, and Light Chase.</li>
+<li>Haunt exit-door locking and restoration.</li>
+<li>Shared and victim-specific scare routing for multiplayer-ready presentation logic.</li>
+<li>First-entry scare and audio tuning for less predictable playthroughs.</li>
+</ul>
+</section>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section class="section credits-section">
+<h2>Credits &amp; production note</h2>
+<p>
+                Haunted Heists is independently developed by Moe Savari under EmberForge Studios.
                 The current pre-alpha uses licensed marketplace assets and placeholders alongside original gameplay code and systems.
                 Credits will be expanded as commissioned production art, animation, audio, and other final assets enter the project.
             </p>
-            <div class="hero-actions">
-                <a class="btn primary" href="mailto:moe.savari@gmail.com?subject=Paranormal%20Estates%3A%20Haunted%20Robberies">Discuss Haunted Robberies</a>
-                <a class="btn secondary" href="index.html">Explore the Portfolio</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; <span id="year"></span> Moe Savari • Paranormal Estates: Haunted Robberies • EmberForge Studios</p>
-        <p class="footer-links"><a href="privacy.html">Privacy Policy</a></p>
-    </footer>
-
-    <script>
+<div class="hero-actions">
+<a class="btn primary" href="mailto:moe.savari@gmail.com?subject=Haunted%20Heists">Discuss Haunted Heists</a>
+<a class="btn secondary" href="index.html">Explore the Portfolio</a>
+</div>
+</section>
+</main>
+<footer class="footer">
+<p>© <span id="year"></span> Moe Savari • Haunted Heists • EmberForge Studios</p>
+<p class="footer-links"><a href="privacy.html">Privacy Policy</a></p>
+</footer>
+<script>
         document.getElementById("year").textContent = new Date().getFullYear();
 
         const roadmapNodes = Array.from(document.querySelectorAll(".roadmap-node"));
@@ -776,13 +578,6 @@
             });
         });
 
-        const sealedEntry = document.querySelector('.sealed-entry');
-        if (sealedEntry) {
-            sealedEntry.addEventListener('click', function () {
-                const isOpen = sealedEntry.classList.toggle('revealed');
-                sealedEntry.setAttribute('aria-expanded', String(isOpen));
-            });
-        }
 
         document.querySelectorAll('.build-download-disabled').forEach(function (link) {
             link.addEventListener('click', function (event) {

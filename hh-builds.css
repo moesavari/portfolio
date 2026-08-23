@@ -678,3 +678,73 @@
         0 0 0 7px rgba(255, 200, 87, .07),
         0 0 34px rgba(255, 200, 87, .42);
 }
+
+
+/* ==========================================================================
+   Haunted Heists — gameplay showcase
+   ========================================================================== */
+
+.hh-video-section {
+    padding-top: clamp(3.5rem, 7vw, 6rem);
+    padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.hh-video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid rgba(142, 232, 196, .22);
+    border-radius: 16px;
+    background: #020303;
+    box-shadow:
+        0 28px 80px rgba(0, 0, 0, .44),
+        0 0 50px rgba(142, 232, 196, .045);
+}
+
+.hh-video-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(142, 232, 196, .08), transparent 38%),
+        linear-gradient(135deg, rgba(142, 232, 196, .025), transparent 45%);
+}
+
+.hh-video-frame iframe {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+.hh-video-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin-top: .9rem;
+}
+
+.hh-video-meta span {
+    padding: .32rem .58rem;
+    border: 1px solid rgba(142, 232, 196, .11);
+    border-radius: 5px;
+    background: rgba(142, 232, 196, .025);
+    color: rgba(200, 255, 233, .68);
+    font-size: .68rem;
+    font-weight: 750;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 680px) {
+    .hh-video-frame {
+        border-radius: 10px;
+    }
+}
+
+/* roadmap canonical 2026-08 */
+.roadmap-label small { overflow-wrap: anywhere; }

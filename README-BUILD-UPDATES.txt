@@ -13,7 +13,8 @@ CURRENT RELEASE HISTORY
 -----------------------
 v0.0.1 — Singleplayer MVP — Aug 14, 2026
 v0.1.0 — EOS WAN Multiplayer — Aug 16, 2026
-v0.2.0 — Multiplayer Lobby + Villa WIP — Aug 21, 2026
+v0.2.0 — Improved Multiplayer + Villa WIP — Aug 21, 2026
+v0.2.5 — UI Polish + Multiplayer Verification — Aug 23, 2026
 
 VERSION RULES GOING FORWARD
 ---------------------------
@@ -60,39 +61,60 @@ Example: v0.2.1
 4. Move the old v0.2.0 notes into a <details class="patch-history-item"> block.
 5. Keep newest historical patch at the top.
 
-
 INTERACTIVE ROADMAP
 -------------------
-The roadmap lives immediately above the Latest Build / Download section.
+Canonical public roadmap:
 
-Milestones:
-v0.0.1  First Playable
-v0.1.0  First Multiplayer Build
-v0.2.0  Improved Multiplayer (current)
-v0.2.5  UI Polish
-v0.3.0  Modern Villa
-v0.4.0  Item Overhaul
-v0.4.5  Equipment Planning
+v0.2.5  UI & Interaction Polish (current)
+        Host/Join redesign, visual consistency, map-selection sync, hover language,
+        extraction/back-door interaction fixes
+
+v0.3.0  Villa Update
+        Fully integrate the Villa and begin map-level gameplay polish such as hiding spots
+
+v0.3.5  Player State Polish
+        Death spectator mode, optional death animation, panic threshold audio/visual feedback
+
+v0.4.0  Item Revamp
+        Procedural loot, item categories, inventory/equipment architecture
+
+v0.4.5  Equipment Preparation UI
+        Empty shared equipment pool; players add owned items; internal ownership backlog
+
 v0.5.0  Heist Tools
+        First tiered player items, consumables, traps and usable equipment
+
 v0.5.5  Equipment Economy
-v0.6.0  Objective Requirements
-v0.7.0  Behavioral Ghost Types
+        Purchasing, ownership, tier unlocks, use/loss/death reconciliation
+
+v0.6.0  Secured Objectives
+        Main objective gated behind puzzles, requirements or tools
+
+v0.7.0  Ghost Types
+        Distinct ghost behavior archetypes
+
 v0.8.0  Outsiders
-v0.9.0  Early Access Candidate
-v1.0.0  Full Release
+        Rival thieves, police and other external events
 
-Roadmap behavior:
-- Completed milestones use spectral green.
-- Current milestone uses a larger gold dot.
-- Planned milestones use dim outlined dots.
-- Labels alternate above and below the line.
-- Clicking a milestone updates the detail panel underneath.
-- On narrow screens the timeline scrolls horizontally.
+v0.9.0  Replayability & Maps
+        Additional maps, procedural variety and broader job progression
 
-To update a milestone, search haunted-heists.html for its roadmap-node and edit:
-data-title, data-status, data-description, data-highlights, and the visible roadmap-label.
+v0.9.x  Tutorial Conversion
+        Convert the original MVP house into a dedicated tutorial
 
-Roadmap finish line:
-- v0.9.0 is the Early Access readiness/stabilization milestone.
-- v1.0.0 is the Full Release milestone.
-- v1.0.0 gets a special terminal-node treatment so the end of the roadmap reads as a destination.
+v0.9.5  Character / Ghost Visual Overhaul
+        New models, animation polish and art upgrades when resources permit
+
+v1.0.0  Early Access
+        Stabilization, balance, optimization and complete initial loop
+
+The website roadmap starts at the current public milestone (v0.2.5).
+Earlier versions remain in Patch History rather than occupying roadmap space.
+
+Behavior:
+- v0.2.5 is Current.
+- Future milestones are Planned.
+- Labels alternate above/below the line.
+- Clicking a milestone updates the full public description panel.
+- Timeline scrolls horizontally on smaller screens.
+- v1.0.0 uses the finish-line styling and represents Early Access.

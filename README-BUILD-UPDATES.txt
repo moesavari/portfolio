@@ -118,3 +118,8 @@ Behavior:
 - Clicking a milestone updates the full public description panel.
 - Timeline scrolls horizontally on smaller screens.
 - v1.0.0 uses the finish-line styling and represents Early Access.
+
+ROADMAP / VIDEO PRESENTATION
+----------------------------
+- Roadmap labels alternate strictly top / bottom across the full v0.0.1 -> v1.0.0 timeline.
+- Gameplay showcase text identifies the footage as captured with v0.1.0.

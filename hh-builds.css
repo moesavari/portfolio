@@ -748,3 +748,72 @@
 
 /* roadmap canonical 2026-08 */
 .roadmap-label small { overflow-wrap: anywhere; }
+
+/* ==========================================================================
+   Dual platform build downloads — Steam / Epic
+   ========================================================================== */
+.build-card-actions {
+    min-width: min(420px, 100%);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .9rem;
+    align-items: stretch;
+    text-align: left;
+}
+.build-platform-slot {
+    min-width: 0;
+    padding: .9rem;
+    border: 1px solid rgba(142,232,196,.13);
+    border-radius: 10px;
+    background: rgba(255,255,255,.018);
+}
+.build-platform-head {
+    display:flex;
+    justify-content:space-between;
+    gap:.7rem;
+    align-items:center;
+    margin-bottom:.7rem;
+}
+.build-platform-head strong { color:rgba(240,244,242,.94); font-size:.9rem; }
+.build-platform-status {
+    padding:.15rem .35rem;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:4px;
+    font-size:.58rem;
+    font-weight:800;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+}
+.build-platform-status.pending {
+    color:var(--ember-gold);
+    border-color:rgba(255,200,87,.24);
+    background:rgba(255,200,87,.04);
+}
+.build-platform-status.available {
+    color:var(--ember-spectral);
+    border-color:rgba(142,232,196,.24);
+    background:rgba(142,232,196,.04);
+}
+.build-platform-slot .btn { width:100%; text-align:center; }
+.build-platform-slot small {
+    display:block;
+    margin-top:.45rem;
+    color:var(--ember-text-muted);
+    font-size:.68rem;
+    text-align:center;
+}
+@media (max-width:760px) {
+    .build-card-actions { width:100%; grid-template-columns:1fr; }
+}
+
+/* v0.3.0 hero title lockup */
+.hero h1 .hero-title-franchise,
+.hero h1 .hero-title-game {
+    display: block;
+}
+.hero h1 .hero-title-franchise {
+    color: var(--ember-text, #f0f1f2);
+}
+.hero h1 .hero-title-game {
+    color: var(--ember-gold, #ffc34d);
+}

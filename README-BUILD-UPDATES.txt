@@ -123,3 +123,54 @@ ROADMAP / VIDEO PRESENTATION
 ----------------------------
 - Roadmap labels alternate strictly top / bottom across the full v0.0.1 -> v1.0.0 timeline.
 - Gameplay showcase text identifies the footage as captured with v0.1.0.
+
+v0.3.0 WEBSITE UPDATE — 2026-08-29
+----------------------------------
+Current roadmap milestone: v0.3.0 — Rich Neighbourhood
+Current public patch: v0.3.0 — Rich Neighbourhood
+
+Major public notes:
+- New Rich Neighbourhood contract map
+- Steam WAN sessions
+- Redesigned Play/session/lobby flow
+- Improved ghost cross-floor and balcony navigation
+- Modular House Manager/editor tools
+- Whole-house power + replicated randomized breaker selection
+- Interaction/inventory/extraction/item-drop reliability improvements
+- Official Paranormal Estates font
+- Stability, performance, loading, and synchronization fixes
+
+The v0.3.0 build download is intentionally set to UPLOAD PENDING until the new packaged ZIP has a public URL.
+
+
+DUAL BUILD DOWNLOADS — v0.3.0+
+-------------------------------
+The current build card has two independent slots: Steam and Epic.
+
+Both are currently set to Upload Pending.
+
+To enable either slot:
+- Replace href="#" with that build's public URL.
+- Remove build-download-disabled and aria-disabled="true".
+- Change build-platform-status from pending to available.
+- Change "Upload Pending" to "Available".
+
+The two builds do not need to go live at the same time.
+
+
+v0.3.0 PUBLIC BUILD LINKS — 2026-08-29
+--------------------------------------
+Steam:
+https://drive.google.com/file/d/1L4FiGm11T9js0My8L3goIarjRFN13p6o/view?usp=drive_link
+
+Epic / EOS:
+https://drive.google.com/file/d/16IieLuY91-qoZ9XurMQbcANrU6CF_KxG/view?usp=drive_link
+
+Both v0.3.0 download slots are enabled and marked Available.
+
+Hero title presentation:
+PARANORMAL ESTATES:
+HAUNTED ROBBERIES
+
+Build monogram:
+HR

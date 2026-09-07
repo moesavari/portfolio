@@ -817,3 +817,191 @@
 .hero h1 .hero-title-game {
     color: var(--ember-gold, #ffc34d);
 }
+
+
+/* ==========================================================================
+   Paranormal Estates official display font
+   ========================================================================== */
+
+@font-face {
+    font-family: "PE Haunted Robberies";
+    src: url("pe-haunted-robberies.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+/* Brand / display typography only */
+.hero h1,
+.hh-hero h1,
+.section-header h2,
+.roadmap-detail h3,
+.patch-entry-header h3,
+.build-card h3,
+.build-version-lockup strong,
+.build-mark {
+    font-family: "PE Haunted Robberies", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+/* Keep compact UI and body copy readable */
+.patch-grid,
+.history-body,
+.build-meta,
+.roadmap-label,
+.btn,
+nav,
+body p,
+body li,
+body small {
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   PE typography hierarchy + v0.3.0 presentation polish
+   ========================================================================== */
+.hero h1 .hero-title-franchise-level {
+    display:block;
+    font-size:.72em;
+    line-height:.88;
+    letter-spacing:.012em;
+    margin-bottom:.08em;
+}
+.hero h1 .hero-title-game-level {
+    display:block;
+    font-size:1em;
+    line-height:.84;
+    letter-spacing:.005em;
+}
+.section-header h2,
+.status-copy h2,
+.roadmap-detail h3,
+.patch-entry-header h3,
+.build-card h3 {
+    font-size:clamp(2.35rem,4.1vw,4.6rem);
+    line-height:.96;
+}
+.architecture-section h2,
+.tech-section h2,
+.architecture-copy h2 {
+    font-size:clamp(2.15rem,3.4vw,3.8rem);
+    line-height:1;
+}
+.status-card h3,.milestone-card h3 { font-size:clamp(1.45rem,2vw,2rem); }
+.status-card li strong,.milestone-card li strong { font-size:1rem; }
+.status-card li small,.milestone-card li small { font-size:.8rem; line-height:1.45; }
+.role-card h2,.role-copy h2 { font-size:clamp(2.4rem,4vw,4.4rem); line-height:.98; }
+@media (max-width:760px) {
+    .hero h1 .hero-title-franchise-level { font-size:.76em; }
+    .hero h1 .hero-title-game-level { font-size:.94em; }
+}
+
+/* v0.3.5 official font coverage */
+.hh-status-card > strong,
+.roadmap-card h3,
+.patch-history-heading h3,
+.build-platform-head > strong {
+    font-family: "PE Haunted Robberies", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+}
+
+
+/* Requested PE display treatment */
+.pe-display-heading {
+    font-family: "PE Haunted Robberies", Georgia, "Times New Roman", serif !important;
+    font-weight: 400 !important;
+    letter-spacing: .01em;
+    line-height: .95;
+}
+
+
+/* v0.3.5 roadmap line continuity fix */
+.roadmap-track {
+    position: relative;
+}
+
+/* Full neutral baseline behind every milestone. */
+.roadmap-track::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    transform: translateY(-50%);
+    background: rgba(132, 151, 148, .24);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Keep milestone dots/labels above the baseline. */
+.roadmap-node {
+    position: relative;
+    z-index: 2;
+}
+
+/* Existing colored progress layers must not erase or truncate the neutral line. */
+.roadmap-track::after,
+.roadmap-progress,
+.roadmap-line,
+.roadmap-line-complete,
+.roadmap-line-current {
+    z-index: 1;
+}
+
+
+/* ==========================================================================
+   FINAL v0.3.5 roadmap progress line
+   One authoritative line: complete -> current -> future.
+   ========================================================================== */
+
+/* Disable the previous backup baseline so we do not have competing lines. */
+.roadmap-track::before {
+    content: none !important;
+}
+
+/* 17 milestones total:
+   v0.3.0 = index 4/16 = 25%
+   v0.3.5 = index 5/16 = 31.25%
+*/
+.roadmap-line {
+    left: 54px !important;
+    right: 54px !important;
+    width: auto !important;
+    height: 2px !important;
+    background: linear-gradient(
+        90deg,
+        var(--ember-spectral) 0%,
+        var(--ember-spectral) 25%,
+        var(--ember-gold) 25%,
+        var(--ember-gold) 31.25%,
+        rgba(132, 151, 148, .24) 31.25%,
+        rgba(132, 151, 148, .24) 100%
+    ) !important;
+    box-shadow:
+        0 0 10px rgba(142, 232, 196, .08),
+        0 0 10px rgba(255, 200, 87, .05);
+    z-index: 1 !important;
+}
+
+/* Dots stay visibly above the single continuous line. */
+.roadmap-node {
+    z-index: 2 !important;
+}
+
+.hero h1 {
+    font-size: clamp(6rem, 10vw, 11rem);
+    line-height: 0.78;
+}
+
+.hero h1 .hero-title-franchise {
+    display: block;
+    color: #f1f1f3;
+    font-size: 1em;
+}
+
+.hero h1 .hero-title-game {
+    display: block;
+    color: #ffc34d;
+    font-size: 1em;
+}

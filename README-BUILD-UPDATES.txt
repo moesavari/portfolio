@@ -174,3 +174,72 @@ HAUNTED ROBBERIES
 
 Build monogram:
 HR
+
+
+OFFICIAL PE DISPLAY FONT
+------------------------
+The website now uses the official Paranormal Estates: Haunted Robberies display font.
+
+Web font file:
+pe-haunted-robberies.woff2
+
+Used for:
+- Main hero title
+- Major section headings
+- Roadmap detail titles
+- Patch titles
+- Current build title/version
+- HR build emblem
+
+Body text, patch-note bullets, metadata, navigation, and buttons remain on the
+existing readable UI font.
+
+Do not remove pe-haunted-robberies.woff2 from the website root.
+
+
+v0.3.0 TYPOGRAPHY / STATUS POLISH
+---------------------------------
+- Paranormal Estates and Haunted Robberies use separate visual title levels.
+- Paranormal Estates is the smaller franchise level; Haunted Robberies is the larger game-title level.
+- Branded display headings are larger for stronger visual presence.
+- Current Status copy now reflects v0.3.0.
+- My Role copy has been tightened while retaining the solo-developer framing.
+
+
+v0.3.5 WEBSITE UPDATE — 2026-09-07
+----------------------------------
+Current patch: v0.3.5 — Player State, Settings & Sessions
+
+Steam build:
+https://drive.google.com/file/d/1W1o5yAOjx6Agm6phla7gI62xCJM6L62h/view?usp=drive_link
+
+Epic / EOS build:
+https://drive.google.com/file/d/17OCJ3ujY7_1kXdhz-orflbWXtqk5b0oG/view?usp=drive_link
+
+Website changes:
+- v0.3.5 is Current; v0.3.0 moved to Patch History.
+- Roadmap advanced to Player State Polish.
+- Hero/current-status messaging updated for 0.3.5.
+- Unreal Engine reference updated to 5.7.
+- Steam and EOS build links replaced with the new 0.3.5 uploads.
+- Official PE font extended to selected status/build/history headings.
+
+
+v0.3.5 POST-RELEASE VISUAL FIX
+------------------------------
+- Applied the official PE display font to:
+  * "Solo developer from concept to playable MVP."
+  * "Player feedback is sharper. Multiplayer is easier to control."
+- Added a full-width neutral roadmap baseline so the timeline remains visually
+  continuous through all future milestones.
+
+
+FINAL ROADMAP LINE FIX
+----------------------
+The roadmap now uses one authoritative continuous line instead of stacking a
+backup line behind the older gradient.
+
+Progress stops for v0.3.5:
+- Mint completed segment: through v0.3.0 (25%)
+- Gold current segment: v0.3.0 -> v0.3.5 (31.25%)
+- Neutral planned segment: v0.3.5 -> v1.0.0

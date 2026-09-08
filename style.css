@@ -446,7 +446,7 @@ a:hover {
 
 .section-title {
     font-size: 2rem;
-    color: #ff9d57; /* EmberForge accent orange */
+    color: #ff9d57; /* Grand Mishap Studios accent orange */
     margin-bottom: 25px;
 }
 
@@ -582,7 +582,7 @@ a:hover {
     gap: 0.5rem;
     align-items: center;
 }
-/* --- Fix: hero secondary buttons should carry Emberforge orange outline --- */
+/* --- Fix: hero secondary buttons should carry Grand Mishap Studios orange outline --- */
 .hero .btn.secondary {
     border-color: rgba(249, 115, 22, 0.85);
     color: rgba(249, 115, 22, 0.95);
@@ -596,7 +596,7 @@ a:hover {
     margin-top: 1.1rem;
 }
 
-/* --- Shipped Projects: Emberforge orange pills (treat as buttons) --- */
+/* --- Shipped Projects: Grand Mishap Studios orange pills (treat as buttons) --- */
 .project-links .pill,
 .project-links a.pill {
     border-color: rgba(249, 115, 22, 0.55);

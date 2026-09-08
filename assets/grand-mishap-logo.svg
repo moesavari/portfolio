@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Grand Mishap Studios GMS emblem</title>
+  <desc id="desc">Angular ivory G and M monogram with a deliberately displaced orange S.</desc>
+  <g fill="none" stroke="#F4E9D2" stroke-width="56" stroke-linejoin="miter" stroke-linecap="square">
+    <path d="M232 94H92v318h140V278h-72"/>
+    <path d="M230 412V98l88 116 88-116v246"/>
+  </g>
+  <path d="M331 305h121v48h-66l66 38v94H326v-48h70l-70-40v-92z" fill="#E85D24"/>
+</svg>

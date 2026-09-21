@@ -1005,3 +1005,109 @@ body small {
     color: #ffc34d;
     font-size: 1em;
 }
+
+
+/* ==========================================================================
+   v0.4.0 α current-release presentation
+   ========================================================================== */
+
+/* 17 milestones: v0.3.5 = 31.25%, v0.4.0 = 37.5% */
+.roadmap-line {
+    background: linear-gradient(
+        90deg,
+        var(--ember-spectral) 0%,
+        var(--ember-spectral) 31.25%,
+        var(--ember-gold) 31.25%,
+        var(--ember-gold) 37.5%,
+        rgba(132, 151, 148, .24) 37.5%,
+        rgba(132, 151, 148, .24) 100%
+    ) !important;
+}
+
+/* The actual hero class is .hh-hero; keep the franchise/game hierarchy deliberate. */
+.hh-hero h1 {
+    font-size: clamp(5.4rem, 8vw, 9rem);
+    line-height: .78;
+}
+.hh-hero h1 .hero-title-franchise {
+    display: block;
+    color: #f1f1f3;
+    font-size: 1em;
+}
+.hh-hero h1 .hero-title-game {
+    display: block;
+    color: #ffc34d;
+    font-size: .82em;
+}
+
+/* Alpha symbol gets the same display identity as the rest of the release branding. */
+.patch-version,
+.build-version-lockup strong,
+.hh-status-card > strong {
+    font-variant-numeric: lining-nums;
+}
+
+/* ==========================================================================
+   v0.4.0 Φ — Public Release: Loot & Item Overhaul
+   ========================================================================== */
+.phi-release-callout {
+    margin: 1.6rem 0 2rem;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    border: 1px solid rgba(255, 195, 77, .28);
+    border-left: 4px solid var(--ember-gold);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255,195,77,.07), rgba(142,232,196,.025) 55%, rgba(0,0,0,.08));
+}
+.phi-release-eyebrow {
+    margin-bottom: .35rem;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ember-spectral);
+}
+.phi-release-callout h4 {
+    margin: 0 0 1rem;
+    font-family: "PE Haunted Robberies", Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400;
+    color: var(--ember-gold);
+}
+.phi-release-callout p { margin: .75rem 0 0; }
+.phi-release-closing {
+    padding-top: .9rem;
+    border-top: 1px solid rgba(255,255,255,.08);
+    font-weight: 700;
+    color: #f0f3f2;
+}
+.gameplay-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .55rem;
+    margin: .9rem 0 1rem;
+}
+.gameplay-tab {
+    appearance: none;
+    border: 1px solid rgba(132,151,148,.28);
+    border-radius: 999px;
+    background: rgba(255,255,255,.025);
+    color: rgba(232,240,237,.72);
+    min-height: 40px;
+    padding: .55rem 1rem;
+    font: inherit;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    cursor: pointer;
+    transition: border-color .18s ease, background .18s ease, color .18s ease;
+}
+.gameplay-tab:hover { border-color: rgba(255,195,77,.45); color: #fff; }
+.gameplay-tab.active {
+    border-color: rgba(255,195,77,.68);
+    background: rgba(255,195,77,.12);
+    color: var(--ember-gold);
+}
+.gameplay-tab:focus-visible {
+    outline: 2px solid var(--ember-spectral);
+    outline-offset: 3px;
+}

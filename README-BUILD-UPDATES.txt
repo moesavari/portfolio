@@ -243,3 +243,47 @@ Progress stops for v0.3.5:
 - Mint completed segment: through v0.3.0 (25%)
 - Gold current segment: v0.3.0 -> v0.3.5 (31.25%)
 - Neutral planned segment: v0.3.5 -> v1.0.0
+
+
+v0.4.0 α WEBSITE PREP — 2026-09-21
+-----------------------------------
+Current milestone:
+v0.4.0 α — Loot & Item Overhaul
+
+Public release framing:
+"The way you rob a house has been rebuilt."
+
+Website changes:
+- v0.3.5 moved to completed/history.
+- v0.4.0 α is the current roadmap milestone and expanded patch.
+- Roadmap progress advances through the 0.4.0 milestone.
+- Current Status now describes the loot/item overhaul.
+- Inventory stat updated to 4 slots where applicable.
+- Steam and Epic/EOS build slots are intentionally disabled/pending.
+- Official PE display font treatment remains in place.
+- Hero title CSS now correctly targets .hh-hero.
+
+When builds are ready:
+- Replace the Steam pending href with the new Steam Drive URL.
+- Replace the Epic/EOS pending href with the new EOS Drive URL.
+- Remove build-download-disabled and aria-disabled.
+- Change each platform status from Pending to Available.
+
+
+v0.4.0 Φ PUBLIC RELEASE PASS — 2026-09-21
+-------------------------------------------
+Release name:
+v0.4.0 Φ — Public Release: Loot & Item Overhaul
+
+Google Drive release assets:
+Steam: https://drive.google.com/file/d/1DHVTIVuDAWf-cxpSpayXsh8C-0nemXJE/view?usp=drivesdk
+Epic/EOS: https://drive.google.com/file/d/1f-_CfH_k6eAJfmLSDu8uVW1JgsD9pl4x/view?usp=drivesdk
+Showcase: https://drive.google.com/file/d/1pPsgf35jbh11BxQXrLG1fBJDyb2r19Eb/view?usp=drivesdk
+
+Website changes:
+- Replaced α designation with Φ.
+- Added the Public Release naming and Φ explanation callout.
+- Activated the 0.4.0 Steam and EOS download buttons.
+- Added gameplay showcase tabs for v0.4.0 Φ and v0.1.0.
+- v0.4.0 Φ showcase is the default active video.
+- Removed the old footage-date sentence and redundant early-build footage badge.

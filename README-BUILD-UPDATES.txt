@@ -287,3 +287,16 @@ Website changes:
 - Added gameplay showcase tabs for v0.4.0 Φ and v0.1.0.
 - v0.4.0 Φ showcase is the default active video.
 - Removed the old footage-date sentence and redundant early-build footage badge.
+
+
+v0.5.5 Ω WEBSITE UPDATE — 2026-10-03
+-------------------------------------
+- Advanced current release to v0.5.5 Ω: Equipment, Heist Tools & Economy Update.
+- Marked 0.4.5 and 0.5.0 complete; 0.5.5 is current Ω milestone.
+- Added supplied commissioned PE:HR hero/social artwork.
+- Added four-GIF Heist Loop showcase.
+- Added Gamefound pre-launch support section and Kickstarter coming-soon placeholder.
+- Replaced Steam/EOS split distribution UI with unified PE:HR Launcher flow.
+- NOTE: launcher executable is ~156 MB and exceeds GitHub's normal 100 MB repository file limit.
+  Host it as a GitHub Release asset, then replace the current Releases-page launcher href with the direct asset URL.
+- Archived v0.4.0 Φ into Patch History.

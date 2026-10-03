@@ -1111,3 +1111,245 @@ body small {
     outline: 2px solid var(--ember-spectral);
     outline-offset: 3px;
 }
+
+
+/* ==========================================================================
+   v0.5.5 Ω — Equipment, Heist Tools & Economy
+   ========================================================================== */
+.hh-hero { min-height: min(900px, 92vh); position: relative; overflow: hidden; }
+.hh-hero-art {
+    position:absolute; inset:0;
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    opacity:.96;
+}
+.hh-hero-shade {
+    background: linear-gradient(90deg, rgba(5,7,10,.18) 0%, rgba(5,7,10,.34) 42%, rgba(5,7,10,.72) 72%, rgba(5,7,10,.88) 100%);
+}
+.hh-hero-inner { position:relative; z-index:2; }
+.omega-release-callout { border-left-color: #c8d7ff; background:linear-gradient(135deg,rgba(160,185,255,.08),rgba(255,195,77,.04) 60%,rgba(0,0,0,.08)); }
+.heist-gif-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.heist-gif-grid figure { margin:0; overflow:hidden; border:1px solid rgba(255,255,255,.1); border-radius:18px; background:rgba(255,255,255,.025); }
+.heist-gif-grid img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+.heist-gif-grid figcaption { display:flex; flex-direction:column; gap:.25rem; padding:1rem 1.1rem 1.15rem; }
+.heist-gif-grid figcaption b { color:var(--ember-gold); font-size:1rem; }
+.heist-gif-grid figcaption span { color:rgba(232,240,237,.72); font-size:.9rem; }
+.support-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.support-card { padding:1.4rem; border:1px solid rgba(255,255,255,.1); border-radius:18px; background:rgba(255,255,255,.025); }
+.support-card.live { border-color:rgba(255,195,77,.28); }
+.support-state { display:inline-block; margin-bottom:.7rem; font-size:.7rem; font-weight:800; letter-spacing:.14em; color:var(--ember-spectral); }
+.support-card h3 { margin:.1rem 0 .55rem; font-size:1.45rem; }
+.support-card p { color:rgba(232,240,237,.72); }
+.support-disabled { opacity:.5; cursor:not-allowed; display:inline-flex; }
+.launcher-slot { width:100%; }
+.launcher-download { width:100%; justify-content:center; }
+@media (max-width:760px) {
+  .heist-gif-grid,.support-grid { grid-template-columns:1fr; }
+  .hh-hero { min-height:760px; }
+  .hh-hero-art { background-position:34% center; }
+  .hh-hero-shade { background:linear-gradient(180deg,rgba(5,7,10,.18),rgba(5,7,10,.68) 56%,rgba(5,7,10,.92)); }
+}
+
+/* Ω hotfix — compact launcher card + roadmap progress */
+#builds .build-card.current-build{padding:1.35rem!important;min-height:0!important;align-items:center;grid-template-columns:84px minmax(0,1.35fr) minmax(300px,.9fr)!important;gap:1.35rem!important}
+#builds .build-version-lockup{min-height:84px!important;width:84px!important}
+#builds .build-copy{padding:0!important}
+#builds .build-copy h3{margin-bottom:.45rem!important;line-height:.92!important}
+#builds .build-copy p{margin:0 0 .7rem!important}
+#builds .build-meta{margin-top:.6rem!important;gap:.4rem .8rem!important}
+#builds .build-card-actions{align-self:center!important;margin:0!important}
+#builds .build-platform-slot{padding:.9rem!important;min-height:0!important}
+#builds .build-platform-slot small{margin-top:.55rem!important;line-height:1.45!important}
+.roadmap-line{background:linear-gradient(90deg,var(--ember-spectral) 0%,var(--ember-spectral) 43.75%,var(--ember-gold) 43.75%,var(--ember-gold) 50%,rgba(132,151,148,.24) 50%,rgba(132,151,148,.24) 100%)!important}
+@media(max-width:900px){#builds .build-card.current-build{grid-template-columns:72px minmax(0,1fr)!important}#builds .build-card-actions{grid-column:1/-1;width:100%}}
+@media(max-width:620px){#builds .build-card.current-build{grid-template-columns:1fr!important}#builds .build-version-lockup{width:72px!important;min-height:72px!important}}
+
+/* ==========================================================================
+   Ω layout hotfix 2 — roadmap line + wide launcher layout
+   ========================================================================== */
+
+/* Roadmap: make the visible track itself carry the progress state.
+   Current node is v0.5.5 Ω: mint through v0.5.0, gold to Ω, gray afterward. */
+.roadmap-track {
+    background:
+      linear-gradient(
+        90deg,
+        var(--ember-spectral) 0%,
+        var(--ember-spectral) 43.75%,
+        var(--ember-gold) 43.75%,
+        var(--ember-gold) 50%,
+        rgba(132,151,148,.24) 50%,
+        rgba(132,151,148,.24) 100%
+      ) center / 100% 2px no-repeat !important;
+}
+.roadmap-line {
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+    top:50% !important;
+    width:100% !important;
+    height:2px !important;
+    transform:translateY(-50%) !important;
+    background:
+      linear-gradient(
+        90deg,
+        var(--ember-spectral) 0%,
+        var(--ember-spectral) 43.75%,
+        var(--ember-gold) 43.75%,
+        var(--ember-gold) 50%,
+        rgba(132,151,148,.24) 50%,
+        rgba(132,151,148,.24) 100%
+      ) !important;
+    z-index:0 !important;
+}
+
+/* Current build: give the copy room and anchor the launcher CTA to the far right. */
+#builds .build-card.current-build {
+    display:grid !important;
+    grid-template-columns:84px minmax(0, 1fr) minmax(330px, 390px) !important;
+    column-gap:1.5rem !important;
+    row-gap:.75rem !important;
+    padding:1.35rem 1.55rem !important;
+    min-height:0 !important;
+}
+#builds .build-version-lockup {
+    grid-column:1 !important;
+    align-self:center !important;
+}
+#builds .build-copy {
+    grid-column:2 !important;
+    width:100% !important;
+    max-width:none !important;
+    align-self:center !important;
+}
+#builds .build-copy h3 {
+    max-width:760px !important;
+}
+#builds .build-copy p {
+    max-width:760px !important;
+}
+#builds .build-card-actions {
+    grid-column:3 !important;
+    justify-self:end !important;
+    align-self:center !important;
+    width:100% !important;
+    max-width:390px !important;
+}
+#builds .launcher-slot {
+    width:100% !important;
+}
+@media(max-width:900px){
+  #builds .build-card.current-build {
+    grid-template-columns:72px minmax(0,1fr) !important;
+  }
+  #builds .build-card-actions {
+    grid-column:1 / -1 !important;
+    justify-self:stretch !important;
+    max-width:none !important;
+  }
+}
+@media(max-width:620px){
+  #builds .build-card.current-build { grid-template-columns:1fr !important; }
+  #builds .build-version-lockup,
+  #builds .build-copy,
+  #builds .build-card-actions { grid-column:1 !important; }
+}
+
+/* ==========================================================================
+   Ω structural fix — targets actual DOM structure
+   ========================================================================== */
+
+/* 17 roadmap milestones:
+   completed through v0.5.0 = 50%
+   current v0.5.5 Ω = 56.25%
+*/
+.roadmap-track {
+    background: none !important;
+}
+.roadmap-line {
+    position:absolute !important;
+    left:54px !important;
+    right:54px !important;
+    top:50% !important;
+    width:auto !important;
+    height:2px !important;
+    transform:translateY(-50%) !important;
+    background:linear-gradient(
+        90deg,
+        var(--ember-spectral) 0%,
+        var(--ember-spectral) 50%,
+        var(--ember-gold) 50%,
+        var(--ember-gold) 56.25%,
+        rgba(132,151,148,.24) 56.25%,
+        rgba(132,151,148,.24) 100%
+    ) !important;
+    z-index:1 !important;
+}
+.roadmap-node { z-index:2 !important; }
+
+/* Actual build DOM is:
+   .build-card
+     .build-card-main  -> badge + copy
+     .build-card-actions -> launcher
+*/
+#build .build-card.current-build {
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(330px,390px) !important;
+    gap:clamp(2rem,4vw,4rem) !important;
+    align-items:center !important;
+    padding:clamp(1.35rem,2vw,1.75rem) clamp(1.5rem,3vw,2.25rem) !important;
+    min-height:0 !important;
+}
+#build .build-card-main {
+    display:grid !important;
+    grid-template-columns:84px minmax(0,1fr) !important;
+    gap:1.4rem !important;
+    align-items:center !important;
+    min-width:0 !important;
+}
+#build .build-mark {
+    width:84px !important;
+    height:84px !important;
+    min-width:84px !important;
+    align-self:center !important;
+}
+#build .build-copy {
+    min-width:0 !important;
+    width:auto !important;
+    max-width:none !important;
+    padding:0 !important;
+}
+#build .build-copy h3 {
+    max-width:none !important;
+    margin:.35rem 0 .55rem !important;
+    font-size:clamp(2.3rem,4vw,4rem) !important;
+    line-height:.9 !important;
+}
+#build .build-copy p {
+    max-width:760px !important;
+    margin:0 0 .75rem !important;
+}
+#build .build-meta {
+    margin-top:.65rem !important;
+}
+#build .build-card-actions {
+    width:100% !important;
+    max-width:390px !important;
+    justify-self:end !important;
+    align-self:center !important;
+    margin:0 !important;
+}
+#build .build-platform-slot {
+    width:100% !important;
+    padding:1rem !important;
+    min-height:0 !important;
+}
+@media(max-width:900px){
+  #build .build-card.current-build { grid-template-columns:1fr !important; gap:1.25rem !important; }
+  #build .build-card-actions { max-width:none !important; justify-self:stretch !important; }
+}
+@media(max-width:620px){
+  #build .build-card-main { grid-template-columns:1fr !important; }
+  #build .build-mark { width:72px !important; height:72px !important; min-width:72px !important; }
+}

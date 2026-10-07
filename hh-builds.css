@@ -1353,3 +1353,131 @@ body small {
   #build .build-card-main { grid-template-columns:1fr !important; }
   #build .build-mark { width:72px !important; height:72px !important; min-width:72px !important; }
 }
+
+
+/* ==========================================================================
+   PE:HR spectral-wealth palette — deep haunted blue with restrained gold
+   ========================================================================== */
+.haunted-page {
+    --ember-spectral: #43b7e6;
+    --ember-spectral-bright: #a8e6ff;
+    --pehr-blue-deep: #06111a;
+    --pehr-blue-panel: #081923;
+    --pehr-blue-line: rgba(67,183,230,.20);
+    --pehr-gold: #c99a45;
+    --pehr-gold-bright: #e5bd68;
+    background:
+        radial-gradient(circle at 8% 18%, rgba(35,135,181,.13), transparent 28%),
+        radial-gradient(circle at 92% 14%, rgba(35,135,181,.10), transparent 27%),
+        radial-gradient(circle at 50% 85%, rgba(201,154,69,.035), transparent 30%),
+        linear-gradient(180deg,#040a0f 0%,#061019 45%,#04090e 100%);
+}
+.haunted-page main {
+    background:
+        linear-gradient(90deg,rgba(67,183,230,.025),transparent 16%,transparent 84%,rgba(67,183,230,.025));
+}
+.haunted-nav {
+    background:rgba(3,10,15,.94);
+    border-bottom-color:rgba(67,183,230,.18);
+}
+.haunted-nav .nav-links a:hover { color:var(--ember-spectral-bright); }
+.haunted-nav .nav-links a::after {
+    background:linear-gradient(90deg,var(--ember-spectral),var(--pehr-gold));
+}
+.hh-hero { border-bottom-color:rgba(67,183,230,.18); }
+.hh-hero-shade {
+    background:
+        linear-gradient(90deg,rgba(2,8,13,.99) 0%,rgba(3,12,18,.84) 34%,rgba(3,12,18,.25) 66%,rgba(3,9,14,.64) 100%),
+        linear-gradient(180deg,rgba(3,12,18,.25) 0%,rgba(3,12,18,.08) 45%,#040b11 100%);
+}
+.hh-hero h1 span { color:var(--pehr-gold-bright); }
+.hh-meta-row { color:rgba(168,230,255,.74); }
+.hh-meta-row span + span::before { color:rgba(201,154,69,.55); }
+.spectral-btn {
+    color:#031018;
+    border-color:#5bc5ec;
+    background:linear-gradient(135deg,#b7ebff,#43b7e6);
+    box-shadow:0 0 30px rgba(67,183,230,.18);
+}
+.spectral-btn:hover {
+    color:#031018;
+    box-shadow:0 0 40px rgba(67,183,230,.32),0 0 16px rgba(201,154,69,.12);
+}
+.hh-status-card,.roadmap-card,.build-card,.build-version-lockup {
+    border-color:rgba(67,183,230,.22);
+}
+.hh-status-card {
+    background:linear-gradient(145deg,rgba(5,19,28,.86),rgba(4,11,17,.82));
+    box-shadow:inset 0 1px 0 rgba(201,154,69,.08);
+}
+.hh-status-card > strong,.metric-grid strong,.system-icon,.arch-node span,.principles-grid strong {
+    color:var(--ember-spectral-bright);
+}
+.loop-grid,.metric-grid { border-color:rgba(67,183,230,.18); }
+.loop-grid { background:rgba(5,17,25,.68); }
+.loop-grid article { border-right-color:rgba(67,183,230,.13); }
+.loop-grid article::after { background:linear-gradient(90deg,var(--ember-spectral),var(--pehr-gold),transparent); }
+.metric-grid { background:rgba(67,183,230,.12); }
+.metric-grid div,.roadmap-card { background:#07151d; }
+.system-card {
+    border-color:rgba(67,183,230,.10);
+    background:linear-gradient(145deg,#091720,#050b10);
+}
+.featured-system {
+    border-color:rgba(201,154,69,.24);
+    background:radial-gradient(circle at top right,rgba(67,183,230,.10),transparent 45%),linear-gradient(145deg,#0a1921,#050b10);
+}
+.system-icon,.arch-node { border-color:rgba(67,183,230,.27); background:rgba(67,183,230,.045); }
+.architecture-section {
+    background:
+        linear-gradient(180deg,transparent,rgba(67,183,230,.025) 12%,rgba(67,183,230,.025) 88%,transparent),
+        repeating-linear-gradient(90deg,transparent 0,transparent 79px,rgba(67,183,230,.018) 80px);
+}
+.arch-core { border-color:rgba(201,154,69,.38); box-shadow:0 0 50px rgba(67,183,230,.06); }
+.challenge-grid article { border-top-color:rgba(201,154,69,.38); background:rgba(5,13,19,.78); }
+.principles-grid article { background:#071119; }
+.build-warning { border-left-color:var(--pehr-gold); background:rgba(201,154,69,.045); }
+.build-warning strong,.text-link { color:var(--pehr-gold-bright); }
+
+/* Community links */
+.community-section { padding-top:clamp(3rem,6vw,5rem); }
+.community-grid {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+}
+.community-card {
+    position:relative;
+    min-height:245px;
+    display:flex;
+    flex-direction:column;
+    padding:1.5rem;
+    overflow:hidden;
+    border:1px solid rgba(67,183,230,.18);
+    border-radius:14px;
+    background:linear-gradient(145deg,rgba(8,25,35,.92),rgba(4,11,17,.96));
+    color:var(--ember-text-main);
+    transition:transform 180ms ease,border-color 180ms ease,box-shadow 180ms ease;
+}
+.community-card::before {
+    content:"";
+    position:absolute;
+    width:180px;height:180px;right:-80px;top:-100px;
+    border-radius:50%;
+    background:rgba(67,183,230,.10);
+    filter:blur(18px);
+}
+.community-card:hover {
+    text-decoration:none;
+    transform:translateY(-3px);
+    border-color:rgba(201,154,69,.42);
+    box-shadow:0 18px 45px rgba(0,0,0,.28),0 0 25px rgba(67,183,230,.06);
+}
+.community-card > span {
+    color:var(--pehr-gold-bright);
+    font-size:.68rem;font-weight:850;letter-spacing:.15em;
+}
+.community-card h3 { margin:2.5rem 0 .6rem;font-size:1.5rem; }
+.community-card p { color:var(--ember-text-soft);font-size:.9rem; }
+.community-card b { margin-top:auto;padding-top:1.25rem;color:var(--ember-spectral-bright);font-size:.84rem; }
+@media(max-width:760px){.community-grid{grid-template-columns:1fr}.community-card{min-height:210px}}

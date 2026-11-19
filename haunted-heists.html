@@ -4,10 +4,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Paranormal Estates: Haunted Robberies — v0.5.5 Ω. Co-op horror robbery, heist tools, equipment economy, and launcher-based updates." name="description"/>
-<title>Paranormal Estates: Haunted Robberies — v0.5.5 Ω</title>
-<link href="style.css?v=9" rel="stylesheet"/>
-<link href="hh-builds.css?v=3" rel="stylesheet"/>
+<meta content="Paranormal Estates: Haunted Robberies — v0.6.0. New haunted estates, secured objectives, specialist tools, ghost improvements and customizable controls." name="description"/>
+<title>Paranormal Estates: Haunted Robberies — v0.6.0</title>
+<link href="style.css?v=10" rel="stylesheet"/>
+<link href="hh-builds.css?v=4" rel="stylesheet"/>
 <link href="assets/grand-mishap_favicon_32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/grand-mishap_favicon_16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="assets/grand-mishap_favicon.ico" rel="shortcut icon"/>
@@ -28,12 +28,12 @@
 <a href="#showcase">Showcase</a>
 <a href="#roadmap">Roadmap</a>
 <a href="#build">Build</a>
-<a href="index.html">Portfolio</a>
+<a href="#community">Community</a><a href="index.html">Portfolio</a>
 </div>
 </div>
 </nav>
 <header class="hh-hero">
-<div aria-hidden="true" class="hh-hero-art" style="background-image:url('assets/pehr-hero-art.svg');"></div>
+<div aria-hidden="true" class="hh-hero-art" style="background-image:url('assets/pehr/Full_Illustration_Artwork_for_web-02-01.jpg');"></div>
 <div aria-hidden="true" class="hh-hero-shade"></div>
 <div class="hh-hero-inner">
 <div class="hh-hero-copy">
@@ -49,8 +49,8 @@
 </div>
 <aside class="hh-status-card">
 <span class="proof-kicker">Development status</span>
-<strong>v0.5.5 Ω — Current Build</strong>
-<p>Equipment preparation, usable heist tools, BossMan's persistent economy, vehicle progression, and the new launcher/update pipeline now connect robberies into a larger progression loop.</p>
+<strong>v0.6.0 — Latest Release</strong>
+<p>Two new haunted estates, secured objectives, specialist cutting tools, updated ghost behavior and customizable controls. Development now focuses on the v0.7.0 tutorial.</p>
 <div class="status-line"><span></span> Pre-alpha</div>
 </aside>
 </div>
@@ -189,13 +189,13 @@
 </section>
 <section class="section status-section" id="status">
 <div class="status-copy">
-<p class="eyebrow spectral">Version 0.5.5 Ω completes the equipment arc across 0.4.5, 0.5.0, and 0.5.5: players can buy tools, prepare the van, use specialized equipment during the job, risk losing gear on death, and carry persistent progression from one robbery into the next.</p>
-<h2 class="pe-display-heading">The robbery now starts before you reach the house.</h2>
-<p>Version 0.4.0 α overhauls valuables from spawning to extraction with procedural loot values, breakable items, four-slot inventory rules, cooperative oversized loot, objective tracking, cursed main-objective behavior, and a scalable item architecture for future updates.</p>
+<p class="eyebrow spectral">VERSION 0.6.0 COMPLETE — TWO NEW ESTATES, SECURED OBJECTIVES, SPECIALIZED EQUIPMENT AND MORE DANGEROUS HAUNTS.</p>
+<h2 class="pe-display-heading">Two new estates. More ways to break in. More reasons to run.</h2>
+<p>The 0.6.0 release introduces Afterglow Estate and Vaelis Manor, reinforced doors, secured glass objectives, new cutting tools, improved ghost behavior, customizable keybinds and a broad round of fixes. Next up: a dedicated tutorial in v0.7.0.</p>
 </div>
 <div class="roadmap-card">
 <h3>Current development</h3>
-<ul class="roadmap-list"><li class="done"><span></span><div><b>Public Release: Loot &amp; Item Overhaul — v0.4.0 Φ</b><small>Procedural valuables, breakable loot, co-op XL carrying and objective systems</small></div></li><li class="done"><span></span><div><b>Equipment Preparation — v0.4.5</b><small>BossMan Shop, owned equipment and shared pre-heist loadouts</small></div></li><li class="done"><span></span><div><b>Heist Tools — v0.5.0</b><small>Usable equipment, worn tools, consumables, lock tools and ghost distractions</small></div></li><li class="active"><span></span><div><b>Equipment Economy — v0.5.5 Ω</b><small>Persistent purchasing, progression, loss rules, vehicle gating and launcher distribution</small></div></li></ul>
+<ul class="roadmap-list"><li class="done"><span></span><div><b>Public Release: Loot &amp; Item Overhaul — v0.4.0 Φ</b><small>Procedural valuables, breakable loot, co-op XL carrying and objective systems</small></div></li><li class="done"><span></span><div><b>Equipment Preparation — v0.4.5</b><small>BossMan Shop, owned equipment and shared pre-heist loadouts</small></div></li><li class="done"><span></span><div><b>Heist Tools — v0.5.0</b><small>Usable equipment, worn tools, consumables, lock tools and ghost distractions</small></div></li><li class="done"><span></span><div><b>Equipment Economy — v0.5.5 Ω</b><small>Persistent purchasing, progression, loss rules, vehicle gating and launcher distribution</small></div></li><li class="done"><span></span><div><b>Secured Objectives &amp; Haunted Estates — v0.6.0</b><small>Two mansions, secured objectives, cutting tools, ghost improvements and configurable controls</small></div></li><li class="active"><span></span><div><b>Tutorial — v0.7.0 (In Development)</b><small>Guided introduction to equipment, stealing, hiding, haunting and extraction</small></div></li></ul>
 </div>
 </section>
 <!--
@@ -211,25 +211,7 @@
               3. Update file size and release date.
               4. Move "Preparing release" to "Available".
         -->
-<section class="section hh-video-section" id="showcase">
-<div class="section-header split-header">
-<div>
-<p class="eyebrow spectral">Gameplay showcase</p>
-<h2>See the robbery go wrong.</h2>
-</div>
-<p class="section-lede">A look at Paranormal Estates: Haunted Robberies in motion: breaking into a haunted property, securing valuables, surviving supernatural pressure, and discovering why “one more item” is usually a terrible plan.</p>
-</div>
-<div aria-label="Gameplay showcase versions" class="gameplay-tabs" role="tablist"><button aria-selected="true" class="gameplay-tab active" data-video-label="v0.4.0 Φ" data-video-src="https://www.youtube.com/embed/oZhnl0zWYbw" role="tab" type="button">v0.4.0 Φ</button><button aria-selected="false" class="gameplay-tab" data-video-label="v0.1.0" data-video-src="https://drive.google.com/file/d/1tqfzLPJU3grIyLL1cQgAD7vBfeAZNmdf/preview" role="tab" type="button">v0.1.0</button></div><div class="hh-video-frame">
-<div aria-hidden="true" class="hh-video-glow"></div>
-<iframe allow="autoplay; fullscreen" allowfullscreen="" data-video-version="v0.4.0 Φ" loading="lazy" src="https://www.youtube.com/embed/oZhnl0zWYbw" title="Paranormal Estates: Haunted Robberies gameplay showcase">
-</iframe>
-</div>
-<div class="hh-video-meta">
-<span>Pre-Alpha Gameplay</span>
-<span>Work in Progress</span>
-<span>Unreal Engine 5</span>
-<span class="hh-video-version-note"></span></div>
-</section><section class="section heist-loop-showcase" id="heist-loop">
+<section class="section hh-video-section" id="showcase"><div class="section-header split-header"><div><p class="eyebrow spectral">Official trailer</p><h2>Every heist has a haunting.</h2></div><p class="section-lede">Meet Paranormal Estates: Haunted Robberies. Bring your crew, take what you can, and try not to become part of the property.</p></div><div class="hh-video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/cDC_WhoYZkE" title="Paranormal Estates: Haunted Robberies — Official Trailer"></iframe></div><div class="trailer-link"><a class="btn secondary" href="https://youtu.be/cDC_WhoYZkE" rel="noopener noreferrer" target="_blank">Watch trailer on YouTube ↗</a></div></section><section class="section heist-loop-showcase" id="heist-loop">
 <div class="section-header split-header">
 <div><p class="eyebrow spectral">The heist loop</p><h2>Break in. Steal everything. Regret it.</h2></div>
 <p class="section-lede">The job is simple on paper. Get inside, fill the van, take the main objective, and survive whatever notices.</p>
@@ -253,11 +235,11 @@
 <p>Follow Paranormal Estates: Haunted Robberies on Gamefound for campaign updates and launch notification.</p>
 <a class="btn spectral-btn" href="https://gamefound.com/en/projects/thehurrikayne/paranormal-estates-haunted-robberies" rel="noopener" target="_blank">Follow on Gamefound</a>
 </article>
-<article class="support-card coming">
-<span class="support-state">COMING SOON</span>
+<article class="support-card live">
+<span class="support-state">CROWDFUNDING</span>
 <h3>Kickstarter</h3>
-<p>The Kickstarter pre-launch page is being prepared. This button will go live as soon as the campaign page is ready.</p>
-<span aria-disabled="true" class="btn secondary support-disabled">Kickstarter Pre-Launch Coming Soon</span>
+<p>Explore Paranormal Estates: Haunted Robberies on Kickstarter. Campaign availability may change.</p>
+<a class="btn spectral-btn" href="https://www.kickstarter.com/projects/grandmishap/paranormal-estates-haunted-robberies?category_id=35" rel="noopener noreferrer" target="_blank">Follow on Kickstarter</a>
 </article>
 </div>
 </section><section class="section roadmap-section" id="roadmap">
@@ -266,20 +248,20 @@
 <p class="eyebrow spectral">Development roadmap</p>
 <h2>What we're building next.</h2>
 </div>
-<p class="section-lede">Follow Paranormal Estates: Haunted Robberies from its first playable prototype through multiplayer, the current loot-and-item overhaul, equipment systems, secured objectives, new ghost types, broader replayability, the tutorial conversion, visual upgrades, and the Early Access launch.</p>
+<p class="section-lede">Version 0.6.0 is complete. Next, v0.7.0 introduces a dedicated playable tutorial. Ghost types, outsiders, replayability, visual improvements and Early Access follow in later milestones.</p>
 </div>
 <div class="roadmap-shell">
 <div aria-label="Paranormal Estates: Haunted Robberies development roadmap" class="roadmap-scroll">
-<div aria-label="Roadmap milestones" class="roadmap-track" role="tablist"><div aria-hidden="true" class="roadmap-line"></div><button aria-selected="false" class="position-top complete roadmap-node" data-description="The first playable Paranormal Estates: Haunted Robberies build established the core robbery loop: enter a haunted property, steal valuables, survive supernatural pressure, and escape with the score." data-highlights="Core movement and interaction|Early theft and extraction loop|Initial ghost and scare systems" data-status="Released" data-title="First Playable" data-version="v0.0.1" role="tab" type="button"><span class="roadmap-label"><b>v0.0.1</b><small>First Playable</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="Paranormal Estates: Haunted Robberies became an online co-op game. This milestone introduced the first multiplayer build and proved that separate players could enter the same robbery together." data-highlights="First multiplayer build|Early Host and Join flow|Initial co-op testing" data-status="Released" data-title="First Multiplayer Build" data-version="v0.1.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.1.0</b><small>Multiplayer</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="The multiplayer foundation expanded toward a proper room-based lobby experience, with session browsing and continued work toward reliable WAN play. Development of the larger Modern Villa also began during this milestone." data-highlights="Room-based session direction|Session browsing and Join controls|Modern Villa work in progress" data-status="Released" data-title="Improved Multiplayer" data-version="v0.2.0" role="tab" type="button"><span class="roadmap-label"><b>v0.2.0</b><small>Improved MP</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="This update focuses on making the multiplayer front end and moment-to-moment interaction feel cleaner and more reliable. Host and Join presentation, visual consistency, replicated map selection, hover language, and extraction/back-door interaction issues are brought into one dedicated polish pass." data-highlights="Host/Join redesign|Visual consistency and hover language|Map-selection sync|Extraction and back-door interaction fixes" data-status="Released" data-title="UI &amp; Interaction Polish" data-version="v0.2.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.2.5</b><small>UI Polish</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="Version 0.3.0 delivers the new Rich Neighbourhood contract as a complete playable map and expands the online, house-management, ghost-navigation, power, interaction, and stability foundations that future properties will build on." data-highlights="New Rich Neighbourhood contract|Steam WAN session support|Improved ghost cross-floor pursuit|Modular House Manager tools|Replicated randomized breakers" data-status="Released" data-title="Rich Neighbourhood" data-version="v0.3.0" role="tab" type="button"><span class="roadmap-label"><b>v0.3.0</b><small>Rich Neighbourhood</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="Version 0.3.5 expands player feedback and multiplayer usability with rebuilt settings, panic accessibility controls, death spectating, public/private rooms, six-character access codes, improved session cleanup, and stronger Steam/EOS compatibility." data-highlights="Rebuilt Audio, Video and Controls settings|Panic audio/visual accessibility toggles|Death spectator mode|Private rooms and six-character codes|Steam/EOS session reliability" data-status="Released" data-title="Player State Polish" data-version="v0.3.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.3.5</b><small>Player State</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="Version 0.4.0 α rebuilds the robbery's loot layer from spawning to extraction. Procedural valuables, breakable item value, four-slot inventory rules, cooperative XL carrying, objective tracking, and cursed main-objective behavior now share a stronger scalable item architecture." data-highlights="Procedural loot economy and randomized values|Breakable valuables with per-item degradation|Four-slot inventory with S/M/L/XL sizing|Two-player XL carrying and dolly support|Main-objective and cursed-haunt overhaul|Objective UI and color-coded interaction language" data-status="Released Φ Build" data-title="Public Release: Loot &amp; Item Overhaul" data-version="v0.4.0" role="tab" type="button"><span class="roadmap-label"><b>v0.4.0</b><small>Public Release Φ</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="Pre-heist preparation becomes a real multiplayer system. Each job begins with an empty shared equipment pool, and players choose which owned items they want to contribute before the crew enters the property. Internal ownership tracking remains part of the supporting backlog." data-highlights="Empty shared equipment pool|Players contribute owned items|Pre-heist equipment UI|Internal ownership backlog" data-status="Released" data-title="Equipment Preparation UI" data-version="v0.4.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.4.5</b><small>Equipment UI</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="The first real thief equipment lineup arrives. Tiered player items, consumables, traps, and other usable tools begin giving crews meaningful choices about how they enter, survive, recover, and deal with supernatural threats." data-highlights="Tiered player items|Consumables|Ghost traps|Usable heist equipment" data-status="Released" data-title="Heist Tools" data-version="v0.5.0" role="tab" type="button"><span class="roadmap-label"><b>v0.5.0</b><small>Heist Tools</small></span><span class="roadmap-dot"></span></button><button aria-selected="true" class="position-bottom current roadmap-node" data-description="Version 0.5.5 Ω completes the equipment arc across 0.4.5, 0.5.0, and 0.5.5, connecting BossMan's shop, pre-heist loadouts, usable tools, equipment loss, vehicle progression, and persistent economy." data-highlights="BossMan Shop and persistent progression|Shared pre-heist equipment pool|Usable heist tools and worn equipment|Noise makers and ghost distractions|Equipment loss and crew recovery rules|Vehicle-tier and cargo progression" data-status="Current Ω Build" data-title="Equipment, Heist Tools &amp; Economy Update" data-version="v0.5.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.5.5</b><small>Equipment Ω</small></span></button><button aria-selected="false" class="position-top roadmap-node planned" data-description="The main score stops being something players can simply walk up and grab. Primary objectives become secured behind puzzles, requirements, tools, or other property-specific conditions, giving each robbery a stronger objective layer before the final prize can be taken." data-highlights="Puzzle-gated main objectives|Tool or requirement gates|Property-specific objective conditions" data-status="Planned" data-title="Secured Objectives" data-version="v0.6.0" role="tab" type="button"><span class="roadmap-label"><b>v0.6.0</b><small>Secured Objectives</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="position-bottom roadmap-node planned" data-description="Ghosts begin behaving as distinct archetypes instead of interchangeable threats. Different supernatural types gain their own tendencies, strengths, weaknesses, and reactions, forcing crews to change how they play from one haunting to another." data-highlights="Distinct ghost archetypes|Different behavioral rules|New strengths and weaknesses|More varied counterplay" data-status="Planned" data-title="Ghost Types" data-version="v0.7.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.7.0</b><small>Ghost Types</small></span></button><button aria-selected="false" class="position-top roadmap-node planned" data-description="Living complications enter the robbery. Rival thieves, police, and other external events can interrupt jobs and create situations where the crew must deal with both human problems and whatever is already haunting the property." data-highlights="Rival thieves|Police events|Other external encounters|Human and supernatural pressure" data-status="Planned" data-title="Outsiders" data-version="v0.8.0" role="tab" type="button"><span class="roadmap-label"><b>v0.8.0</b><small>Outsiders</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="position-bottom roadmap-node planned" data-description="The content layer broadens beyond the initial properties. Additional maps, more procedural variation, and wider job progression are introduced to make repeat robberies feel less predictable and give players more reasons to keep building their criminal career." data-highlights="Additional maps|Procedural variety|Broader job progression|Greater replayability" data-status="Planned" data-title="Replayability &amp; Maps" data-version="v0.9.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.9.0</b><small>Replayability</small></span></button><button aria-selected="false" class="position-top roadmap-node planned" data-description="The original MVP house is repurposed into a dedicated tutorial experience. Instead of remaining just another normal property, it becomes the player's introduction to stealing, equipment, objectives, panic, haunting escalation, and extraction." data-highlights="Convert the original MVP house|Dedicated playable tutorial|Teach the core robbery loop|Introduce haunting and extraction" data-status="Planned" data-title="Tutorial Conversion" data-version="v0.9.x" role="tab" type="button"><span class="roadmap-label"><b>v0.9.x</b><small>Tutorial</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="position-bottom roadmap-node planned" data-description="Characters and ghosts receive a major visual-quality pass as production resources allow. New models, stronger animation work, and broader art upgrades replace or improve temporary presentation so the game approaches its Early Access visual target." data-highlights="New character models|New ghost models|Animation polish|Broader art upgrades" data-status="Planned" data-title="Character / Ghost Visual Overhaul" data-version="v0.9.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.9.5</b><small>Visual Overhaul</small></span></button><button aria-selected="false" class="roadmap-finale position-top roadmap-node planned" data-description="Paranormal Estates: Haunted Robberies reaches its Early Access launch milestone. The focus is stabilization, balance, optimization, multiplayer reliability, and making sure the complete initial gameplay loop is coherent and ready for a wider public audience." data-highlights="Stabilization and QA|Balance pass|Optimization|Complete initial gameplay loop" data-status="Planned" data-title="Early Access" data-version="v1.0.0" role="tab" type="button"><span class="roadmap-label"><b>v1.0.0</b><small>Early Access</small></span><span class="roadmap-dot"></span></button></div>
+<div aria-label="Roadmap milestones" class="roadmap-track" role="tablist"><div aria-hidden="true" class="roadmap-line"></div><button aria-selected="false" class="position-top complete roadmap-node" data-description="The first playable Paranormal Estates: Haunted Robberies build established the core robbery loop: enter a haunted property, steal valuables, survive supernatural pressure, and escape with the score." data-highlights="Core movement and interaction|Early theft and extraction loop|Initial ghost and scare systems" data-status="Released" data-title="First Playable" data-version="v0.0.1" role="tab" type="button"><span class="roadmap-label"><b>v0.0.1</b><small>First Playable</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="Paranormal Estates: Haunted Robberies became an online co-op game. This milestone introduced the first multiplayer build and proved that separate players could enter the same robbery together." data-highlights="First multiplayer build|Early Host and Join flow|Initial co-op testing" data-status="Released" data-title="First Multiplayer Build" data-version="v0.1.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.1.0</b><small>Multiplayer</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="The multiplayer foundation expanded toward a proper room-based lobby experience, with session browsing and continued work toward reliable WAN play. Development of the larger Modern Villa also began during this milestone." data-highlights="Room-based session direction|Session browsing and Join controls|Modern Villa work in progress" data-status="Released" data-title="Improved Multiplayer" data-version="v0.2.0" role="tab" type="button"><span class="roadmap-label"><b>v0.2.0</b><small>Improved MP</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="This update focuses on making the multiplayer front end and moment-to-moment interaction feel cleaner and more reliable. Host and Join presentation, visual consistency, replicated map selection, hover language, and extraction/back-door interaction issues are brought into one dedicated polish pass." data-highlights="Host/Join redesign|Visual consistency and hover language|Map-selection sync|Extraction and back-door interaction fixes" data-status="Released" data-title="UI &amp; Interaction Polish" data-version="v0.2.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.2.5</b><small>UI Polish</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="Version 0.3.0 delivers the new Rich Neighbourhood contract as a complete playable map and expands the online, house-management, ghost-navigation, power, interaction, and stability foundations that future properties will build on." data-highlights="New Rich Neighbourhood contract|Steam WAN session support|Improved ghost cross-floor pursuit|Modular House Manager tools|Replicated randomized breakers" data-status="Released" data-title="Rich Neighbourhood" data-version="v0.3.0" role="tab" type="button"><span class="roadmap-label"><b>v0.3.0</b><small>Rich Neighbourhood</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="Version 0.3.5 expands player feedback and multiplayer usability with rebuilt settings, panic accessibility controls, death spectating, public/private rooms, six-character access codes, improved session cleanup, and stronger Steam/EOS compatibility." data-highlights="Rebuilt Audio, Video and Controls settings|Panic audio/visual accessibility toggles|Death spectator mode|Private rooms and six-character codes|Steam/EOS session reliability" data-status="Released" data-title="Player State Polish" data-version="v0.3.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.3.5</b><small>Player State</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="Version 0.4.0 α rebuilds the robbery's loot layer from spawning to extraction. Procedural valuables, breakable item value, four-slot inventory rules, cooperative XL carrying, objective tracking, and cursed main-objective behavior now share a stronger scalable item architecture." data-highlights="Procedural loot economy and randomized values|Breakable valuables with per-item degradation|Four-slot inventory with S/M/L/XL sizing|Two-player XL carrying and dolly support|Main-objective and cursed-haunt overhaul|Objective UI and color-coded interaction language" data-status="Released Φ Build" data-title="Public Release: Loot &amp; Item Overhaul" data-version="v0.4.0" role="tab" type="button"><span class="roadmap-label"><b>v0.4.0</b><small>Public Release Φ</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="complete position-bottom roadmap-node" data-description="Pre-heist preparation becomes a real multiplayer system. Each job begins with an empty shared equipment pool, and players choose which owned items they want to contribute before the crew enters the property. Internal ownership tracking remains part of the supporting backlog." data-highlights="Empty shared equipment pool|Players contribute owned items|Pre-heist equipment UI|Internal ownership backlog" data-status="Released" data-title="Equipment Preparation UI" data-version="v0.4.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.4.5</b><small>Equipment UI</small></span></button><button aria-selected="false" class="position-top complete roadmap-node" data-description="The first real thief equipment lineup arrives. Tiered player items, consumables, traps, and other usable tools begin giving crews meaningful choices about how they enter, survive, recover, and deal with supernatural threats." data-highlights="Tiered player items|Consumables|Ghost traps|Usable heist equipment" data-status="Released" data-title="Heist Tools" data-version="v0.5.0" role="tab" type="button"><span class="roadmap-label"><b>v0.5.0</b><small>Heist Tools</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="position-bottom roadmap-node complete" data-description="Version 0.5.5 Ω completes the equipment arc across 0.4.5, 0.5.0, and 0.5.5, connecting BossMan's shop, pre-heist loadouts, usable tools, equipment loss, vehicle progression, and persistent economy." data-highlights="BossMan Shop and persistent progression|Shared pre-heist equipment pool|Usable heist tools and worn equipment|Noise makers and ghost distractions|Equipment loss and crew recovery rules|Vehicle-tier and cargo progression" data-status="Released" data-title="Equipment, Heist Tools &amp; Economy Update" data-version="v0.5.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.5.5</b><small>Equipment Ω</small></span></button><button aria-selected="false" class="position-top roadmap-node complete" data-description="Added Afterglow Estate and Vaelis Manor, secured objectives, reinforced doors, safeboxes, specialized cutting tools, improved ghost behavior, customizable controls and extensive polish." data-highlights="Afterglow Estate and Vaelis Manor|Reinforced doors and safeboxes|Blowtorch and glass cutters|Normal/cursed ghost auras|Customizable keybinds" data-status="Released — Latest" data-title="Secured Objectives &amp; Haunted Estates" data-version="v0.6.0" role="tab" type="button"><span class="roadmap-label"><b>v0.6.0</b><small>Secured Estates</small></span><span class="roadmap-dot"></span></button><button aria-selected="true" class="position-bottom roadmap-node current" data-description="The original MVP house becomes a guided introduction to equipment, objectives, hiding, ghost encounters and extraction." data-highlights="Guided first heist|Interactive instruction moments|Learn equipment and objectives|Hiding, haunting and extraction" data-status="In Development" data-title="Tutorial Conversion" data-version="v0.7.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.7.0</b><small>Tutorial</small></span></button><button aria-selected="false" class="position-top roadmap-node planned" data-description="Ghosts begin behaving as distinct archetypes instead of interchangeable threats. Different supernatural types gain their own tendencies, strengths, weaknesses, and reactions, forcing crews to change how they play from one haunting to another." data-highlights="Distinct ghost archetypes|Different behavioral rules|New strengths and weaknesses|More varied counterplay" data-status="Planned" data-title="New Ghost Types" data-version="v0.8.0" role="tab" type="button"><span class="roadmap-label"><b>v0.8.0</b><small>Ghost Types</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="position-bottom roadmap-node planned" data-description="Living complications enter the robbery. Rival thieves, police, and other external events can interrupt jobs and create situations where the crew must deal with both human problems and whatever is already haunting the property." data-highlights="Rival thieves|Police events|Other external encounters|Human and supernatural pressure" data-status="Planned" data-title="Outsiders" data-version="v0.9.0" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.9.0</b><small>Outsiders</small></span></button><button aria-selected="false" class="position-top roadmap-node planned" data-description="The content layer broadens beyond the initial properties. Additional maps, more procedural variation, and wider job progression are introduced to make repeat robberies feel less predictable and give players more reasons to keep building their criminal career." data-highlights="Additional maps|Procedural variety|Broader job progression|Greater replayability" data-status="Planned" data-title="Replayability &amp; Maps" data-version="v0.9.x" role="tab" type="button"><span class="roadmap-label"><b>v0.9.x</b><small>Replayability</small></span><span class="roadmap-dot"></span></button><button aria-selected="false" class="position-bottom roadmap-node planned" data-description="Characters and ghosts receive a major visual-quality pass as production resources allow. New models, stronger animation work, and broader art upgrades replace or improve temporary presentation so the game approaches its Early Access visual target." data-highlights="New character models|New ghost models|Animation polish|Broader art upgrades" data-status="Planned" data-title="Character / Ghost Visual Overhaul" data-version="v0.9.5" role="tab" type="button"><span class="roadmap-dot"></span><span class="roadmap-label"><b>v0.9.5</b><small>Visual Overhaul</small></span></button><button aria-selected="false" class="roadmap-finale position-top roadmap-node planned" data-description="Paranormal Estates: Haunted Robberies reaches its Early Access launch milestone. The focus is stabilization, balance, optimization, multiplayer reliability, and making sure the complete initial gameplay loop is coherent and ready for a wider public audience." data-highlights="Stabilization and QA|Balance pass|Optimization|Complete initial gameplay loop" data-status="Planned" data-title="Early Access" data-version="v1.0.0" role="tab" type="button"><span class="roadmap-label"><b>v1.0.0</b><small>Early Access</small></span><span class="roadmap-dot"></span></button></div>
 </div>
 <div aria-live="polite" class="roadmap-detail" id="roadmap-detail" role="tabpanel">
 <div class="roadmap-detail-topline">
-<span id="roadmap-detail-version">v0.5.5 Ω</span>
-<span class="roadmap-detail-status current" id="roadmap-detail-status">Current Ω Build</span>
+<span id="roadmap-detail-version">v0.7.0</span>
+<span class="roadmap-detail-status current" id="roadmap-detail-status">In Development</span>
 </div>
-<h3 id="roadmap-detail-title">Equipment, Heist Tools &amp; Economy Update</h3>
-<p id="roadmap-detail-description">Version 0.5.5 Ω completes the equipment arc across 0.4.5, 0.5.0, and 0.5.5, connecting BossMan's shop, pre-heist loadouts, usable tools, equipment loss, vehicle progression, and persistent economy.</p>
-<ul class="roadmap-detail-highlights" id="roadmap-detail-highlights"><li>BossMan Shop and persistent progression</li><li>Shared pre-heist equipment pool</li><li>Usable heist tools and worn equipment</li><li>Noise makers and ghost distractions</li><li>Equipment loss and crew recovery rules</li><li>Vehicle-tier and cargo progression</li></ul>
+<h3 id="roadmap-detail-title">Tutorial Conversion</h3>
+<p id="roadmap-detail-description">The original MVP house becomes a guided introduction to equipment, objectives, hiding, ghost encounters and extraction.</p>
+<ul class="roadmap-detail-highlights" id="roadmap-detail-highlights"><li>Guided first heist</li><li>Interactive instruction moments</li><li>Learn equipment and objectives</li><li>Hiding, haunting and extraction</li></ul>
 </div>
 </div>
 </section>
@@ -295,7 +277,7 @@
 </div>
 <div aria-label="Latest build version" class="build-version-lockup">
 <span>Current Patch</span>
-<strong>v0.5.5 Ω</strong>
+<strong>v0.6.0</strong>
 <small>Launcher Build</small>
 </div>
 </div>
@@ -304,9 +286,9 @@
 <div aria-hidden="true" class="build-mark">HR</div>
 <div class="build-copy">
 <div class="build-status available"><span></span> Available</div>
-<h3>Equipment, Heist Tools &amp; Economy Update</h3>
-<p>Install the PE:HR Launcher once. The launcher handles game installation and future updates, replacing the old separate Steam and EOS download packages.</p>
-<div aria-label="Build details" class="build-meta"><span><b>Platform</b> Windows PC</span><span><b>Players</b> 1–6</span><span><b>Version</b> v0.5.5 Ω</span><span><b>Distribution</b> PE:HR Launcher</span><span><b>Updates</b> Automatic through launcher</span></div>
+<h3>Secured Objectives &amp; Haunted Estates</h3>
+<p>Install the PE:HR Launcher once to play the latest release featuring two new mansions, secured objectives, specialized tools and ghost improvements. The launcher handles future game updates.</p>
+<div aria-label="Build details" class="build-meta"><span><b>Platform</b> Windows PC</span><span><b>Players</b> 1–6</span><span><b>Version</b> v0.6.0</span><span><b>Distribution</b> PE:HR Launcher</span><span><b>Updates</b> Automatic through launcher</span></div>
 </div>
 </div>
 <div class="build-card-actions"><div class="build-platform-slot launcher-slot">
@@ -328,13 +310,71 @@
 <p class="eyebrow spectral">Current update</p>
 <h2>Patch Notes</h2>
 </div>
-<p class="section-lede">
-                    The current patch stays fully expanded. Previous releases are preserved underneath
-                    so playtest reports can always be tied to the build that produced them.
-                </p>
+<p class="section-lede">Everything in the official v0.6.0 release, including subsequent maintenance improvements. Earlier updates remain available in the archive below.</p>
 </div>
 <article class="patch-entry patch-current">
-<header class="patch-entry-header"><div><div class="patch-title-line"><span class="patch-version">v0.5.5 Ω</span><span class="patch-tag">v0.4.5 → v0.5.5</span><span class="patch-tag current">Ω</span></div><h3>Equipment, Heist Tools &amp; Economy Update</h3></div><time datetime="2026-10-03">October 3, 2026</time></header>
+<header class="patch-entry-header"><div><div class="patch-title-line"><span class="patch-version">v0.6.0</span><span class="patch-tag current">Current Release</span></div><h3>Secured Objectives &amp; Haunted Estates</h3></div><span class="patch-tag">November 2026</span></header>
+<p class="patch-summary"><strong>New estates, new gear, and ghosts that take grand theft personally.</strong> Explore Afterglow Estate and Vaelis Manor, crack secured objectives with specialized equipment, and survive smarter haunts—plus a major round of fixes and polish.</p>
+<section class="phi-release-callout"><div class="phi-release-eyebrow">THE HEIST JUST GOT HARDER</div><h4>Two new estates. More ways to break in. More reasons to run.</h4><p>Version 0.6.0 brings secured doors, safeboxes, specialized cutters, updated ghost behavior, customizable controls, and improvements across the crew experience.</p><p class="phi-release-closing">Includes maintenance fixes and polish delivered after the initial 0.6.0 development build.</p></section>
+<div class="patch-detail-grid">
+<section class="patch-feature-card"><span aria-hidden="true" class="patch-card-accent"></span><h4>New Estates</h4><ul>
+<li>Added Afterglow Estate and Vaelis Manor, two mansions with distinct layouts, loot routes, and secured objectives.</li>
+<li>Added more hiding spots across playable properties.</li>
+</ul></section>
+<section class="patch-feature-card"><span aria-hidden="true" class="patch-card-accent"></span><h4>Secured Objectives &amp; Equipment</h4><ul>
+<li>Reinforced doors now guard secured areas. Use a Bypass Lock or Blowtorch; standard lockpicks remain for exit doors.</li>
+<li>Safeboxes protect the main prize behind secured glass, requiring specialized cutting tools.</li>
+<li>Added security systems protecting high-value areas and objectives, with alarms influenced by equipment choice.</li>
+<li>Blowtorch: cuts reinforced doors without triggering the alarm; cannot cut secured glass.</li>
+<li>Powered Glass Cutter: handheld electric saw for cutting secured glass.</li>
+<li>Laser Cutter: alternative secured-glass cutting tool with distinct effects.</li>
+<li>Bypass Lock: opens reinforced-door locks and no longer works on exit doors.</li>
+<li>Interrupted safebox cuts retain progress so players can resume later.</li>
+<li>Cutting into the main objective can attract a ghost that approaches, chases encountered players, and briefly searches the room if no one is found.</li>
+<li>Updated equipment models, cutting effects, and main-objective audio to improve clarity.</li>
+</ul></section>
+<section class="patch-feature-card"><span aria-hidden="true" class="patch-card-accent"></span><h4>Ghosts, Haunts &amp; Audio</h4><ul>
+<li>Added ghost auras that visually distinguish normal and cursed haunts.</li>
+<li>Updated ghost visual effects and fixed flickering ribcage/skull visuals appearing above ghosts during haunts.</li>
+<li>Corrected cursed haunts not following the grace-period rule.</li>
+<li>Added movement-based Director hints so roaming ghosts can investigate areas near players’ earlier positions.</li>
+<li>Fixed ghost navigation extending outside Vaelis Manor.</li>
+<li>Added configurable audio ranges for ghost sounds, doors, slams, tools, impacts, alarms, and ambient sounds. Haunt and chase audio now follows ghosts and fades with distance.</li>
+</ul></section>
+<section class="patch-feature-card"><span aria-hidden="true" class="patch-card-accent"></span><h4>Crew Lobby, Controls &amp; Player Experience</h4><ul>
+<li>Refreshed the crew lobby Missionboard and menu artwork with a red, black, and cream theme.</li>
+<li>Added customizable keybindings to the Settings page.</li>
+<li>Improved first-person body presence and fixed crouching allowing players to see inside their character’s head.</li>
+<li>Interaction prompts now label timed actions, including Picking Lock, Cutting Glass, and Looting.</li>
+<li>Pressing E without an available interaction no longer displays “Nothing to interact with.”</li>
+<li>Improved XL loot guidance: solo players are directed to use an XL dolly; co-op players are prompted to use a dolly or partner, and to clear inventory when necessary.</li>
+<li>Dead spectators can no longer see doors and can pass through closed doors.</li>
+<li>Fixed the interaction cast bar remaining visible after starting a second match.</li>
+<li>Adjusted audio and UI presentation throughout.</li>
+</ul></section>
+<section class="patch-feature-card"><span aria-hidden="true" class="patch-card-accent"></span><h4>Progression, Vans &amp; Demo Access</h4><ul>
+<li>Set up player progression with unlock tiers for equipment and vans.</li>
+<li>For this demo, players start with $20,000 and all equipment and van tiers unlocked.</li>
+<li>Removed the separate van item-acquisition range restriction: players with access to the van inventory can retrieve items.</li>
+<li>Adjusted van inventory and pro lockpick mesh sizes.</li>
+</ul></section>
+<section class="patch-feature-card"><span aria-hidden="true" class="patch-card-accent"></span><h4>World Fixes &amp; Voice Acting Trial</h4><ul>
+<li>Fixed streetlights appearing inside Vaelis Manor at the world origin in packaged builds.</li>
+<li>Fixed Vaelis Manor house-boundary detection counting outdoor players as inside.</li>
+<li>Fixed missing wall collision.</li>
+<li>Testing contextual BossMan voice lines reacting to items and player actions, including hints at future story threads.</li>
+</ul></section>
+</div>
+<div class="patch-footnote"><strong>BossMan says:</strong> The equipment is expensive. Try not to die before you use it.</div>
+</article>
+<div class="patch-history-heading">
+<div>
+<p class="eyebrow spectral">Previous releases</p>
+<h3>Patch History</h3>
+</div>
+<span>Click a version to expand</span>
+</div>
+<div aria-label="Previous Paranormal Estates: Haunted Robberies patches" class="patch-history-scroll"><details class="patch-history-item"><summary><span class="history-version">v0.5.5 Ω</span><span class="history-title">Equipment, Heist Tools &amp; Economy Update</span><time datetime="2026-10-03">Oct 3, 2026</time></summary><div class="history-body">
 <p class="patch-summary"><strong>The robbery now starts before you reach the house.</strong> This update expands the full equipment loop—from buying tools, to loading the van, to surviving long enough to use them.</p>
 <section class="phi-release-callout omega-release-callout"><div class="phi-release-eyebrow">Ω — THE HEIST GETS AN ECONOMY</div><h4>Three milestones. One connected equipment loop.</h4><p>Across v0.4.5, v0.5.0, and v0.5.5, Haunted Robberies gained equipment preparation, usable heist tools, BossMan's persistent shop economy, equipment ownership and loss, and vehicle progression.</p><p>The new Paranormal Estates launcher changes distribution too: install once, then let the launcher handle game installation and future updates.</p><p class="phi-release-closing">Φ rebuilt what you steal. Ω changes what you bring, what you risk, and what comes home with you.</p></section>
 <div class="patch-grid">
@@ -380,14 +420,8 @@
 </ul></section>
 </div>
 <div class="patch-footnote"><strong>BossMan says:</strong> Good luck out there. BossMan expects results, not excuses.</div>
-</article><div class="patch-history-heading">
-<div>
-<p class="eyebrow spectral">Previous releases</p>
-<h3>Patch History</h3>
-</div>
-<span>Click a version to expand</span>
-</div>
-<div aria-label="Previous Paranormal Estates: Haunted Robberies patches" class="patch-history-scroll"><details class="patch-history-item"><summary><span class="history-version">v0.4.0 Φ</span><span class="history-title">Public Release: Loot &amp; Item Overhaul</span><time datetime="2026-09-21">Sep 21, 2026</time></summary><div class="history-body"><p>Rebuilt the loot layer with procedural valuables, breakable item value, four-slot inventory rules, cooperative XL carrying, objective tracking, cursed main-objective behavior, and scalable item architecture.</p><div class="history-columns"><section><h4>Loot &amp; Carrying</h4><ul><li>Procedural loot economy and randomized values.</li><li>Breakable valuables with per-item degradation.</li><li>Four-slot inventory with S/M/L/XL sizing.</li><li>Two-player XL carrying and dolly support.</li></ul></section><section><h4>Objectives &amp; Haunts</h4><ul><li>Main-objective selection and extraction gating.</li><li>Cursed-haunt behavior tied to stealing the primary objective.</li><li>Objective UI and color-coded interaction language.</li></ul></section></div></div></details><details class="patch-history-item">
+</div></details>
+<details class="patch-history-item"><summary><span class="history-version">v0.4.0 Φ</span><span class="history-title">Public Release: Loot &amp; Item Overhaul</span><time datetime="2026-09-21">Sep 21, 2026</time></summary><div class="history-body"><p>Rebuilt the loot layer with procedural valuables, breakable item value, four-slot inventory rules, cooperative XL carrying, objective tracking, cursed main-objective behavior, and scalable item architecture.</p><div class="history-columns"><section><h4>Loot &amp; Carrying</h4><ul><li>Procedural loot economy and randomized values.</li><li>Breakable valuables with per-item degradation.</li><li>Four-slot inventory with S/M/L/XL sizing.</li><li>Two-player XL carrying and dolly support.</li></ul></section><section><h4>Objectives &amp; Haunts</h4><ul><li>Main-objective selection and extraction gating.</li><li>Cursed-haunt behavior tied to stealing the primary objective.</li><li>Objective UI and color-coded interaction language.</li></ul></section></div></div></details><details class="patch-history-item">
 <summary><span class="history-version">v0.3.5</span><span class="history-title">Player State, Settings &amp; Sessions</span><time datetime="2026-09-07">Sep 7, 2026</time></summary>
 <div class="history-body">
 <p>Rebuilt settings and accessibility, added death spectating and private room codes, and hardened Steam/EOS multiplayer session behavior.</p>
@@ -535,7 +569,7 @@
 </details>
 </div>
 </section>
-<section class="section credits-section">
+<section class="section community-section" id="community"><div class="section-header split-header"><div><p class="eyebrow spectral">Community</p><h2>Follow Grand Mishap Studios.</h2></div><p class="section-lede">Join the community, follow development, and see what happens when a crew decides one more item is worth the risk.</p></div><div class="community-grid"><article class="community-card"><span class="community-kicker">COMMUNITY</span><h3>Discord</h3><p>Meet the crew, share feedback, and find playtest opportunities.</p><a href="https://discord.gg/29rzSqrGXN" rel="noopener noreferrer" target="_blank">Join Discord ↗</a></article><article class="community-card"><span class="community-kicker">VIDEOS</span><h3>YouTube</h3><p>Trailers, gameplay, development updates and Criminal Incompetence.</p><a href="https://www.youtube.com/@GrandMishapStudios" rel="noopener noreferrer" target="_blank">Watch on YouTube ↗</a></article><article class="community-card"><span class="community-kicker">SHORTS &amp; CLIPS</span><h3>TikTok</h3><p>Quick doses of haunted robbery chaos and bad decisions.</p><a href="https://www.tiktok.com/@grandmishapstudios" rel="noopener noreferrer" target="_blank">Follow on TikTok ↗</a></article><article class="community-card"><span class="community-kicker">PHOTOS &amp; UPDATES</span><h3>Instagram</h3><p>Follow development snapshots, artwork, announcements, and behind-the-scenes moments.</p><a href="https://www.instagram.com/grandmishapstudios" rel="noopener noreferrer" target="_blank">Follow on Instagram ↗</a></article></div></section><section class="section credits-section">
 <h2>Credits &amp; production note</h2>
 <p>
                 Paranormal Estates: Haunted Robberies is independently developed by Moe Savari under Grand Mishap Studios.
